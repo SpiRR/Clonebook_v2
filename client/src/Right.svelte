@@ -1,19 +1,6 @@
 <!-- JavaScript -->
 <script>
 
-import ChatContainer, {addChatWindow} from "./ChatContainer.svelte"
-// Hardcoded values to test
-	let ajFriends =[
-        {"id":"1", "name":"X", "lastName":"AA"},
-        {"id":"2", "name":"Y", "lastName":"BB"},
-        {"id":"3", "name":"Z", "lastName":"CC"}
-    ]
-
-    function showChatWindow () {
-        addChatWindow()
-    }
-
-    // Connecting to the API
 
 </script>
 
@@ -22,10 +9,7 @@ import ChatContainer, {addChatWindow} from "./ChatContainer.svelte"
 <main>
 
 	<section id="contacts">
-        Contacts
-        {#each ajFriends as jFriend}
-            <div class="friend" on:click="{showChatWindow}">{jFriend.name} {jFriend.lastName}</div>
-        {/each}
+       
     </section>
 
 </main>

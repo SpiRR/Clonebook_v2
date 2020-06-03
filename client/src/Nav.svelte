@@ -1,31 +1,32 @@
 <script>
-  // Server
-  let ajUsers = [];
-
-  let searchResultsDisplay = "none";
-
-  function showSearchResults() {
-    searchResultsDisplay = "grid";
-  }
-
-  // Arrow function
-  const hideSearchResults = () => {
-    searchResultsDisplay = "none";
-  };
-
-  // Connect to API and get the data
-  const getData = async () => {
-    ajUsers = [];
-
-    // Get fresh data from API
-    let connection = await fetch("http://localhost:9090/users");
-    let data = await connection.json();
-    ajUsers = data;
-
-    showSearchResults();
-  };
+ 
 </script>
 
+
+
+<!-- JavaScript -->
+<!-- HTML -->
+<nav>
+  <div>Clonebook</div>
+
+  <div id="searchContainer">
+
+    <form>
+      <input
+        type="text"
+        placeholder="Search on CloneBook"
+        />
+    </form>
+
+    <div id="searchResults">
+    
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- Style to this component -->
 <style>
   nav {
     display: grid;
@@ -42,6 +43,10 @@
     position: relative;
   }
 
+  div#searchContainer form input {
+    border-radius: 25px;
+  }
+
   div#searchResults {
     position: absolute;
     width: 100%;
@@ -52,32 +57,6 @@
     color: #333;
     border: 1px solid #111;
     border-top: none;
+    display: none
   }
 </style>
-
-<!-- JavaScript -->
-<!-- HTML -->
-<nav>
-  <div>Clonebook</div>
-
-  <div id="searchContainer">
-
-    <form>
-      <input
-        type="text"
-        placeholder="Search on CloneBook"
-        on:focus={getData}
-        on:blur={hideSearchResults} />
-    </form>
-
-    <div id="searchResults" style="display: {searchResultsDisplay}">
-      {#each ajUsers as jUser}
-        <div>{jUser.name} {jUser.lastName}</div>
-      {/each}
-    </div>
-
-  </div>
-
-</nav>
-
-<!-- Style to this component -->

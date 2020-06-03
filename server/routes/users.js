@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+// Search users
 router.get("/users", (req, res) => {
 
     try {
@@ -25,5 +26,30 @@ router.get("/users", (req, res) => {
     }
 
 })
+
+// Register
+router.post("/signup", (req, res) => {
+    res.send('signup')
+});
+
+// Login
+router.post("/login", (req, res) => {
+    res.send('login')
+});
+
+// Logout
+router.post("/logout", (req, res) => {
+    res.send('logout')
+});
+
+// Change my details 
+router.patch("/change-details", (req, res) => {
+    res.send('change details')
+});
+
+// Contacts and their statuses change
+router.get("/contacts", (req, res) => {
+    res.send('my contacts')
+});
 
 module.exports = router

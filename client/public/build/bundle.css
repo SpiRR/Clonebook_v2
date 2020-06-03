@@ -1,5 +1,7 @@
-section.svelte-1hmlqqy{position:fixed;background-color:red;width:100vw;height:10vh;bottom:0;right:0;cursor:pointer}
-nav.svelte-a24vye{display:grid;grid-template-columns:100fr 100fr;align-items:center;width:100%;height:3rem;padding:0px 10vw;background-color:#4267b2;color:white}div#searchContainer.svelte-a24vye{position:relative}div#searchResults.svelte-a24vye{position:absolute;width:100%;margin-top:-0.1rem;height:20vh;padding:0.2rem;background-color:white;color:#333;border:1px solid #111;border-top:none}
-section#contacts.svelte-1fsfdxg{position:fixed;padding-left:0.6rem;background-color:rgb(202, 193, 202);width:20vw;height:100%;top:0;right:0}div.friend.svelte-1fsfdxg{cursor:pointer}
+section.svelte-1tdsitm{position:fixed;background-color:red;width:3vw;height:6vh;bottom:39px;right:36px;cursor:pointer;border-radius:100%
+}
+nav.svelte-k877j3.svelte-k877j3{display:grid;grid-template-columns:100fr 100fr;align-items:center;width:100%;height:3rem;padding:0px 10vw;background-color:#4267b2;color:white}div#searchContainer.svelte-k877j3.svelte-k877j3{position:relative}div#searchContainer.svelte-k877j3 form input.svelte-k877j3{border-radius:25px}div#searchResults.svelte-k877j3.svelte-k877j3{position:absolute;width:100%;margin-top:-0.1rem;height:20vh;padding:0.2rem;background-color:white;color:#333;border:1px solid #111;border-top:none;display:none
+  }
+section#contacts.svelte-1fsfdxg{position:fixed;padding-left:0.6rem;background-color:rgb(202, 193, 202);width:20vw;height:100%;top:0;right:0}
 
 /*# sourceMappingURL=bundle.css.map */

@@ -1,6 +1,6 @@
 const express = require("express")
 const server = express()
-const port = 9090
+const port = 80
 
 // MongoDB
 const MongoClient = require("mongodb").MongoClient
@@ -16,7 +16,7 @@ MongoClient.connect(mongoUrl, {
         return
     }
     db = res.db('clonebook')
-    console.log("Dtabase listening...")
+    console.log("Database listening...")
 })
 
 server.use(express.urlencoded({
@@ -39,7 +39,10 @@ server.use((req, res, next) => {
 
 // Routes
 const users = require('./routes/users.js');
+const posts = require('./routes/posts.js');
+
 server.use("/", users)
+server.use("/", posts)
 
 server.listen(port, err => {
     if (err) {
