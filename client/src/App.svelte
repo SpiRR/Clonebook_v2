@@ -1,5 +1,21 @@
 <script>
-	let name = 'world';
+	import Nav from "./Nav.svelte"
+	import Right from "./Right.svelte"
+	import ChatContainer from "./ChatContainer.svelte"
 </script>
 
-<h1>Hello {name}!</h1>
+<!-- -------------------------------- -->
+
+<section>
+
+	<Nav />
+	<Right />
+	<ChatContainer />
+
+</section>
+
+<!-- -------------------------------- -->
+
+<style>
+
+</style>
