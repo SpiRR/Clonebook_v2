@@ -320,11 +320,18 @@ var app = (function () {
     	let nav;
     	let div0;
     	let t1;
-    	let div2;
+    	let div3;
     	let form;
     	let input;
     	let t2;
     	let div1;
+    	let t3;
+    	let div2;
+    	let a0;
+    	let t5;
+    	let a1;
+    	let t7;
+    	let a2;
 
     	const block = {
     		c: function create() {
@@ -332,24 +339,46 @@ var app = (function () {
     			div0 = element("div");
     			div0.textContent = "Clonebook";
     			t1 = space();
-    			div2 = element("div");
+    			div3 = element("div");
     			form = element("form");
     			input = element("input");
     			t2 = space();
     			div1 = element("div");
+    			t3 = space();
+    			div2 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "1";
+    			t5 = space();
+    			a1 = element("a");
+    			a1.textContent = "2";
+    			t7 = space();
+    			a2 = element("a");
+    			a2.textContent = "3";
     			add_location(div0, file, 9, 2, 75);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "Search on CloneBook");
-    			attr_dev(input, "class", "svelte-k877j3");
+    			attr_dev(input, "class", "svelte-jqgy9a");
     			add_location(input, file, 14, 6, 149);
     			add_location(form, file, 13, 4, 135);
     			attr_dev(div1, "id", "searchResults");
-    			attr_dev(div1, "class", "svelte-k877j3");
+    			attr_dev(div1, "class", "svelte-jqgy9a");
     			add_location(div1, file, 20, 4, 252);
-    			attr_dev(div2, "id", "searchContainer");
-    			attr_dev(div2, "class", "svelte-k877j3");
-    			add_location(div2, file, 11, 2, 101);
-    			attr_dev(nav, "class", "svelte-k877j3");
+    			attr_dev(a0, "href", "#");
+    			attr_dev(a0, "class", "svelte-jqgy9a");
+    			add_location(a0, file, 25, 6, 326);
+    			attr_dev(a1, "href", "#");
+    			attr_dev(a1, "class", "svelte-jqgy9a");
+    			add_location(a1, file, 26, 6, 353);
+    			attr_dev(a2, "href", "#");
+    			attr_dev(a2, "class", "svelte-jqgy9a");
+    			add_location(a2, file, 27, 6, 380);
+    			attr_dev(div2, "id", "icons");
+    			attr_dev(div2, "class", "svelte-jqgy9a");
+    			add_location(div2, file, 24, 4, 302);
+    			attr_dev(div3, "id", "searchContainer");
+    			attr_dev(div3, "class", "svelte-jqgy9a");
+    			add_location(div3, file, 11, 2, 101);
+    			attr_dev(nav, "class", "svelte-jqgy9a");
     			add_location(nav, file, 8, 0, 66);
     		},
     		l: function claim(nodes) {
@@ -359,11 +388,18 @@ var app = (function () {
     			insert_dev(target, nav, anchor);
     			append_dev(nav, div0);
     			append_dev(nav, t1);
-    			append_dev(nav, div2);
-    			append_dev(div2, form);
+    			append_dev(nav, div3);
+    			append_dev(div3, form);
     			append_dev(form, input);
-    			append_dev(div2, t2);
-    			append_dev(div2, div1);
+    			append_dev(div3, t2);
+    			append_dev(div3, div1);
+    			append_dev(div3, t3);
+    			append_dev(div3, div2);
+    			append_dev(div2, a0);
+    			append_dev(div2, t5);
+    			append_dev(div2, a1);
+    			append_dev(div2, t7);
+    			append_dev(div2, a2);
     		},
     		p: noop,
     		i: noop,
@@ -417,15 +453,40 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let main;
     	let section;
+    	let h3;
+    	let t1;
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let t2;
+    	let p;
 
     	const block = {
     		c: function create() {
     			main = element("main");
     			section = element("section");
+    			h3 = element("h3");
+    			h3.textContent = "Contacts";
+    			t1 = space();
+    			div = element("div");
+    			img = element("img");
+    			t2 = space();
+    			p = element("p");
+    			p.textContent = "Stine Knarkegaard Petersen";
+    			attr_dev(h3, "class", "svelte-1vk61uw");
+    			add_location(h3, file$1, 11, 4, 132);
+    			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "user");
+    			attr_dev(img, "class", "svelte-1vk61uw");
+    			add_location(img, file$1, 14, 8, 190);
+    			attr_dev(p, "class", "svelte-1vk61uw");
+    			add_location(p, file$1, 15, 8, 223);
+    			attr_dev(div, "class", "friend svelte-1vk61uw");
+    			add_location(div, file$1, 13, 7, 160);
     			attr_dev(section, "id", "contacts");
-    			attr_dev(section, "class", "svelte-1fsfdxg");
-    			add_location(section, file$1, 10, 1, 76);
-    			add_location(main, file$1, 8, 0, 65);
+    			attr_dev(section, "class", "svelte-1vk61uw");
+    			add_location(section, file$1, 10, 1, 103);
+    			add_location(main, file$1, 8, 0, 92);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -433,6 +494,12 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
     			append_dev(main, section);
+    			append_dev(section, h3);
+    			append_dev(section, t1);
+    			append_dev(section, div);
+    			append_dev(div, img);
+    			append_dev(div, t2);
+    			append_dev(div, p);
     		},
     		p: noop,
     		i: noop,
@@ -453,7 +520,8 @@ var app = (function () {
     	return block;
     }
 
-    function instance$1($$self, $$props) {
+    function instance$1($$self, $$props, $$invalidate) {
+    	let src = "./images/me.jpg";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -462,7 +530,17 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Right", $$slots, []);
-    	return [];
+    	$$self.$capture_state = () => ({ src });
+
+    	$$self.$inject_state = $$props => {
+    		if ("src" in $$props) $$invalidate(0, src = $$props.src);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [src];
     }
 
     class Right extends SvelteComponentDev {
@@ -489,7 +567,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			section = element("section");
-    			attr_dev(section, "class", "svelte-1tdsitm");
+    			attr_dev(section, "class", "svelte-1w8q08t");
     			add_location(section, file$2, 7, 0, 80);
     		},
     		l: function claim(nodes) {
@@ -543,59 +621,207 @@ var app = (function () {
     	}
     }
 
-    /* src\App.svelte generated by Svelte v3.23.0 */
-    const file$3 = "src\\App.svelte";
+    /* src\Left.svelte generated by Svelte v3.23.0 */
+
+    const file$3 = "src\\Left.svelte";
 
     function create_fragment$3(ctx) {
-    	let section;
-    	let t0;
+    	let main;
+    	let section0;
+    	let h30;
     	let t1;
-    	let current;
-    	const nav = new Nav({ $$inline: true });
-    	const right = new Right({ $$inline: true });
-    	const chatcontainer = new ChatContainer({ $$inline: true });
+    	let div0;
+    	let img0;
+    	let img0_src_value;
+    	let t2;
+    	let h40;
+    	let t4;
+    	let div1;
+    	let img1;
+    	let img1_src_value;
+    	let t5;
+    	let h41;
+    	let t7;
+    	let div2;
+    	let img2;
+    	let img2_src_value;
+    	let t8;
+    	let h42;
+    	let t10;
+    	let section1;
+    	let h31;
+    	let t12;
+    	let div3;
+    	let img3;
+    	let img3_src_value;
+    	let t13;
+    	let h43;
+    	let t15;
+    	let div4;
+    	let img4;
+    	let img4_src_value;
+    	let t16;
+    	let h44;
+    	let t18;
+    	let div5;
+    	let img5;
+    	let img5_src_value;
+    	let t19;
+    	let h45;
 
     	const block = {
     		c: function create() {
-    			section = element("section");
-    			create_component(nav.$$.fragment);
-    			t0 = space();
-    			create_component(right.$$.fragment);
+    			main = element("main");
+    			section0 = element("section");
+    			h30 = element("h3");
+    			h30.textContent = "Sites";
     			t1 = space();
-    			create_component(chatcontainer.$$.fragment);
-    			add_location(section, file$3, 8, 0, 183);
+    			div0 = element("div");
+    			img0 = element("img");
+    			t2 = space();
+    			h40 = element("h4");
+    			h40.textContent = "General";
+    			t4 = space();
+    			div1 = element("div");
+    			img1 = element("img");
+    			t5 = space();
+    			h41 = element("h4");
+    			h41.textContent = "Goverment";
+    			t7 = space();
+    			div2 = element("div");
+    			img2 = element("img");
+    			t8 = space();
+    			h42 = element("h4");
+    			h42.textContent = "COVID-19: Information Center";
+    			t10 = space();
+    			section1 = element("section");
+    			h31 = element("h3");
+    			h31.textContent = "Groups";
+    			t12 = space();
+    			div3 = element("div");
+    			img3 = element("img");
+    			t13 = space();
+    			h43 = element("h4");
+    			h43.textContent = "Node.js Developers";
+    			t15 = space();
+    			div4 = element("div");
+    			img4 = element("img");
+    			t16 = space();
+    			h44 = element("h4");
+    			h44.textContent = "Web Development";
+    			t18 = space();
+    			div5 = element("div");
+    			img5 = element("img");
+    			t19 = space();
+    			h45 = element("h4");
+    			h45.textContent = "Computer Science";
+    			attr_dev(h30, "class", "svelte-tad157");
+    			add_location(h30, file$3, 9, 7, 99);
+    			if (img0.src !== (img0_src_value = "./images/point.svg")) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "point");
+    			attr_dev(img0, "class", "svelte-tad157");
+    			add_location(img0, file$3, 12, 8, 140);
+    			attr_dev(h40, "class", "svelte-tad157");
+    			add_location(h40, file$3, 13, 8, 192);
+    			attr_dev(div0, "class", "svelte-tad157");
+    			add_location(div0, file$3, 11, 8, 125);
+    			if (img1.src !== (img1_src_value = "./images/building.svg")) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "point");
+    			attr_dev(img1, "class", "svelte-tad157");
+    			add_location(img1, file$3, 17, 8, 251);
+    			attr_dev(h41, "class", "svelte-tad157");
+    			add_location(h41, file$3, 18, 8, 306);
+    			attr_dev(div1, "class", "svelte-tad157");
+    			add_location(div1, file$3, 16, 8, 236);
+    			if (img2.src !== (img2_src_value = "./images/virus.svg")) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "alt", "point");
+    			attr_dev(img2, "class", "svelte-tad157");
+    			add_location(img2, file$3, 22, 8, 367);
+    			attr_dev(h42, "class", "svelte-tad157");
+    			add_location(h42, file$3, 23, 8, 419);
+    			attr_dev(div2, "class", "svelte-tad157");
+    			add_location(div2, file$3, 21, 8, 352);
+    			attr_dev(section0, "id", "sites");
+    			attr_dev(section0, "class", "svelte-tad157");
+    			add_location(section0, file$3, 8, 1, 70);
+    			attr_dev(h31, "class", "svelte-tad157");
+    			add_location(h31, file$3, 29, 7, 528);
+    			if (img3.src !== (img3_src_value = "./images/nodejs.jpg")) attr_dev(img3, "src", img3_src_value);
+    			attr_dev(img3, "alt", "point");
+    			attr_dev(img3, "class", "svelte-tad157");
+    			add_location(img3, file$3, 32, 8, 570);
+    			attr_dev(h43, "class", "svelte-tad157");
+    			add_location(h43, file$3, 33, 8, 623);
+    			attr_dev(div3, "class", "svelte-tad157");
+    			add_location(div3, file$3, 31, 8, 555);
+    			if (img4.src !== (img4_src_value = "./images/webdev.jpg")) attr_dev(img4, "src", img4_src_value);
+    			attr_dev(img4, "alt", "point");
+    			attr_dev(img4, "class", "svelte-tad157");
+    			add_location(img4, file$3, 37, 8, 693);
+    			attr_dev(h44, "class", "svelte-tad157");
+    			add_location(h44, file$3, 38, 8, 746);
+    			attr_dev(div4, "class", "svelte-tad157");
+    			add_location(div4, file$3, 36, 8, 678);
+    			if (img5.src !== (img5_src_value = "./images/dat.jpg")) attr_dev(img5, "src", img5_src_value);
+    			attr_dev(img5, "alt", "point");
+    			attr_dev(img5, "class", "svelte-tad157");
+    			add_location(img5, file$3, 42, 8, 813);
+    			attr_dev(h45, "class", "svelte-tad157");
+    			add_location(h45, file$3, 43, 8, 863);
+    			attr_dev(div5, "class", "svelte-tad157");
+    			add_location(div5, file$3, 41, 8, 798);
+    			attr_dev(section1, "id", "groups");
+    			attr_dev(section1, "class", "svelte-tad157");
+    			add_location(section1, file$3, 28, 4, 498);
+    			attr_dev(main, "class", "svelte-tad157");
+    			add_location(main, file$3, 6, 0, 59);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, section, anchor);
-    			mount_component(nav, section, null);
-    			append_dev(section, t0);
-    			mount_component(right, section, null);
-    			append_dev(section, t1);
-    			mount_component(chatcontainer, section, null);
-    			current = true;
+    			insert_dev(target, main, anchor);
+    			append_dev(main, section0);
+    			append_dev(section0, h30);
+    			append_dev(section0, t1);
+    			append_dev(section0, div0);
+    			append_dev(div0, img0);
+    			append_dev(div0, t2);
+    			append_dev(div0, h40);
+    			append_dev(section0, t4);
+    			append_dev(section0, div1);
+    			append_dev(div1, img1);
+    			append_dev(div1, t5);
+    			append_dev(div1, h41);
+    			append_dev(section0, t7);
+    			append_dev(section0, div2);
+    			append_dev(div2, img2);
+    			append_dev(div2, t8);
+    			append_dev(div2, h42);
+    			append_dev(main, t10);
+    			append_dev(main, section1);
+    			append_dev(section1, h31);
+    			append_dev(section1, t12);
+    			append_dev(section1, div3);
+    			append_dev(div3, img3);
+    			append_dev(div3, t13);
+    			append_dev(div3, h43);
+    			append_dev(section1, t15);
+    			append_dev(section1, div4);
+    			append_dev(div4, img4);
+    			append_dev(div4, t16);
+    			append_dev(div4, h44);
+    			append_dev(section1, t18);
+    			append_dev(section1, div5);
+    			append_dev(div5, img5);
+    			append_dev(div5, t19);
+    			append_dev(div5, h45);
     		},
     		p: noop,
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(nav.$$.fragment, local);
-    			transition_in(right.$$.fragment, local);
-    			transition_in(chatcontainer.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(nav.$$.fragment, local);
-    			transition_out(right.$$.fragment, local);
-    			transition_out(chatcontainer.$$.fragment, local);
-    			current = false;
-    		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(section);
-    			destroy_component(nav);
-    			destroy_component(right);
-    			destroy_component(chatcontainer);
+    			if (detaching) detach_dev(main);
     		}
     	};
 
@@ -610,7 +836,618 @@ var app = (function () {
     	return block;
     }
 
-    function instance$3($$self, $$props, $$invalidate) {
+    function instance$3($$self, $$props) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Left> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Left", $$slots, []);
+    	return [];
+    }
+
+    class Left extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Left",
+    			options,
+    			id: create_fragment$3.name
+    		});
+    	}
+    }
+
+    /* src\Posts.svelte generated by Svelte v3.23.0 */
+
+    const file$4 = "src\\Posts.svelte";
+
+    function create_fragment$4(ctx) {
+    	let section;
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let form;
+    	let input;
+    	let t1;
+    	let button0;
+    	let t3;
+    	let button1;
+    	let t5;
+    	let button2;
+    	let t7;
+    	let button3;
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			div = element("div");
+    			img = element("img");
+    			t0 = space();
+    			form = element("form");
+    			input = element("input");
+    			t1 = space();
+    			button0 = element("button");
+    			button0.textContent = "Post";
+    			t3 = space();
+    			button1 = element("button");
+    			button1.textContent = "Photo / Video";
+    			t5 = space();
+    			button2 = element("button");
+    			button2.textContent = "Tag a friend";
+    			t7 = space();
+    			button3 = element("button");
+    			button3.textContent = "Something";
+    			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "user");
+    			attr_dev(img, "class", "svelte-s2ux91");
+    			add_location(img, file$4, 11, 4, 153);
+    			attr_dev(input, "placeholder", "What's on your mind?");
+    			attr_dev(input, "class", "svelte-s2ux91");
+    			add_location(input, file$4, 14, 12, 219);
+    			attr_dev(button0, "class", "svelte-s2ux91");
+    			add_location(button0, file$4, 17, 12, 308);
+    			attr_dev(form, "action", "");
+    			add_location(form, file$4, 13, 8, 189);
+    			attr_dev(button1, "class", "svelte-s2ux91");
+    			add_location(button1, file$4, 20, 12, 362);
+    			attr_dev(button2, "class", "svelte-s2ux91");
+    			add_location(button2, file$4, 21, 12, 406);
+    			attr_dev(button3, "class", "svelte-s2ux91");
+    			add_location(button3, file$4, 22, 12, 449);
+    			attr_dev(div, "id", "post-container");
+    			attr_dev(div, "class", "svelte-s2ux91");
+    			add_location(div, file$4, 9, 4, 116);
+    			add_location(section, file$4, 8, 0, 101);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			append_dev(section, div);
+    			append_dev(div, img);
+    			append_dev(div, t0);
+    			append_dev(div, form);
+    			append_dev(form, input);
+    			append_dev(form, t1);
+    			append_dev(form, button0);
+    			append_dev(div, t3);
+    			append_dev(div, button1);
+    			append_dev(div, t5);
+    			append_dev(div, button2);
+    			append_dev(div, t7);
+    			append_dev(div, button3);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$4.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let src = "./images/me.jpg";
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Posts> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Posts", $$slots, []);
+    	$$self.$capture_state = () => ({ src });
+
+    	$$self.$inject_state = $$props => {
+    		if ("src" in $$props) $$invalidate(0, src = $$props.src);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [src];
+    }
+
+    class Posts extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Posts",
+    			options,
+    			id: create_fragment$4.name
+    		});
+    	}
+    }
+
+    /* src\Userposts.svelte generated by Svelte v3.23.0 */
+
+    const file$5 = "src\\Userposts.svelte";
+
+    function create_fragment$5(ctx) {
+    	let section;
+    	let div5;
+    	let div1;
+    	let img0;
+    	let img0_src_value;
+    	let t0;
+    	let p0;
+    	let t2;
+    	let div0;
+    	let t4;
+    	let div2;
+    	let button0;
+    	let t6;
+    	let button1;
+    	let t8;
+    	let div3;
+    	let img1;
+    	let img1_src_value;
+    	let t9;
+    	let p1;
+    	let t11;
+    	let div4;
+    	let img2;
+    	let img2_src_value;
+    	let t12;
+    	let input;
+    	let t13;
+    	let button2;
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			div5 = element("div");
+    			div1 = element("div");
+    			img0 = element("img");
+    			t0 = space();
+    			p0 = element("p");
+    			p0.textContent = "User name";
+    			t2 = space();
+    			div0 = element("div");
+    			div0.textContent = "Report writing before I'm gonna throw my code out the window for being a bitch 😂👌\r\n            #webdevelopment #webdeveloper  #reactjs #nodejs #bachelordegree";
+    			t4 = space();
+    			div2 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "Like";
+    			t6 = space();
+    			button1 = element("button");
+    			button1.textContent = "Comment";
+    			t8 = space();
+    			div3 = element("div");
+    			img1 = element("img");
+    			t9 = space();
+    			p1 = element("p");
+    			p1.textContent = "I feel you!!";
+    			t11 = space();
+    			div4 = element("div");
+    			img2 = element("img");
+    			t12 = space();
+    			input = element("input");
+    			t13 = space();
+    			button2 = element("button");
+    			button2.textContent = ">";
+    			if (img0.src !== (img0_src_value = /*src*/ ctx[0])) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", "user");
+    			attr_dev(img0, "class", "svelte-ci1ur9");
+    			add_location(img0, file$5, 12, 12, 183);
+    			attr_dev(p0, "class", "svelte-ci1ur9");
+    			add_location(p0, file$5, 13, 12, 221);
+    			attr_dev(div0, "id", "post");
+    			attr_dev(div0, "class", "svelte-ci1ur9");
+    			add_location(div0, file$5, 14, 12, 251);
+    			attr_dev(div1, "id", "mypost");
+    			attr_dev(div1, "class", "svelte-ci1ur9");
+    			add_location(div1, file$5, 11, 8, 152);
+    			attr_dev(button0, "class", "svelte-ci1ur9");
+    			add_location(button0, file$5, 20, 12, 503);
+    			attr_dev(button1, "class", "svelte-ci1ur9");
+    			add_location(button1, file$5, 21, 12, 538);
+    			attr_dev(div2, "id", "like");
+    			attr_dev(div2, "class", "svelte-ci1ur9");
+    			add_location(div2, file$5, 19, 8, 474);
+    			if (img1.src !== (img1_src_value = /*src*/ ctx[0])) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "user");
+    			attr_dev(img1, "class", "svelte-ci1ur9");
+    			add_location(img1, file$5, 25, 8, 617);
+    			attr_dev(p1, "class", "svelte-ci1ur9");
+    			add_location(p1, file$5, 26, 8, 651);
+    			attr_dev(div3, "id", "comments");
+    			attr_dev(div3, "class", "svelte-ci1ur9");
+    			add_location(div3, file$5, 24, 6, 588);
+    			if (img2.src !== (img2_src_value = /*src*/ ctx[0])) attr_dev(img2, "src", img2_src_value);
+    			attr_dev(img2, "alt", "user");
+    			attr_dev(img2, "class", "svelte-ci1ur9");
+    			add_location(img2, file$5, 30, 12, 732);
+    			attr_dev(input, "placeholder", "Your comment....");
+    			attr_dev(input, "class", "svelte-ci1ur9");
+    			add_location(input, file$5, 31, 12, 770);
+    			attr_dev(button2, "class", "svelte-ci1ur9");
+    			add_location(button2, file$5, 33, 12, 837);
+    			attr_dev(div4, "id", "comment-post");
+    			attr_dev(div4, "class", "svelte-ci1ur9");
+    			add_location(div4, file$5, 29, 7, 695);
+    			attr_dev(div5, "class", "user-posts svelte-ci1ur9");
+    			add_location(div5, file$5, 10, 4, 118);
+    			add_location(section, file$5, 8, 0, 101);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			append_dev(section, div5);
+    			append_dev(div5, div1);
+    			append_dev(div1, img0);
+    			append_dev(div1, t0);
+    			append_dev(div1, p0);
+    			append_dev(div1, t2);
+    			append_dev(div1, div0);
+    			append_dev(div5, t4);
+    			append_dev(div5, div2);
+    			append_dev(div2, button0);
+    			append_dev(div2, t6);
+    			append_dev(div2, button1);
+    			append_dev(div5, t8);
+    			append_dev(div5, div3);
+    			append_dev(div3, img1);
+    			append_dev(div3, t9);
+    			append_dev(div3, p1);
+    			append_dev(div5, t11);
+    			append_dev(div5, div4);
+    			append_dev(div4, img2);
+    			append_dev(div4, t12);
+    			append_dev(div4, input);
+    			append_dev(div4, t13);
+    			append_dev(div4, button2);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$5.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$5($$self, $$props, $$invalidate) {
+    	let src = "./images/me.jpg";
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Userposts> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("Userposts", $$slots, []);
+    	$$self.$capture_state = () => ({ src });
+
+    	$$self.$inject_state = $$props => {
+    		if ("src" in $$props) $$invalidate(0, src = $$props.src);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [src];
+    }
+
+    class Userposts extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Userposts",
+    			options,
+    			id: create_fragment$5.name
+    		});
+    	}
+    }
+
+    /* src\OpenChatContainer.svelte generated by Svelte v3.23.0 */
+
+    const file$6 = "src\\OpenChatContainer.svelte";
+
+    function create_fragment$6(ctx) {
+    	let section;
+    	let div3;
+    	let div0;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let p;
+    	let t2;
+    	let a0;
+    	let t4;
+    	let a1;
+    	let t6;
+    	let div1;
+    	let t7;
+    	let div2;
+    	let input;
+    	let t8;
+    	let button;
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			div3 = element("div");
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			p = element("p");
+    			p.textContent = "Friend Name";
+    			t2 = space();
+    			a0 = element("a");
+    			a0.textContent = "X";
+    			t4 = space();
+    			a1 = element("a");
+    			a1.textContent = "-";
+    			t6 = space();
+    			div1 = element("div");
+    			t7 = space();
+    			div2 = element("div");
+    			input = element("input");
+    			t8 = space();
+    			button = element("button");
+    			button.textContent = ">";
+    			if (img.src !== (img_src_value = src)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "user");
+    			attr_dev(img, "class", "svelte-yvlupx");
+    			add_location(img, file$6, 13, 8, 189);
+    			attr_dev(p, "class", "svelte-yvlupx");
+    			add_location(p, file$6, 14, 8, 222);
+    			attr_dev(a0, "class", "svelte-yvlupx");
+    			add_location(a0, file$6, 15, 8, 250);
+    			attr_dev(a1, "class", "svelte-yvlupx");
+    			add_location(a1, file$6, 16, 8, 268);
+    			attr_dev(div0, "id", "top-container");
+    			attr_dev(div0, "class", "svelte-yvlupx");
+    			add_location(div0, file$6, 12, 4, 155);
+    			attr_dev(div1, "id", "chat");
+    			attr_dev(div1, "class", "svelte-yvlupx");
+    			add_location(div1, file$6, 20, 4, 298);
+    			attr_dev(input, "placeholder", "Aa");
+    			attr_dev(input, "type", "text");
+    			attr_dev(input, "class", "svelte-yvlupx");
+    			add_location(input, file$6, 25, 8, 369);
+    			attr_dev(button, "class", "svelte-yvlupx");
+    			add_location(button, file$6, 28, 8, 434);
+    			attr_dev(div2, "id", "bot-container");
+    			attr_dev(div2, "class", "svelte-yvlupx");
+    			add_location(div2, file$6, 24, 4, 335);
+    			attr_dev(div3, "id", "chat-container");
+    			add_location(div3, file$6, 11, 0, 124);
+    			attr_dev(section, "class", "svelte-yvlupx");
+    			add_location(section, file$6, 9, 0, 111);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			append_dev(section, div3);
+    			append_dev(div3, div0);
+    			append_dev(div0, img);
+    			append_dev(div0, t0);
+    			append_dev(div0, p);
+    			append_dev(div0, t2);
+    			append_dev(div0, a0);
+    			append_dev(div0, t4);
+    			append_dev(div0, a1);
+    			append_dev(div3, t6);
+    			append_dev(div3, div1);
+    			append_dev(div3, t7);
+    			append_dev(div3, div2);
+    			append_dev(div2, input);
+    			append_dev(div2, t8);
+    			append_dev(div2, button);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$6.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    let src = "./images/me.jpg";
+
+    function instance$6($$self, $$props, $$invalidate) {
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<OpenChatContainer> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("OpenChatContainer", $$slots, []);
+    	$$self.$capture_state = () => ({ src });
+    	return [];
+    }
+
+    class OpenChatContainer extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "OpenChatContainer",
+    			options,
+    			id: create_fragment$6.name
+    		});
+    	}
+    }
+
+    /* src\App.svelte generated by Svelte v3.23.0 */
+    const file$7 = "src\\App.svelte";
+
+    function create_fragment$7(ctx) {
+    	let section;
+    	let t0;
+    	let t1;
+    	let t2;
+    	let t3;
+    	let t4;
+    	let t5;
+    	let current;
+    	const nav = new Nav({ $$inline: true });
+    	const left = new Left({ $$inline: true });
+    	const posts = new Posts({ $$inline: true });
+    	const right = new Right({ $$inline: true });
+    	const chatcontainer = new ChatContainer({ $$inline: true });
+    	const openchatcontainer = new OpenChatContainer({ $$inline: true });
+    	const userposts = new Userposts({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			section = element("section");
+    			create_component(nav.$$.fragment);
+    			t0 = space();
+    			create_component(left.$$.fragment);
+    			t1 = space();
+    			create_component(posts.$$.fragment);
+    			t2 = space();
+    			create_component(right.$$.fragment);
+    			t3 = space();
+    			create_component(chatcontainer.$$.fragment);
+    			t4 = space();
+    			create_component(openchatcontainer.$$.fragment);
+    			t5 = space();
+    			create_component(userposts.$$.fragment);
+    			add_location(section, file$7, 12, 0, 357);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, section, anchor);
+    			mount_component(nav, section, null);
+    			append_dev(section, t0);
+    			mount_component(left, section, null);
+    			append_dev(section, t1);
+    			mount_component(posts, section, null);
+    			append_dev(section, t2);
+    			mount_component(right, section, null);
+    			append_dev(section, t3);
+    			mount_component(chatcontainer, section, null);
+    			append_dev(section, t4);
+    			mount_component(openchatcontainer, section, null);
+    			append_dev(section, t5);
+    			mount_component(userposts, section, null);
+    			current = true;
+    		},
+    		p: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(nav.$$.fragment, local);
+    			transition_in(left.$$.fragment, local);
+    			transition_in(posts.$$.fragment, local);
+    			transition_in(right.$$.fragment, local);
+    			transition_in(chatcontainer.$$.fragment, local);
+    			transition_in(openchatcontainer.$$.fragment, local);
+    			transition_in(userposts.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(nav.$$.fragment, local);
+    			transition_out(left.$$.fragment, local);
+    			transition_out(posts.$$.fragment, local);
+    			transition_out(right.$$.fragment, local);
+    			transition_out(chatcontainer.$$.fragment, local);
+    			transition_out(openchatcontainer.$$.fragment, local);
+    			transition_out(userposts.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(section);
+    			destroy_component(nav);
+    			destroy_component(left);
+    			destroy_component(posts);
+    			destroy_component(right);
+    			destroy_component(chatcontainer);
+    			destroy_component(openchatcontainer);
+    			destroy_component(userposts);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$7.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -619,20 +1456,30 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	$$self.$capture_state = () => ({ Nav, Right, ChatContainer });
+
+    	$$self.$capture_state = () => ({
+    		Nav,
+    		Right,
+    		ChatContainer,
+    		Left,
+    		Posts,
+    		UserPosts: Userposts,
+    		OpenChatContainer
+    	});
+
     	return [];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$3.name
+    			id: create_fragment$7.name
     		});
     	}
     }

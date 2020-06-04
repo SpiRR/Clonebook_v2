@@ -8,14 +8,16 @@
 <section>
 
 
+
 </section>
 
 
 <!-- Style to this component -->
 <style> 
+
 section {
   position: fixed;
-  background-color: red;
+  background-color: white;
   width: 3vw;
   height: 6vh;
   bottom: 39px;
