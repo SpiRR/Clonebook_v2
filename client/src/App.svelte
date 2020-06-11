@@ -13,15 +13,15 @@
 
 <section>
 
-	<!-- <Nav />
+	<Nav />
 	<Left />
 	<Posts />
 	<Right />
 	<ChatContainer />
 	<OpenChatContainer />
-	<UserPosts /> -->
+	<UserPosts />
 
-	<Home />
+	<!-- <Home /> -->
 
 </section>
 

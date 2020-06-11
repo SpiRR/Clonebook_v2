@@ -58,7 +58,7 @@ div#top-container a {
     color: white;
     display: inline-block;
     top: 20px;
-    float: right;
+    /* float: right; */
     padding: 5px;
     margin-right: 5px;
 }

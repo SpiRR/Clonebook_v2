@@ -2,8 +2,8 @@ const express = require("express")
 const server = express()
 const port = 80
 const InitiateMongoServer = require("./config/db");
-const users = require("./routes/users")
-const port = 80
+const users = require("./routes/users.js")
+const posts = require('./routes/posts.js');
 
 InitiateMongoServer();
 
@@ -18,8 +18,6 @@ server.get("/", (req, res) => {
     res.json({ message: "API Working" });
 });
 
-server.use("/users", users);
-
 // Cors
 server.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
@@ -33,9 +31,6 @@ server.use((req, res, next) => {
 });
 
 // Routes
-const users = require('./routes/users.js');
-const posts = require('./routes/posts.js');
-
 server.use("/", users)
 server.use("/", posts)
 
