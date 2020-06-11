@@ -1,4 +1,5 @@
 <script>
+	import Home from './Homepage.svelte'
 	import Nav from "./Nav.svelte"
 	import Right from "./Right.svelte"
 	import ChatContainer from "./ChatContainer.svelte"
@@ -19,6 +20,8 @@
 	<ChatContainer />
 	<OpenChatContainer />
 	<UserPosts />
+
+	<!-- <Home /> -->
 
 </section>
 
