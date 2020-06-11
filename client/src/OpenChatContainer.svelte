@@ -13,8 +13,8 @@ let src = "./images/me.jpg"
     <div id="top-container">
         <img {src} alt="user"/>
         <p>Friend Name</p>
-        <a href="/">X</a>
-        <a href="/">-</a>
+        <a>X</a>
+        <a>-</a>
     </div>
 
 
