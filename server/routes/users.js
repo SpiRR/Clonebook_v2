@@ -119,7 +119,7 @@ router.post("/signup" ,[
 
 // Login
 router.post("/login",  (req, res) => {
-
+    console.log('login')
 });
 
 // Logout
@@ -136,7 +136,5 @@ router.patch("/change-details", (req, res) => {
 router.get("/contacts", (req, res) => {
     res.send('my contacts')
 });
-
-
 
 module.exports = router
