@@ -1,29 +1,24 @@
 const express = require("express")
 const server = express()
 const port = 80
+const InitiateMongoServer = require("./config/db");
+const users = require("./routes/users")
+const port = 80
 
-// MongoDB
-const MongoClient = require("mongodb").MongoClient
-const mongoUrl = "mongodb://localhost:27017"
+InitiateMongoServer();
 
-let db = ""
-
-MongoClient.connect(mongoUrl, {
-    useUnifiedTolopogy: true
-}, (err, res) => {
-    if (err) {
-        console.log('DB error')
-        return
-    }
-    db = res.db('clonebook')
-    console.log("Database listening...")
-})
 
 server.use(express.urlencoded({
     extended: false
 }));
 server.use(express.json());
 server.use(express.Router());
+
+server.get("/", (req, res) => {
+    res.json({ message: "API Working" });
+});
+
+server.use("/users", users);
 
 // Cors
 server.use((req, res, next) => {

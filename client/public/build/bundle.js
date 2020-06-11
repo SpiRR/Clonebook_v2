@@ -1380,7 +1380,7 @@ var app = (function () {
     			create_component(openchatcontainer.$$.fragment);
     			t5 = space();
     			create_component(userposts.$$.fragment);
-    			add_location(section, file$7, 12, 0, 357);
+    			add_location(section, file$7, 12, 0, 369);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
