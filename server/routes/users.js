@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const http = require('http');
-const formidable = require("formidable")
 const {
     check,
     validationResult
@@ -11,28 +9,21 @@ const multer = require('multer');
 const upload = multer({
     dest: 'images/'
 })
-const fs = require("fs");
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 const jwt = require('jsonwebtoken')
-const jwtKey = 'Bwaah'
 const expiresIn = 10000
 
-const User = require("../models/User.js")
+const User = require("../models/User.js");
+const isAuthendicated = require("../middleware/isAuthenticated.js");
 
-//Search users 
-router.get("/search", (req, res) => {
-
+//Search users (NEED TO BE CONVERTED)
+router.get("/search", async (req, res) => {
     try {
-        // Mongo query 
-        usersCollection.find({}).toArray((err, ajUsers) => {
-            if (err) {
-                res.status(500).send([]) // edited
-                return
-            }
-            // Returning a response in ajUsers with all users in the database
-            return res.send(ajUsers)
-        })
+
+        let users = await User.findOne({
+            email
+        });
+
+        return users;
 
     } catch (error) {
         // Should it be here? TODO: Test this
@@ -44,7 +35,7 @@ router.get("/search", (req, res) => {
         });
     }
 
-})
+});
 
 
 // Register
@@ -99,32 +90,6 @@ router.post("/signup", [
         user.password = await bcrypt.hash(password, salt);
 
         await user.save();
-        // user.save(function (err, user) {
-        //     if (err) {
-        //         console.error(err);
-        //         return
-        //     }
-        //     console.log(user.email, 'Saved')
-
-        //     return res.send(user)
-        // })
-
-
-        // const payload = {
-        //     user: {
-        //         id: user.id
-        //     }
-        // }
-
-        // jwt.sign( payload, "randomString", {
-        //     expiresIn
-        // }, (err, token) => {
-        //         if (err) throw err;
-        //         res.status(200).json({
-        //             token
-        //         });
-        //     }
-        // );
 
     } catch (err) {
         console.log(err.message);
@@ -177,7 +142,7 @@ router.post("/login", [
         };
 
         jwt.sign(
-            payload, "somestring", {expiresIn}, (err, token) => {
+            payload, "randomString", {expiresIn}, (err, token) => {
                 if(err) throw err;
                 res.status(200).json({
                     token: token
@@ -192,6 +157,15 @@ router.post("/login", [
         });
     }
 
+});
+
+router.get("/profile", isAuthendicated ,async(req, res) => {
+    try {
+        const user = await User.findById(req.user.id);
+        res.json(user);
+      } catch (e) {
+        res.send({ message: "Error in Fetching user" });
+      }
 });
 
 // Logout

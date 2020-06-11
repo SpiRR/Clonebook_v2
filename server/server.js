@@ -5,15 +5,15 @@ const InitiateMongoServer = require("./config/db");
 const users = require("./routes/users.js")
 const posts = require('./routes/posts.js');
 
+// Initiating Mongo Server
 InitiateMongoServer();
 
 
-server.use(express.urlencoded({
-    extended: false
-}));
+server.use(express.urlencoded({extended: false}));
 server.use(express.json());
 server.use(express.Router());
 
+// API test endpoint
 server.get("/", (req, res) => {
     res.json({ message: "API Working" });
 });
