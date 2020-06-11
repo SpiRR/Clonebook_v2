@@ -12,4 +12,8 @@ router.post("/liked-post", (req, res) => {
     res.send('post liked')
 });
 
+router.get("/get-posts", (req, res) => {
+    res.send('loaded posts')
+})
+
 module.exports = router
