@@ -138,6 +138,7 @@ div#group-posts {
     margin-bottom: 50px;
     border-radius: 25px;
     border: 1px solid lightgray;
+    box-shadow: 2px 5px lightgray;
     padding: 10px;
 }
 

@@ -38,29 +38,20 @@ const currentPage = (nameOfPage) => {
       <i class="fas fa-users"></i>
     </div>  
 
+    <div on:click={() => { currentPage('videos') }}>
+      <i class="fas fa-video"></i>
+    </div>  
+
     <div on:click={() => { currentPage('marketplace') }}>
       <i class="fas fa-shopping-basket"></i>
-    </div>    
+    </div> 
+
 	</div>
 
 	<div class="right">
 		<div class="profilelink" on:click={() => { currentPage('profilepage') }}>
 			<img {src} alt="user"/> 
       <p>Stine</p>        
-		</div>
-		
-		<div>
-			<i class="fas fa-plus-circle"></i>
-		</div>
-
-		<div>
-			<i class="far fa-comment-alt"></i>
-			<div class="chat-counter">1</div>       
-		</div>
-
-		<div>
-			<i class="far fa-bell"></i> 
-			<div class="notification-counter">5</div>         
 		</div>
 
 	</div>
@@ -121,11 +112,12 @@ nav .left .logo{
 
 nav div.middle{
   display: grid;
-  grid-template-columns: 5fr 5fr 5fr;
+  grid-template-columns: 5fr 5fr 5fr 5fr;
   justify-items: center;
   grid-gap: 1rem;
   align-items: center;
   position: relative;
+  left: -164px;
 }
 
 nav div.middle > div{
@@ -133,14 +125,29 @@ nav div.middle > div{
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-
+cursor: pointer;
   position: relative;
   width: 100%;
   height: 100%;
 }
+
+nav .middle div:active {
+  border-bottom: 2px solid #1da1f2;
+}
+
+nav .middle div:focus {
+  color: lightskyblue;
+}
+
+
+nav .middle div:hover {
+  background-color: #e7e7e7;
+  color: lightskyblue;
+}
+
 nav div.right{
   display: grid;
-  grid-template-columns: 8fr 8fr 1fr 1fr 8fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 2rem;
   align-items: center;
@@ -156,10 +163,16 @@ nav div.right .profilelink {
   font-size: 17px;
   grid-template-columns: 2fr 5fr;
   grid-gap: 1rem;
+  cursor: pointer;
 }
 
 nav div.right .profilelink {
-  top: 5px;
+  position: relative;
+}
+
+nav div.right .profilelink p{
+  top: 6px;
+  right: 10px;
   position: relative;
 }
 
@@ -170,38 +183,7 @@ nav div.right > div:last-child{
   text-align: right;
 }
 
-nav div.chat-counter{
-  display: grid;
-  justify-content: center;
-  align-content: center;
 
-  position: absolute;
-  top: -0.6rem;
-  right: -1rem;
-
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: white;
-  background: #f02849;
-  border-radius: 50%;
-}
-nav div.notification-counter{
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  top: -0.6rem;
-  right: -1rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: white;
-  background: #f02849;
-  border-radius: 50%;
-}
 
   /* div#searchResults {
     position: absolute;

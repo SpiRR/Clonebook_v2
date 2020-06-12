@@ -59,6 +59,7 @@ div.user-posts {
     border-radius: 20px;
     padding: 10px;
     border: 1px solid lightgray;
+    box-shadow: 2px 5px lightgray;
 }
 
 div.user-posts p {

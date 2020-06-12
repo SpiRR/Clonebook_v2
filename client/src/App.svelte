@@ -6,6 +6,7 @@
   import Marketplace from './nav/Marketplace.svelte'
 
   import Profilepage from './Nav/Profilepage.svelte'
+  import Videos from './Nav/videos.svelte'
 
   import Right from './Right.svelte'
   import Left from './Left.svelte'
@@ -29,6 +30,7 @@
   <Home />
   <Groups />
   <Marketplace />
+  <Videos />
 
   <Profilepage />
   <ChatContainer />

@@ -9,8 +9,6 @@ let src = "./images/me.jpg"
 
 <section style="display: {$showPage.pageShown == 'profilepage' ? "block" : "none"}">
 
-<div class="cover">*insert cover image here*</div>
-
 <div class="profileinfo">
     <img {src} alt="user"/> 
     <h3>Stine Knarkegaard Andersen</h3>
@@ -24,10 +22,11 @@ let src = "./images/me.jpg"
 <style>
 
 section {
+    background-image: url("../images/bg.jpg");
     position: relative;
     top: 150px;
     width: 55vw;
-    height: 14vh;
+    height: 28vh;
     background-color: #FAFAFA;
     margin-left: auto;
     margin-right: auto;
@@ -59,6 +58,7 @@ section {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid white;
 }
 
 .profileinfo h3 {
