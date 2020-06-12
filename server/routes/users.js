@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const path = require("path")
 const {
     check,
     validationResult
@@ -16,26 +17,32 @@ const User = require("../models/User.js");
 const isAuthendicated = require("../middleware/isAuthenticated.js");
 
 //Search users (NEED TO BE CONVERTED)
-router.get("/search", async (req, res) => {
-    try {
+// router.get("/search", async (req, res) => {
+//     try {
 
-        let users = await User.findOne({
-            email
-        });
+//         let users = await User.findOne({
+//             email
+//         });
 
-        return users;
+//         return users;
 
-    } catch (error) {
-        // Should it be here? TODO: Test this
-        process.on("uncaughtException", (err, data) => {
-            if (err) {
-                console.log("critical error, yet system keeps running");
-                return;
-            }
-        });
-    }
+//     } catch (error) {
+//         // Should it be here? TODO: Test this
+//         process.on("uncaughtException", (err, data) => {
+//             if (err) {
+//                 console.log("critical error, yet system keeps running");
+//                 return;
+//             }
+//         });
+//     }
 
-});
+// });
+
+// Get signup
+
+router.get("/signup", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "signup.html"))
+})
 
 
 // Register
@@ -96,6 +103,10 @@ router.post("/signup", [
         res.status(500).send("Error in register")
     }
 });
+
+router.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "login.html"))
+})
 
 // Login
 router.post("/login", [

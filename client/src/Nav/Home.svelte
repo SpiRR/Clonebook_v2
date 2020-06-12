@@ -1,25 +1,22 @@
-<script context="module">
+<script>
  
-import Right from '../Right.svelte'
-import Left from '../Left.svelte'
-import ChatContainer from '../ChatContainer.svelte'
-import Posts from '../Posts.svelte'
-import UserPosts from '../UserPosts.svelte'
+  import Posts from '../Posts.svelte'
+  import UserPosts from '../UserPosts.svelte'
+
+import {showPage} from '../pageToggle.js'
 
 </script>
 
-<!-- Home feed -->
-<section>
+<section style="display: {$showPage.pageShown == 'home' ? "block" : "none"}">
+Home
 
- <Right />
-<!--<Left />
-<ChatContainer />
-<Posts /> 
-<UserPosts /> -->
-
+<Posts />
+<UserPosts />
 </section>
 
 
 <style>
+
+
  
 </style>

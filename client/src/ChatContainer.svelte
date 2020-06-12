@@ -17,7 +17,7 @@
 
 section {
   position: fixed;
-  background-color: white;
+  background-color: grey;
   width: 3vw;
   height: 6vh;
   bottom: 39px;

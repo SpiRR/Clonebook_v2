@@ -55,16 +55,16 @@
    main {
         position: fixed;
         padding-left: 0.6rem;
-        background-color: #18191A;
-        color: white;
+        background-color: #FAFAFA;
+        color: black;
         width: 16vw;
-        height: 100%;
-        top: 48px;
+        height: 91%;
+        bottom: 0;
         left: 0;
     }
 
     section {
-        color: white;
+        color: grey;
     }
 
     section#sites div img {

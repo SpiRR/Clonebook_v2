@@ -19,7 +19,6 @@ let src = "./images/me.jpg"
 
 </main>
 
-
 <!-- Style to this component -->
 <style>
 
@@ -27,7 +26,7 @@ let src = "./images/me.jpg"
     position: fixed;
     padding-left: 0.6rem;
     width: 17vw;
-    height: 93%;
+    height: 91%;
     bottom: 0;
     right: 0;
     }

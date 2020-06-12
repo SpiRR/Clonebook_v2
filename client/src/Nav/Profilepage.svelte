@@ -1,18 +1,25 @@
-<script>
- 
+<script >
+
 import {showPage} from '../pageToggle.js'
+let src = "./images/me.jpg"
 
 </script>
 
-<!-- Groups feed -->
-<section style="display: {$showPage.pageShown == 'groups' ? "block" : "none"}">
- 
-GG Noobz
+<!-- -------------------------------- -->
+
+<section style="display: {$showPage.pageShown == 'profilepage' ? "block" : "none"}">
+
+<div class="profileinfo">
+    <img {src} alt="user"/> 
+    <h5>Stine Knarkegaard Andersen</h5>   
+</div>
+
 </section>
 
+<!-- -------------------------------- -->
 
 <style>
- 
+
 section {
     position: relative;
     top: 150px;
@@ -25,6 +32,5 @@ section {
     border: 1px solid lightgray;
     padding: 10px;
 }
- 
 
 </style>

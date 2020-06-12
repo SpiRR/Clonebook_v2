@@ -9,9 +9,8 @@ import Signup from './Signup.svelte'
 
 <section>
 
-<Login />
-
-<Signup />
+    <Login />
+    <Signup />
 
 </section>
 

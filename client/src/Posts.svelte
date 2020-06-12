@@ -32,12 +32,13 @@ let src = "./images/me.jpg"
 div#post-container {
     position: relative;
     top: 150px;
-    width: 30vw;
-    height: 10vh;
-    background-color: #242526;
+    width: 40vw;
+    height: 14vh;
+    background-color: #FAFAFA;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px;
+    border-radius: 25px;
+    border: 1px solid lightgray;
     padding: 10px;
 }
 
@@ -47,8 +48,8 @@ div#post-container img {
 }
 
 div#post-container input {
-    background-color: #3A3B3C;
-    color: #B8BBBF;
+    background-color: #FAFAFA;
+    color: black;
     border-radius: 20px;
     width: 20vw;
     padding: 8px;
