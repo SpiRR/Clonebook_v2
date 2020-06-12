@@ -24,13 +24,12 @@ let src = "./images/me.jpg"
 <style>
 
     section#contacts {
-        position: fixed;
-        padding-left: 0.6rem;
-        background-color: #18191A;
-        width: 17vw;
-        height: 100%;
-        top: 48px;
-        right: 0;
+    position: fixed;
+    padding-left: 0.6rem;
+    width: 17vw;
+    height: 93%;
+    bottom: 0;
+    right: 0;
     }
 
     section#contacts h3 {
@@ -39,7 +38,7 @@ let src = "./images/me.jpg"
 
     section#contacts .friend {
         cursor: pointer;
-        color: white;
+        color: black;
     }
 
     section#contacts .friend img {

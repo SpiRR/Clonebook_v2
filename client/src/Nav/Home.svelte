@@ -11,8 +11,8 @@ import UserPosts from '../UserPosts.svelte'
 <!-- Home feed -->
 <section>
 
-<!-- <Right />
-<Left />
+ <Right />
+<!--<Left />
 <ChatContainer />
 <Posts /> 
 <UserPosts /> -->

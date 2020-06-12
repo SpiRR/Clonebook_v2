@@ -8,7 +8,7 @@ export const navOptions = [
 		{ page: 'Home',   component: Home },
     { page: 'Groups',   component: Groups },
     { page: 'Marketplace',   component: Marketplace },
-		// other navigation pages can go here
+		// profile
 ]
 
 </script>

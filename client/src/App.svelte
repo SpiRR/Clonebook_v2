@@ -38,7 +38,6 @@
 	</div>
 
 	<div class="middle">
-
 			{#each navOptions as option, i}
 			<i class="nav-item">
 				<i class={intSelected==i ? "nav-link active p-2 ml-1" : "p-2 ml-1 nav-link"} on:click={changeComponent} id={i} role="tab">{option.page}</i>
