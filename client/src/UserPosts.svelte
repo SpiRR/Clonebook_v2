@@ -1,6 +1,6 @@
 <script>
 
-let src = "./images/me.jpg"
+let src = "../images/me.jpg"
 
 </script>
 
@@ -11,15 +11,16 @@ let src = "./images/me.jpg"
     <div class="user-posts">
         <div id="mypost">
             <img {src} alt="user"/> 
-            <p>User name</p>
-            <div id="post">Report writing before I'm gonna throw my code out the window for being a bitch 😂👌
-            #webdevelopment #webdeveloper  #reactjs #nodejs #bachelordegree
+            <p>Stine Knarkegaard Andersen</p>
+            <div id="post">
+                Report writing before I'm gonna throw my code out the window for being a bitch 😂👌
+                #webdevelopment #webdeveloper  #reactjs #nodejs #bachelordegree
             </div>
         </div>
 
         <div id="like">
-            <button>Like</button>
-            <button>Comment</button>
+            <i class="far fa-thumbs-up"></i>
+            <i class="far fa-comment"></i>
         </div>
 
       <div id="comments">
@@ -44,16 +45,17 @@ let src = "./images/me.jpg"
 
 div.user-posts {
     position: relative;
-    top: 150px;
-    width: 30vw;
+    width: 40vw;
+    height: 14vh;
     min-height: 45vh;
-    margin-top: 20px;
-    background-color: #242526;
+    margin-top: 200px;
+    background-color: #FAFAFA;
     color: white;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
     padding: 10px;
+    border: 1px solid lightgray;
 }
 
 div.user-posts p {
@@ -61,13 +63,12 @@ div.user-posts p {
     display: inline-block;
     top: -24px;
     right: -17px;
-    
+    color: black;
 }
 
 div.user-posts div {
-    /* background-color: #faf; */
     margin-top: 25px;
-    color: #B8BBBF;
+    color: black;
     width: 28vw;
     top: 60px;
     left: 30px;
@@ -81,12 +82,10 @@ div.user-posts #mypost img {
 div#mypost {
     position: relative;
     color: white;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 20px;
     padding: 10px;
     top: -33px;
-    left: -18px;
+    width: 100%;
 }
 
 
@@ -95,33 +94,38 @@ div#post {
 }
 
 div#like {
+    cursor: pointer;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
-    display: inline-block;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    margin-top: 35px;
+    margin-bottom: 10px;
     top: -9px;
     left: 1px;
     width: 100%;
 }
 
-div#like button {
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+div#like i {
+    border: 1px solid lightgray;
+    font-size: 22px;
+    left: 0;
+    position: relative;
+ 
 }
 
 div#comments {
     display: inline-block;
-    position: relative; 
+    position: relative;
     top: 0;
 }
 
 div#comments p {
-    outline: 1px solid black;
-    background-color: black;
-    padding: 10px
+    outline: 1px solid lightgray;
+    background-color: #FAFAFA;
+    padding: 10px;
+    color: black;
+    border-radius: 25px;
 }
 
 div#comments img {
@@ -137,8 +141,8 @@ div#comment-post {
 
 div#comment-post input{
     position: relative;
-    background-color: #3A3B3C;
-    color: #B8BBBF;
+    background-color: #FAFAFA;
+    color: black;
     border-radius: 25px;
     width: 23vw;
     height: 3vh;

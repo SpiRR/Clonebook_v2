@@ -8,7 +8,6 @@ const posts = require('./routes/posts.js');
 // Initiating Mongo Server
 InitiateMongoServer();
 
-
 server.use(express.urlencoded({extended: false}));
 server.use(express.json());
 server.use(express.Router());

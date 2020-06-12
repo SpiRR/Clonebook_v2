@@ -1,27 +1,38 @@
-<script>
-	import Home from "./Homepage.svelte"
-	import Nav from "./Nav.svelte"
-	import Right from "./Right.svelte"
-	import ChatContainer from "./ChatContainer.svelte"
-	import Left from "./Left.svelte"
-	import Posts from "./Posts.svelte"
-	import UserPosts from "./Userposts.svelte"
-	import OpenChatContainer from "./OpenChatContainer.svelte"
+<script >
+
+  import Nav from './Nav.svelte'
+  import Home from './nav/Home.svelte'
+  import Groups from './nav/Groups.svelte'
+  import Marketplace from './nav/Marketplace.svelte'
+
+  import Profilepage from './Nav/Profilepage.svelte'
+
+  import Right from './Right.svelte'
+  import Left from './Left.svelte'
+  import ChatContainer from './ChatContainer.svelte'
+  import OpenChatContainer from './OpenChatContainer.svelte'
+
+  import {showPage} from './pageToggle.js'
+
 </script>
 
 <!-- -------------------------------- -->
 
 <section>
 
-	<Nav />
-	<Left />
-	<Posts />
-	<Right />
-	<ChatContainer />
-	<OpenChatContainer />
-	<UserPosts />
+  {#if $showPage.pageShown != 'profilepage'}
+    <Left/>
+    <Right/>
+  {/if}
 
-	<!-- <Home /> -->
+  <Nav />
+  <Home />
+  <Groups />
+  <Marketplace />
+
+  <Profilepage />
+  <ChatContainer />
+  <OpenChatContainer />
 
 </section>
 
