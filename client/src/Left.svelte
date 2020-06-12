@@ -43,7 +43,32 @@
         <img src="./images/dat.jpg" alt="point">
         <h4>Computer Science</h4>
         </div>
+
+        <div>
+        <img src="./images/lol.jpg" alt="point">
+        <h4>Leauge of Legends</h4>
+        </div>
+
+        <div>
+        <img src="./images/wow.png" alt="point">
+        <h4>World of Warcraft</h4>
+        </div>
        
+    </section>
+
+    <section id="liked-pages">
+        <h3>Liked pages</h3>
+
+        <div>
+        <img src="./images/markiplier.jpg" alt="point">
+            <h4>Markiplier</h4>
+        </div>
+
+        <div>
+        <img src="./images/lixiantv.jpg" alt="point">
+            <h4>LixinaTV</h4>
+        </div>
+
     </section>
 
 </main>
@@ -67,21 +92,23 @@
         color: grey;
     }
 
-    section#sites div img {
+    section#sites div img, section#groups div img, section#liked-pages div img {
         margin-bottom: 10px; 
         width: 2vw;
         border-radius: 25px;
     }
 
-    section#sites, section#groups {
+    section#sites, section#groups, section#liked-pages {
         margin-left: 10px;
     }
 
-    section#sites h3,  section#groups h3{
+    section#sites h3,  section#groups h3, section#liked-pages h3{
+        margin-top: 25px;
         margin-bottom: 25px;
+        font-weight: 600;
     }
 
-    section#sites h4, section#groups h4 {
+    section#sites h4, section#groups h4, section#liked-pages h4 {
         display: inline-block;
         top: -21px;
         position: relative;

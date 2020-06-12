@@ -26,7 +26,7 @@ let src = "./images/me.jpg"
         <input 
         placeholder="Aa"
         type="text">
-        <button> > </button>
+        <i class="fas fa-paper-plane"></i>
     </div>
 </div>
 
@@ -37,7 +37,7 @@ let src = "./images/me.jpg"
 <style> 
 
 div#chat-container {
-    display: none;
+    /* display: none; */
     border: 1px solid lightgray;
     position: fixed;
     background-color: #FAFAFA;
@@ -46,12 +46,13 @@ div#chat-container {
     bottom: 0px;
     right: 150px;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 15px;
+    box-shadow: 2px 5px lightgray;
 }
 
 div#top-container {
     border-bottom: 1px solid lightgray;
-    height: 7vh;
+    height: 8vh;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr;
 }
@@ -89,15 +90,15 @@ div#bot-container input {
     background-color: #FAFAFA;
     color: black;
     border-radius: 25px;
-    width: 11vw;
-    height: 3vh;
+    width: 13vw;
+    height: 4vh;
     top: 13px;
     left: 18px;
 }
 
-div#bot-container button {
+div#bot-container i {
     position: relative;
     top: 13px;
-    left: 60px;
+    left: 29px;
 }
 </style>

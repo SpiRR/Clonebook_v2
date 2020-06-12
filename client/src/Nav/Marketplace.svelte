@@ -2,12 +2,14 @@
  
 import {showPage} from '../pageToggle.js'
 
+let src = "./images/construction.png"
+
 </script>
 
 <!-- Market place -->
 <section style="display: {$showPage.pageShown == 'marketplace' ? "block" : "none"}">
 
-MNarket
+    <img src={src} alt="">
 </section>
 
 
@@ -22,8 +24,12 @@ section {
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
-    border: 1px solid lightgray;
     padding: 10px;
 }
+
+section img {
+    width: 33vw;
+}
+
  
 </style>

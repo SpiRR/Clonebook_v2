@@ -17,9 +17,9 @@ let src = "./images/me.jpg"
         </form>
 
     <div class="extras">
-        <i class="fab fa-youtube">Video</i>
-        <i class="far fa-images">Images</i>
-        <i class="far fa-surprise">Surprise me!</i>
+        <i class="fab fa-youtube"><p>Video</p></i>
+        <i class="far fa-images"><p>Images</p></i>   
+        <i class="far fa-surprise"><p>Surprise</p></i> 
     </div>
 </div>
 
@@ -31,7 +31,7 @@ let src = "./images/me.jpg"
 
 div#post-container {
     position: relative;
-    top: 150px;
+    top: 130px;
     width: 40vw;
     height: 14vh;
     background-color: #FAFAFA;
@@ -40,10 +40,11 @@ div#post-container {
     border-radius: 25px;
     border: 1px solid lightgray;
     padding: 10px;
+    box-shadow: 2px 5px lightgray;
 }
 
 div#post-container img {
-    width: 3vw;
+    width: 4vw;
     border-radius: 50%
 }
 
@@ -77,10 +78,31 @@ div#post-container i {
 
 .extras {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    bottom: 22px;
     left: 0;
     position: absolute;
-    grid-gap: 5rem;
+    /* grid-gap: 5rem; */
+}
+
+.extras p {
+    color: black;
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.extras .fa-youtube {
+    color: red;
+    font-size: 20px;
+}
+.extras .fa-images {
+    font-size: 20px;
+    color: blue;
+}
+.extras .fa-surprise {
+    font-size: 20px;
+    color: green;
 }
 
 </style>
