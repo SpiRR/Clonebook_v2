@@ -1,6 +1,6 @@
 <script>
 
-let src = "./images/me.jpg"
+let src = "../images/me.jpg"
 
 </script>
 
