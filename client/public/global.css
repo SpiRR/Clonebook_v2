@@ -2,16 +2,21 @@
 
 body{
   width: 100%;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: rgba(0, 0, 0, 0.02);
 }
 input{
+  font-size: 15px;
   padding: 0px 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   font-weight: inherit;
   font-family: inherit;
   outline: none;
+}
+
+h4 {
+  font-weight: 600;
 }

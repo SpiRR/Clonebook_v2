@@ -31,7 +31,7 @@ let src = "./images/me.jpg"
 
 div#post-container {
     position: relative;
-    top: 150px;
+    top: 130px;
     width: 40vw;
     height: 14vh;
     background-color: #FAFAFA;
@@ -43,7 +43,7 @@ div#post-container {
 }
 
 div#post-container img {
-    width: 3vw;
+    width: 4vw;
     border-radius: 50%
 }
 
@@ -78,7 +78,8 @@ div#post-container i {
 .extras {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    left: 0;
+    bottom: 22px;
+    left: -15px;
     position: absolute;
     grid-gap: 5rem;
 }

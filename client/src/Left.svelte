@@ -43,6 +43,16 @@
         <img src="./images/dat.jpg" alt="point">
         <h4>Computer Science</h4>
         </div>
+
+        <div>
+        <img src="./images/lol.jpg" alt="point">
+        <h4>Leauge of Legends</h4>
+        </div>
+
+        <div>
+        <img src="./images/wow.png" alt="point">
+        <h4>World of Warcraft</h4>
+        </div>
        
     </section>
 

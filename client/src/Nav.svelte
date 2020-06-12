@@ -45,7 +45,8 @@ const currentPage = (nameOfPage) => {
 
 	<div class="right">
 		<div class="profilelink" on:click={() => { currentPage('profilepage') }}>
-			<img {src} alt="user"/> Stine        
+			<img {src} alt="user"/> 
+      <p>Stine</p>        
 		</div>
 		
 		<div>
@@ -152,10 +153,15 @@ nav div.right img {
 
 nav div.right .profilelink {
   display: grid;
+  font-size: 17px;
   grid-template-columns: 2fr 5fr;
   grid-gap: 1rem;
 }
 
+nav div.right .profilelink {
+  top: 5px;
+  position: relative;
+}
 
 nav div.right > div{
   position: relative;

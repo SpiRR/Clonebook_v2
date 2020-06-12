@@ -18,12 +18,16 @@ let src = "../images/me.jpg"
             </div>
         </div>
 
-        <div id="like">
-            <i class="far fa-thumbs-up"></i>
-            <i class="far fa-comment"></i>
+        <div id="like-counter">
+            <i class="far fa-thumbs-up">1 </i>
         </div>
 
-      <div id="comments">
+        <div id="like">
+            <i class="far fa-thumbs-up">Like </i>
+            <i class="far fa-comment">Comment </i>
+        </div>
+
+      <!-- <div id="comments">
         <img {src} alt="user"/> 
         <p>I feel you!!</p>
       </div>
@@ -33,7 +37,7 @@ let src = "../images/me.jpg"
             <input 
             placeholder="Your comment...."/>
             <button> > </button>
-        </div>
+        </div> -->
     </div>
 
 </section>
@@ -46,8 +50,7 @@ let src = "../images/me.jpg"
 div.user-posts {
     position: relative;
     width: 40vw;
-    height: 14vh;
-    min-height: 45vh;
+    height: 30vh;
     margin-top: 200px;
     background-color: #FAFAFA;
     color: white;
@@ -93,13 +96,19 @@ div#post {
     margin-bottom: 10px;
 }
 
+div#like-counter {
+    position: relative;
+    top: 20px;
+    left: 60px;
+}
+
 div#like {
     cursor: pointer;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 50px;
     margin-bottom: 10px;
     top: -9px;
     left: 1px;
@@ -107,14 +116,12 @@ div#like {
 }
 
 div#like i {
-    border: 1px solid lightgray;
-    font-size: 22px;
+    font-size: 20px;
     left: 0;
     position: relative;
- 
 }
 
-div#comments {
+/* div#comments {
     display: inline-block;
     position: relative;
     top: 0;
@@ -161,8 +168,5 @@ div#comment-post button {
     right: -30px;
     bottom: 12px;
 }
-
-
-
-
+ */
 </style>
