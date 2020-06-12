@@ -37,6 +37,7 @@ let src = "./images/me.jpg"
 <style> 
 
 div#chat-container {
+    display: none;
     border: 1px solid lightgray;
     position: fixed;
     background-color: #FAFAFA;

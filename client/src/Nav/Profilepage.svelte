@@ -9,9 +9,12 @@ let src = "./images/me.jpg"
 
 <section style="display: {$showPage.pageShown == 'profilepage' ? "block" : "none"}">
 
+<div class="cover">*insert cover image here*</div>
+
 <div class="profileinfo">
     <img {src} alt="user"/> 
-    <h5>Stine Knarkegaard Andersen</h5>   
+    <h3>Stine Knarkegaard Andersen</h3>
+    <i class="fas fa-cog"></i>   
 </div>
 
 </section>
@@ -23,7 +26,7 @@ let src = "./images/me.jpg"
 section {
     position: relative;
     top: 150px;
-    width: 40vw;
+    width: 55vw;
     height: 14vh;
     background-color: #FAFAFA;
     margin-left: auto;
@@ -31,6 +34,50 @@ section {
     border-radius: 25px;
     border: 1px solid lightgray;
     padding: 10px;
+}
+
+.cover {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.profileinfo {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 150px;
+}
+
+.profileinfo img{
+    display: block;
+    position: relative;
+    width: 10vw;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profileinfo h3 {
+    display: block;
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.profileinfo .fas {
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 16px;
+    cursor: pointer;
 }
 
 </style>

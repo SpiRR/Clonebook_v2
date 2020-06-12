@@ -4,28 +4,28 @@ let src = "./images/me.jpg"
 
 </script>
 
-<!-- -------------------------------- -->
+<!-- ---------------------------------->
 
 <section>
-    <div id="post-container">
+<div id="post-container">
     
     <img {src} alt="user"/> 
 
         <form action="">
-            <input 
-                placeholder="What's on your mind?"
-            />
-            <button>Post</button>
+            <input placeholder="What's on your mind?"/>
+            <i class="fas fa-paper-plane"></i>
         </form>
 
-            <button>Photo / Video</button>
-            <button>Tag a friend</button>
-            <button>Something</button>
+    <div class="extras">
+        <i class="fab fa-youtube">Video</i>
+        <i class="far fa-images">Images</i>
+        <i class="far fa-surprise">Surprise me!</i>
     </div>
+</div>
 
 </section>
 
-<!-- -------------------------------- -->
+<!-- ---------------------------------->
 
 <style>
 
@@ -51,28 +51,36 @@ div#post-container input {
     background-color: #FAFAFA;
     color: black;
     border-radius: 20px;
-    width: 20vw;
+    width: 30vw;
     padding: 8px;
     display: inline-block;
-    top: 12px;
+    top: 20px;
     position: absolute;
     left: 95px;
 }
 
-div#post-container form button {
+div#post-container form i {
     display: inline-block;
     position: absolute;
-    top: 19px;
-    right: 22px;
+    font-size: 20px;
+    top: 26px;
+    right: 36px;
 }
 
-div#post-container button {
+div#post-container i {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    font-size: 20px;
     right: -107px;
 }
 
-
+.extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    left: 0;
+    position: absolute;
+    grid-gap: 5rem;
+}
 
 </style>

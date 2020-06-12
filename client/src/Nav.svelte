@@ -20,8 +20,9 @@ const currentPage = (nameOfPage) => {
 		<div class="logo">
 			<i class="fab fa-cuttlefish"></i>
 		</div>
+
 		<form>
-		<input type="text" placeholder="Search on CloneBook"/>
+		  <input type="text" placeholder="Search on CloneBook"/>
 		</form>
 
 		<!-- <div id="searchResults"></div> -->
@@ -41,8 +42,6 @@ const currentPage = (nameOfPage) => {
       <i class="fas fa-shopping-basket"></i>
     </div>    
 	</div>
-
-
 
 	<div class="right">
 		<div class="profilelink" on:click={() => { currentPage('profilepage') }}>
@@ -69,11 +68,11 @@ const currentPage = (nameOfPage) => {
 
 <!-- Style to this component -->
 <style>
+
   nav {
   display: grid;
   grid-template-columns: 25fr 40fr 10fr;
   grid-gap: 2rem;
-
   position: fixed;
   top: 0px;
   left: 0px;
@@ -97,7 +96,7 @@ const currentPage = (nameOfPage) => {
 
 nav .left form {
 	display: grid;
-grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 nav .left form, nav .left form input {
@@ -186,11 +185,9 @@ nav div.notification-counter{
   display: grid;
   justify-content: center;
   align-content: center;
-
   position: absolute;
   top: -0.6rem;
   right: -1rem;
-
   width: 1.5rem;
   height: 1.5rem;
   font-size: 0.8rem;
@@ -198,7 +195,6 @@ nav div.notification-counter{
   color: white;
   background: #f02849;
   border-radius: 50%;
-
 }
 
   /* div#searchResults {
