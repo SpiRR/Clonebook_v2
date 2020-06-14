@@ -44,8 +44,10 @@ div#post-container {
 }
 
 div#post-container img {
-    width: 4vw;
-    border-radius: 50%
+    width: 3vw;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-top: 4px;
 }
 
 div#post-container input {
