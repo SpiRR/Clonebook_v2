@@ -47,9 +47,7 @@ router.get("/signup", (req, res) => {
 
 // Register
 router.post("/signup", [
-    check("email", "Please Enter a Valid Email")
-    .not()
-    .isEmpty(),
+    check("email", "Missing email").not().isEmpty(),
     check("email", "Please enter a valid email").isEmail(),
     check("password", "Please enter a valid password").isLength({
         min: 6
@@ -83,20 +81,37 @@ router.post("/signup", [
         }
 
         // get profileimg here
-        let profileimg = "../images/not.png"
+        // let profileimg = "./images/not.png"
 
         user = new User({
             email,
             password,
             firstName,
             lastName,
-            profileimg
+            // profileimg
         });
 
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
 
         await user.save();
+
+        const payload = {
+            user: {
+                id: user.id
+            }
+        };
+
+        // Redirect to loggedIn content
+        jwt.sign(
+            payload, "randomString", {expiresIn}, (err, token) => {
+                if(err) throw err;
+                res.status(200).json({
+                    user: user.email,
+                    token: token
+                });
+            }
+        )
 
     } catch (err) {
         console.log(err.message);
@@ -109,6 +124,7 @@ router.get("/login", (req, res) => {
 })
 
 // Login
+// Save TOKEN in FE in LocalStorage
 router.post("/login", [
     check("email", "Please enter a valid email").isEmail(),
     check("password", "Please enter a valid password").isLength({
@@ -180,16 +196,22 @@ router.get("/profile", isAuthendicated ,async(req, res) => {
 });
 
 // Logout
+// DELETE TOKEN IN FE LOCALSTORAGE
 router.post("/logout", (req, res) => {
+
     res.send('logout')
 });
 
 // Change my details 
 router.patch("/change-details", (req, res) => {
+    // Which details? 
+    // Profile img
+    // Name
     res.send('change details')
 });
 
 // Contacts and their statuses change
+// Get my contacts / friends
 router.get("/contacts", (req, res) => {
     res.send('my contacts')
 });
