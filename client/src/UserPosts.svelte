@@ -57,7 +57,7 @@ div.user-posts {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px 0px;
     border: 1px solid lightgray;
     box-shadow: 2px 5px lightgray;
 }
@@ -90,17 +90,20 @@ div#mypost {
     padding: 10px;
     top: -33px;
     width: 100%;
+    margin-left: -19px;
 }
 
 
 div#post {
     margin-bottom: 10px;
+    margin-left: -15px;
+    width: 90%;
 }
 
 div#like-counter {
     position: relative;
     top: 20px;
-    left: 60px;
+    left: 30px;
 }
 
 div#like {

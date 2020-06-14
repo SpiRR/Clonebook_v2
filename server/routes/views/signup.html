@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Signup</title>
 
     <style>
 
         section {
+            font-size: 15px;
+            font-weight: 300;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             box-sizing: border-box;
             padding: 0;
+            border: 1px solid lightgray;
+            width: 22%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 25px;
+            height: auto;
+            box-shadow: 2px 5px lightgray;
+            margin-top: 200px;
         }
         
         section form {
@@ -46,14 +59,21 @@
             padding: 8px 0;
         }
         
-        /* section form #border {
-            width: 17vw;
+        section h2 {
             text-align: center;
-            margin-right: auto;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        section .logo {
+            margin-top: 15px;
+            font-size: 50px;
+            color: #1da1f2;
             margin-left: auto;
-            border-bottom: 1px solid lightgray;
-            margin-top: 85px;
-        } */
+            margin-right: auto;
+            display: block;
+            text-align: center;
+        }
         
         section form button:last-child {
             border-radius: 10px;
@@ -71,7 +91,13 @@
 
     <section>
 
-        <form>
+        <div class="logo">
+			<i class="fab fa-cuttlefish">loneBook</i>
+		</div>
+
+        <h2>Signup</h2>
+
+        <form method="post">
             <input 
             placeholder="E-mail"
             type="text"
@@ -83,12 +109,6 @@
             type="password"
             name="password"
             />
-        
-            <!-- <input 
-            placeholder="Repeat Password"
-            type="password"
-        
-            /> -->
         
             <input 
             placeholder="First name"
@@ -104,11 +124,35 @@
         
             <input name="profileimg" type="file" id="img" accept="image/*">
         
-            <button>Signup</button>
+            <button id="signup-btn" type="button">Signup</button>
         
         </form>
         
         </section>
+
+    <script>
+
+    $("#signup-btn").click(function () {
+        const formData = $('form').serialize()
+        console.log(formData)
+
+        $.ajax({
+            url: "http://localhost:80/signup",
+            type: "POST",
+            dataType: 'json',
+            xhrFields: {
+                withCredentials: true
+            }, 
+            data: formData
+        }).done(function (data) {
+            console.log(data)
+            var token = data.token 
+            localStorage.setItem('token', token)
+            location.href = "http://localhost:5000/"
+        })
+
+    })
+    </script>
     
 </body>
 </html>

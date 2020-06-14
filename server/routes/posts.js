@@ -12,6 +12,7 @@ router.post("/liked-post", (req, res) => {
     res.send('post liked')
 });
 
+// All yours and your friends posts
 router.get("/get-posts", (req, res) => {
     res.send('loaded posts')
 })
