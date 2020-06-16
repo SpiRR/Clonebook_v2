@@ -169,11 +169,7 @@ router.post("/login", async (req, res) => {
                 message: "Server Error"
             });
         }
-
     })
-
-    
-
 });
 
 router.get("/profile", isAuthendicated, async (req, res) => {
