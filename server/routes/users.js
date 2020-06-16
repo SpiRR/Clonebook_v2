@@ -45,16 +45,16 @@ router.get("/signup", (req, res) => {
 
 
 // Register
-router.post("/signup", async (req, res) => {
+router.post("/users/signup", async (req, res) => {
 
     const form = formidable({
         multiples: true
     });
     form.parse(req, async (err, fields, files) => {
-        if (err) {
-            next(err);
-            return;
-        }
+        // if (err) {
+        //     next(err);
+        //     return;
+        // }
         const email = fields.email
         const password = fields.password
         const firstName = fields.firstName
@@ -141,7 +141,7 @@ router.post("/login", async (req, res) => {
         }
         const email = fields.email
         const password = fields.password
-        
+
         try {
 
             let user = await User.findOne({
