@@ -134,10 +134,10 @@
 
     $("#signup-btn").click(function () {
         const formData = $('form').serialize()
-        console.log(formData)
+        console.log('from form: ', formData)
 
         $.ajax({
-            url: "http://localhost:80/users/signup",
+            url: "users/signup",
             type: "POST",
             dataType: 'json',
             xhrFields: {
@@ -145,7 +145,7 @@
             }, 
             data: formData
         }).done(function (data) {
-            console.log(data)
+            console.log('data ', data)
             var token = data.token 
             localStorage.setItem('token', token)
             location.href = "/"
