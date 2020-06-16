@@ -97,7 +97,8 @@
 
         <h2>Signup</h2>
 
-        <form method="post">
+        <form method="POST" action="signup">
+            
             <input 
             placeholder="E-mail"
             type="text"
@@ -122,9 +123,9 @@
             name="lastName"
             />
         
-            <input name="profileimg" type="file" id="img" accept="image/*">
+            <input name="profilepicture" type="file" id="img">
         
-            <button id="signup-btn" type="button">Signup</button>
+            <button id="signup-btn" type="submit">Signup</button>
         
         </form>
         
@@ -132,26 +133,26 @@
 
     <script>
 
-    $("#signup-btn").click(function () {
-        const formData = $('form').serialize()
-        console.log('from form: ', formData)
+    // $("#signup-btn").click(function () {
+    //     const formData = $('form').serialize()
+    //     console.log('from form: ', formData)
 
-        $.ajax({
-            url: "/signup",
-            type: "POST",
-            dataType: 'json',
-            xhrFields: {
-                withCredentials: true
-            }, 
-            data: formData
-        }).done(function (data) {
-            console.log('data ', data)
-            var token = data.token 
-            localStorage.setItem('token', token)
-            location.href = "/"
-        })
+    //     $.ajax({
+    //         url: "/signup",
+    //         type: "POST",
+    //         dataType: 'json',
+    //         xhrFields: {
+    //             withCredentials: true
+    //         }, 
+    //         data: formData
+    //     }).done(function (data) {
+    //         console.log('data ', data)
+    //         var token = data.token 
+    //         localStorage.setItem('token', token)
+    //         location.href = "/"
+    //     })
 
-    })
+    // })
     </script>
     
 </body>

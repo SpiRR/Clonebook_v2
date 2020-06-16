@@ -22,8 +22,8 @@ const UserSchema = mongoose.Schema({
   },
 
   profilepicture: {
-    data: Buffer, 
-    contentType: String
+    type: String,
+    get: v => `${root}${v}`
   },
 
   friends: {

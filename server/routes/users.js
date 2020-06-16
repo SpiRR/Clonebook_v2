@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path")
-const {
-    check,
-    validationResult
-} = require("express-validator");
 const bcrypt = require("bcryptjs");
 const formidable = require("formidable")
 const fs = require('fs');
@@ -15,7 +11,7 @@ const expiresIn = 10000
 const User = require("../models/User.js");
 const isAuthendicated = require("../middleware/isAuthenticated.js");
 
-//Search users (NEED TO BE CONVERTED)
+//Search users (NEED TO BE CONVERTED SO YOU CAN SEARCH ON EMAIL)
 router.get("/search", async (req, res) => {
 
     let users = await User.find();
@@ -33,9 +29,7 @@ router.get("/signup", (req, res) => {
 // Register
 router.post("/signup", async (req, res) => {
 
-    const form = formidable({
-        multiples: true
-    });
+    const form = formidable({multiples: true});
     form.parse(req, async (err, fields, files) => {
         // if (err) {
         //     next(err);
@@ -45,10 +39,10 @@ router.post("/signup", async (req, res) => {
         const password = fields.password
         const firstName = fields.firstName
         const lastName = fields.lastName
-        // const profilepicture = files.profilepicture // uploads without in postman
+        // const profilepicture = files.profilepicture 
 
         try {
-            const filename = uuidV4() + '.jpg'
+            const filename = uuidV4() + '.jpg' // https://www.npmjs.com/package/detect-file-type
             const oldPath = files.profilepicture.path
             const newPath = path.join(__dirname, '..', 'images', 'userImages', filename)
 
@@ -67,14 +61,14 @@ router.post("/signup", async (req, res) => {
                 });
             }
 
-            console.log(newPath)
+            console.log('???', newPath)
 
             user = new User({
                 email,
                 password,
                 firstName,
                 lastName,
-                profilepicture: filename, // Find another way to store - it wont
+                profilepicture: filename.toString(), 
                 friends: [], 
                 posts: []
             });
@@ -109,6 +103,7 @@ router.post("/signup", async (req, res) => {
         }
     });
 
+    res.send('error in signup')
 });
 
 router.get("/login", (req, res) => {
