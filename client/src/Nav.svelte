@@ -9,7 +9,8 @@ const currentPage = (nameOfPage) => {
 }
 
 function logout () {
-  
+  window.localStorage.removeItem('token')
+  location.href = "http://localhost:80/login"
 }
 
 </script>
@@ -59,7 +60,7 @@ function logout () {
 		</div>
 
     <div class="menu">
-      <a id="logout" href="/login"><i class="fas fa-sign-out-alt"></i></a>
+      <a id="logout" on:click={logout}><i class="fas fa-sign-out-alt"></i></a>
     </div>
 
 	</div>

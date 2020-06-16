@@ -492,54 +492,53 @@ var app = (function () {
     			a = element("a");
     			i5 = element("i");
     			attr_dev(i0, "class", "fab fa-cuttlefish svelte-102w3yf");
-    			add_location(i0, file, 24, 3, 326);
+    			add_location(i0, file, 25, 3, 412);
     			attr_dev(div0, "class", "logo svelte-102w3yf");
-    			add_location(div0, file, 23, 2, 303);
+    			add_location(div0, file, 24, 2, 389);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "Search on CloneBook");
     			attr_dev(input, "class", "svelte-102w3yf");
-    			add_location(input, file, 28, 4, 387);
+    			add_location(input, file, 29, 4, 473);
     			attr_dev(form, "class", "svelte-102w3yf");
-    			add_location(form, file, 27, 2, 375);
+    			add_location(form, file, 28, 2, 461);
     			attr_dev(div1, "class", "left svelte-102w3yf");
-    			add_location(div1, file, 22, 1, 281);
+    			add_location(div1, file, 23, 1, 367);
     			attr_dev(i1, "class", "fas fa-home svelte-102w3yf");
-    			add_location(i1, file, 37, 6, 593);
+    			add_location(i1, file, 38, 6, 679);
     			attr_dev(div2, "class", "svelte-102w3yf");
-    			add_location(div2, file, 36, 4, 539);
+    			add_location(div2, file, 37, 4, 625);
     			attr_dev(i2, "class", "fas fa-users svelte-102w3yf");
-    			add_location(i2, file, 41, 6, 696);
+    			add_location(i2, file, 42, 6, 782);
     			attr_dev(div3, "class", "svelte-102w3yf");
-    			add_location(div3, file, 40, 4, 640);
+    			add_location(div3, file, 41, 4, 726);
     			attr_dev(i3, "class", "fas fa-video svelte-102w3yf");
-    			add_location(i3, file, 45, 6, 802);
+    			add_location(i3, file, 46, 6, 888);
     			attr_dev(div4, "class", "svelte-102w3yf");
-    			add_location(div4, file, 44, 4, 746);
+    			add_location(div4, file, 45, 4, 832);
     			attr_dev(i4, "class", "fas fa-shopping-basket svelte-102w3yf");
-    			add_location(i4, file, 49, 6, 913);
+    			add_location(i4, file, 50, 6, 999);
     			attr_dev(div5, "class", "svelte-102w3yf");
-    			add_location(div5, file, 48, 4, 852);
+    			add_location(div5, file, 49, 4, 938);
     			attr_dev(div6, "class", "middle svelte-102w3yf");
-    			add_location(div6, file, 35, 1, 513);
+    			add_location(div6, file, 36, 1, 599);
     			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
     			attr_dev(img, "class", "svelte-102w3yf");
-    			add_location(img, file, 56, 3, 1081);
+    			add_location(img, file, 57, 3, 1167);
     			attr_dev(p, "class", "svelte-102w3yf");
-    			add_location(p, file, 57, 6, 1113);
+    			add_location(p, file, 58, 6, 1199);
     			attr_dev(div7, "class", "profilelink svelte-102w3yf");
-    			add_location(div7, file, 55, 2, 1003);
+    			add_location(div7, file, 56, 2, 1089);
     			attr_dev(i5, "class", "fas fa-sign-out-alt svelte-102w3yf");
-    			add_location(i5, file, 61, 35, 1205);
+    			add_location(i5, file, 62, 39, 1295);
     			attr_dev(a, "id", "logout");
-    			attr_dev(a, "href", "/login");
-    			add_location(a, file, 61, 6, 1176);
+    			add_location(a, file, 62, 6, 1262);
     			attr_dev(div8, "class", "menu svelte-102w3yf");
-    			add_location(div8, file, 60, 4, 1150);
+    			add_location(div8, file, 61, 4, 1236);
     			attr_dev(div9, "class", "right svelte-102w3yf");
-    			add_location(div9, file, 54, 1, 980);
+    			add_location(div9, file, 55, 1, 1066);
     			attr_dev(nav, "class", "svelte-102w3yf");
-    			add_location(nav, file, 20, 0, 271);
+    			add_location(nav, file, 21, 0, 357);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -582,7 +581,8 @@ var app = (function () {
     					listen_dev(div3, "click", /*click_handler_1*/ ctx[4], false, false, false),
     					listen_dev(div4, "click", /*click_handler_2*/ ctx[5], false, false, false),
     					listen_dev(div5, "click", /*click_handler_3*/ ctx[6], false, false, false),
-    					listen_dev(div7, "click", /*click_handler_4*/ ctx[7], false, false, false)
+    					listen_dev(div7, "click", /*click_handler_4*/ ctx[7], false, false, false),
+    					listen_dev(a, "click", logout, false, false, false)
     				];
 
     				mounted = true;
@@ -610,7 +610,8 @@ var app = (function () {
     }
 
     function logout() {
-    	
+    	window.localStorage.removeItem("token");
+    	location.href = "http://localhost:80/login";
     }
 
     function instance($$self, $$props, $$invalidate) {

@@ -16,36 +16,22 @@ const User = require("../models/User.js");
 const isAuthendicated = require("../middleware/isAuthenticated.js");
 
 //Search users (NEED TO BE CONVERTED)
-// router.get("/search", async (req, res) => {
-//     try {
+router.get("/search", async (req, res) => {
 
-//         let users = await User.findOne({
-//             email
-//         });
+    let users = await User.find();
 
-//         return users;
-
-//     } catch (error) {
-//         // Should it be here? TODO: Test this
-//         process.on("uncaughtException", (err, data) => {
-//             if (err) {
-//                 console.log("critical error, yet system keeps running");
-//                 return;
-//             }
-//         });
-//     }
-
-// });
+    res.send(users)
+    
+});
 
 // Get signup
-
 router.get("/signup", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "signup.html"))
 })
 
 
 // Register
-router.post("/users/signup", async (req, res) => {
+router.post("/signup", async (req, res) => {
 
     const form = formidable({
         multiples: true
@@ -199,13 +185,6 @@ router.get("/profile", isAuthendicated, async (req, res) => {
             message: "Error in Fetching user"
         });
     }
-});
-
-// Logout
-// DELETE TOKEN IN FE LOCALSTORAGE
-router.post("/logout", (req, res) => {
-
-    res.send('logout')
 });
 
 // Change my details 
