@@ -445,12 +445,16 @@ var app = (function () {
     	let div5;
     	let i4;
     	let t5;
-    	let div8;
+    	let div9;
     	let div7;
     	let img;
     	let img_src_value;
     	let t6;
     	let p;
+    	let t8;
+    	let div8;
+    	let a;
+    	let i5;
     	let mounted;
     	let dispose;
 
@@ -477,54 +481,65 @@ var app = (function () {
     			div5 = element("div");
     			i4 = element("i");
     			t5 = space();
-    			div8 = element("div");
+    			div9 = element("div");
     			div7 = element("div");
     			img = element("img");
     			t6 = space();
     			p = element("p");
     			p.textContent = "Stine";
-    			attr_dev(i0, "class", "fab fa-cuttlefish");
-    			add_location(i0, file, 20, 3, 275);
-    			attr_dev(div0, "class", "logo svelte-gfmmhl");
-    			add_location(div0, file, 19, 2, 252);
+    			t8 = space();
+    			div8 = element("div");
+    			a = element("a");
+    			i5 = element("i");
+    			attr_dev(i0, "class", "fab fa-cuttlefish svelte-102w3yf");
+    			add_location(i0, file, 24, 3, 326);
+    			attr_dev(div0, "class", "logo svelte-102w3yf");
+    			add_location(div0, file, 23, 2, 303);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "Search on CloneBook");
-    			attr_dev(input, "class", "svelte-gfmmhl");
-    			add_location(input, file, 24, 4, 336);
-    			attr_dev(form, "class", "svelte-gfmmhl");
-    			add_location(form, file, 23, 2, 324);
-    			attr_dev(div1, "class", "left svelte-gfmmhl");
-    			add_location(div1, file, 18, 1, 230);
-    			attr_dev(i1, "class", "fas fa-home");
-    			add_location(i1, file, 33, 6, 542);
-    			attr_dev(div2, "class", "svelte-gfmmhl");
-    			add_location(div2, file, 32, 4, 488);
-    			attr_dev(i2, "class", "fas fa-users");
-    			add_location(i2, file, 37, 6, 645);
-    			attr_dev(div3, "class", "svelte-gfmmhl");
-    			add_location(div3, file, 36, 4, 589);
-    			attr_dev(i3, "class", "fas fa-video");
-    			add_location(i3, file, 41, 6, 751);
-    			attr_dev(div4, "class", "svelte-gfmmhl");
-    			add_location(div4, file, 40, 4, 695);
-    			attr_dev(i4, "class", "fas fa-shopping-basket");
-    			add_location(i4, file, 45, 6, 862);
-    			attr_dev(div5, "class", "svelte-gfmmhl");
-    			add_location(div5, file, 44, 4, 801);
-    			attr_dev(div6, "class", "middle svelte-gfmmhl");
-    			add_location(div6, file, 31, 1, 462);
+    			attr_dev(input, "class", "svelte-102w3yf");
+    			add_location(input, file, 28, 4, 387);
+    			attr_dev(form, "class", "svelte-102w3yf");
+    			add_location(form, file, 27, 2, 375);
+    			attr_dev(div1, "class", "left svelte-102w3yf");
+    			add_location(div1, file, 22, 1, 281);
+    			attr_dev(i1, "class", "fas fa-home svelte-102w3yf");
+    			add_location(i1, file, 37, 6, 593);
+    			attr_dev(div2, "class", "svelte-102w3yf");
+    			add_location(div2, file, 36, 4, 539);
+    			attr_dev(i2, "class", "fas fa-users svelte-102w3yf");
+    			add_location(i2, file, 41, 6, 696);
+    			attr_dev(div3, "class", "svelte-102w3yf");
+    			add_location(div3, file, 40, 4, 640);
+    			attr_dev(i3, "class", "fas fa-video svelte-102w3yf");
+    			add_location(i3, file, 45, 6, 802);
+    			attr_dev(div4, "class", "svelte-102w3yf");
+    			add_location(div4, file, 44, 4, 746);
+    			attr_dev(i4, "class", "fas fa-shopping-basket svelte-102w3yf");
+    			add_location(i4, file, 49, 6, 913);
+    			attr_dev(div5, "class", "svelte-102w3yf");
+    			add_location(div5, file, 48, 4, 852);
+    			attr_dev(div6, "class", "middle svelte-102w3yf");
+    			add_location(div6, file, 35, 1, 513);
     			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
-    			attr_dev(img, "class", "svelte-gfmmhl");
-    			add_location(img, file, 52, 3, 1030);
-    			attr_dev(p, "class", "svelte-gfmmhl");
-    			add_location(p, file, 53, 6, 1062);
-    			attr_dev(div7, "class", "profilelink svelte-gfmmhl");
-    			add_location(div7, file, 51, 2, 952);
-    			attr_dev(div8, "class", "right svelte-gfmmhl");
-    			add_location(div8, file, 50, 1, 929);
-    			attr_dev(nav, "class", "svelte-gfmmhl");
-    			add_location(nav, file, 16, 0, 220);
+    			attr_dev(img, "class", "svelte-102w3yf");
+    			add_location(img, file, 56, 3, 1081);
+    			attr_dev(p, "class", "svelte-102w3yf");
+    			add_location(p, file, 57, 6, 1113);
+    			attr_dev(div7, "class", "profilelink svelte-102w3yf");
+    			add_location(div7, file, 55, 2, 1003);
+    			attr_dev(i5, "class", "fas fa-sign-out-alt svelte-102w3yf");
+    			add_location(i5, file, 61, 35, 1205);
+    			attr_dev(a, "id", "logout");
+    			attr_dev(a, "href", "/login");
+    			add_location(a, file, 61, 6, 1176);
+    			attr_dev(div8, "class", "menu svelte-102w3yf");
+    			add_location(div8, file, 60, 4, 1150);
+    			attr_dev(div9, "class", "right svelte-102w3yf");
+    			add_location(div9, file, 54, 1, 980);
+    			attr_dev(nav, "class", "svelte-102w3yf");
+    			add_location(nav, file, 20, 0, 271);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -551,11 +566,15 @@ var app = (function () {
     			append_dev(div6, div5);
     			append_dev(div5, i4);
     			append_dev(nav, t5);
-    			append_dev(nav, div8);
-    			append_dev(div8, div7);
+    			append_dev(nav, div9);
+    			append_dev(div9, div7);
     			append_dev(div7, img);
     			append_dev(div7, t6);
     			append_dev(div7, p);
+    			append_dev(div9, t8);
+    			append_dev(div9, div8);
+    			append_dev(div8, a);
+    			append_dev(a, i5);
 
     			if (!mounted) {
     				dispose = [
@@ -590,11 +609,15 @@ var app = (function () {
     	return block;
     }
 
+    function logout() {
+    	
+    }
+
     function instance($$self, $$props, $$invalidate) {
     	let $showPage;
     	validate_store(showPage, "showPage");
     	component_subscribe($$self, showPage, $$value => $$invalidate(2, $showPage = $$value));
-    	let src = "./images/me.jpg";
+    	let src = "http://localhost:5000/images/me.jpg";
 
     	const currentPage = nameOfPage => {
     		set_store_value(showPage, $showPage.pageShown = nameOfPage, $showPage);
@@ -629,7 +652,13 @@ var app = (function () {
     		currentPage("profilepage");
     	};
 
-    	$$self.$capture_state = () => ({ src, showPage, currentPage, $showPage });
+    	$$self.$capture_state = () => ({
+    		src,
+    		showPage,
+    		currentPage,
+    		logout,
+    		$showPage
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ("src" in $$props) $$invalidate(0, src = $$props.src);
@@ -716,32 +745,32 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
     			attr_dev(img, "class", "svelte-42dc4y");
-    			add_location(img, file$1, 11, 4, 148);
+    			add_location(img, file$1, 11, 4, 168);
     			attr_dev(input, "placeholder", "What's on your mind?");
     			attr_dev(input, "class", "svelte-42dc4y");
-    			add_location(input, file$1, 14, 12, 214);
+    			add_location(input, file$1, 14, 12, 234);
     			attr_dev(i0, "class", "fas fa-paper-plane svelte-42dc4y");
-    			add_location(i0, file$1, 15, 12, 271);
+    			add_location(i0, file$1, 15, 12, 291);
     			attr_dev(form, "action", "");
-    			add_location(form, file$1, 13, 8, 184);
+    			add_location(form, file$1, 13, 8, 204);
     			attr_dev(p0, "class", "svelte-42dc4y");
-    			add_location(p0, file$1, 19, 34, 386);
+    			add_location(p0, file$1, 19, 34, 406);
     			attr_dev(i1, "class", "fab fa-youtube svelte-42dc4y");
-    			add_location(i1, file$1, 19, 8, 360);
+    			add_location(i1, file$1, 19, 8, 380);
     			attr_dev(p1, "class", "svelte-42dc4y");
-    			add_location(p1, file$1, 20, 33, 437);
+    			add_location(p1, file$1, 20, 33, 457);
     			attr_dev(i2, "class", "far fa-images svelte-42dc4y");
-    			add_location(i2, file$1, 20, 8, 412);
+    			add_location(i2, file$1, 20, 8, 432);
     			attr_dev(p2, "class", "svelte-42dc4y");
-    			add_location(p2, file$1, 21, 35, 494);
+    			add_location(p2, file$1, 21, 35, 514);
     			attr_dev(i3, "class", "far fa-surprise svelte-42dc4y");
-    			add_location(i3, file$1, 21, 8, 467);
+    			add_location(i3, file$1, 21, 8, 487);
     			attr_dev(div0, "class", "extras svelte-42dc4y");
-    			add_location(div0, file$1, 18, 4, 330);
+    			add_location(div0, file$1, 18, 4, 350);
     			attr_dev(div1, "id", "post-container");
     			attr_dev(div1, "class", "svelte-42dc4y");
-    			add_location(div1, file$1, 9, 0, 111);
-    			add_location(section, file$1, 8, 0, 100);
+    			add_location(div1, file$1, 9, 0, 131);
+    			add_location(section, file$1, 8, 0, 120);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -786,7 +815,7 @@ var app = (function () {
     }
 
     function instance$1($$self, $$props, $$invalidate) {
-    	let src = "./images/me.jpg";
+    	let src = "http://localhost:5000/images/me.jpg";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -871,30 +900,30 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
     			attr_dev(img, "class", "svelte-13l9b5n");
-    			add_location(img, file$2, 12, 12, 184);
+    			add_location(img, file$2, 12, 12, 203);
     			attr_dev(p, "class", "svelte-13l9b5n");
-    			add_location(p, file$2, 13, 12, 222);
+    			add_location(p, file$2, 13, 12, 241);
     			attr_dev(div0, "id", "post");
     			attr_dev(div0, "class", "svelte-13l9b5n");
-    			add_location(div0, file$2, 14, 12, 269);
+    			add_location(div0, file$2, 14, 12, 288);
     			attr_dev(div1, "id", "mypost");
     			attr_dev(div1, "class", "svelte-13l9b5n");
-    			add_location(div1, file$2, 11, 8, 153);
+    			add_location(div1, file$2, 11, 8, 172);
     			attr_dev(i0, "class", "far fa-thumbs-up");
-    			add_location(i0, file$2, 21, 12, 551);
+    			add_location(i0, file$2, 21, 12, 570);
     			attr_dev(div2, "id", "like-counter");
     			attr_dev(div2, "class", "svelte-13l9b5n");
-    			add_location(div2, file$2, 20, 8, 514);
+    			add_location(div2, file$2, 20, 8, 533);
     			attr_dev(i1, "class", "far fa-thumbs-up svelte-13l9b5n");
-    			add_location(i1, file$2, 25, 12, 642);
+    			add_location(i1, file$2, 25, 12, 661);
     			attr_dev(i2, "class", "far fa-comment svelte-13l9b5n");
-    			add_location(i2, file$2, 26, 12, 693);
+    			add_location(i2, file$2, 26, 12, 712);
     			attr_dev(div3, "id", "like");
     			attr_dev(div3, "class", "svelte-13l9b5n");
-    			add_location(div3, file$2, 24, 8, 613);
+    			add_location(div3, file$2, 24, 8, 632);
     			attr_dev(div4, "class", "user-posts svelte-13l9b5n");
-    			add_location(div4, file$2, 10, 4, 119);
-    			add_location(section, file$2, 8, 0, 102);
+    			add_location(div4, file$2, 10, 4, 138);
+    			add_location(section, file$2, 8, 0, 121);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -937,7 +966,7 @@ var app = (function () {
     }
 
     function instance$2($$self, $$props, $$invalidate) {
-    	let src = "../images/me.jpg";
+    	let src = "http://localhost:5000/images/me.jpg";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -1316,153 +1345,153 @@ var app = (function () {
     			t66 = space();
     			i19 = element("i");
     			i19.textContent = "Comment";
-    			if (img0.src !== (img0_src_value = "./images/nodejs.jpg")) attr_dev(img0, "src", img0_src_value);
+    			if (img0.src !== (img0_src_value = "http://localhost:5000/images/nodejs.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "point");
     			attr_dev(img0, "class", "svelte-1t6tzlx");
     			add_location(img0, file$4, 12, 12, 255);
     			attr_dev(h40, "class", "svelte-1t6tzlx");
-    			add_location(h40, file$4, 13, 12, 312);
+    			add_location(h40, file$4, 13, 12, 332);
     			attr_dev(a0, "href", "https://nodejs.org/en/blog/");
-    			add_location(a0, file$4, 20, 32, 716);
+    			add_location(a0, file$4, 20, 32, 736);
     			attr_dev(p0, "class", "svelte-1t6tzlx");
-    			add_location(p0, file$4, 14, 12, 353);
+    			add_location(p0, file$4, 14, 12, 373);
     			attr_dev(i0, "class", "far fa-thumbs-up");
-    			add_location(i0, file$4, 24, 16, 840);
+    			add_location(i0, file$4, 24, 16, 860);
     			attr_dev(div0, "id", "like-counter");
     			attr_dev(div0, "class", "svelte-1t6tzlx");
-    			add_location(div0, file$4, 23, 12, 799);
+    			add_location(div0, file$4, 23, 12, 819);
     			attr_dev(i1, "class", "far fa-comment");
-    			add_location(i1, file$4, 28, 16, 959);
+    			add_location(i1, file$4, 28, 16, 979);
     			attr_dev(div1, "id", "comment-counter");
     			attr_dev(div1, "class", "svelte-1t6tzlx");
-    			add_location(div1, file$4, 27, 12, 915);
+    			add_location(div1, file$4, 27, 12, 935);
     			attr_dev(i2, "class", "far fa-thumbs-up svelte-1t6tzlx");
-    			add_location(i2, file$4, 32, 16, 1065);
+    			add_location(i2, file$4, 32, 16, 1085);
     			attr_dev(i3, "class", "far fa-comment svelte-1t6tzlx");
-    			add_location(i3, file$4, 33, 16, 1120);
+    			add_location(i3, file$4, 33, 16, 1140);
     			attr_dev(div2, "id", "like");
     			attr_dev(div2, "class", "svelte-1t6tzlx");
-    			add_location(div2, file$4, 31, 12, 1032);
+    			add_location(div2, file$4, 31, 12, 1052);
     			attr_dev(div3, "id", "group-posts");
     			attr_dev(div3, "class", "svelte-1t6tzlx");
     			add_location(div3, file$4, 11, 8, 219);
-    			if (img1.src !== (img1_src_value = "./images/webdev.jpg")) attr_dev(img1, "src", img1_src_value);
+    			if (img1.src !== (img1_src_value = "http://localhost:5000/images/webdev.jpg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "point");
     			attr_dev(img1, "class", "svelte-1t6tzlx");
-    			add_location(img1, file$4, 39, 12, 1244);
+    			add_location(img1, file$4, 39, 12, 1264);
     			attr_dev(h41, "class", "svelte-1t6tzlx");
-    			add_location(h41, file$4, 40, 12, 1301);
+    			add_location(h41, file$4, 40, 12, 1341);
     			attr_dev(a1, "href", "https://reactjsnews.com/");
-    			add_location(a1, file$4, 44, 25, 1674);
+    			add_location(a1, file$4, 44, 25, 1714);
     			attr_dev(p1, "class", "svelte-1t6tzlx");
-    			add_location(p1, file$4, 41, 12, 1339);
+    			add_location(p1, file$4, 41, 12, 1379);
     			attr_dev(i4, "class", "far fa-thumbs-up");
-    			add_location(i4, file$4, 48, 16, 1798);
+    			add_location(i4, file$4, 48, 16, 1838);
     			attr_dev(div4, "id", "like-counter");
     			attr_dev(div4, "class", "svelte-1t6tzlx");
-    			add_location(div4, file$4, 47, 12, 1757);
+    			add_location(div4, file$4, 47, 12, 1797);
     			attr_dev(i5, "class", "far fa-comment");
-    			add_location(i5, file$4, 52, 16, 1916);
+    			add_location(i5, file$4, 52, 16, 1956);
     			attr_dev(div5, "id", "comment-counter");
     			attr_dev(div5, "class", "svelte-1t6tzlx");
-    			add_location(div5, file$4, 51, 12, 1872);
+    			add_location(div5, file$4, 51, 12, 1912);
     			attr_dev(i6, "class", "far fa-thumbs-up svelte-1t6tzlx");
-    			add_location(i6, file$4, 56, 16, 2021);
+    			add_location(i6, file$4, 56, 16, 2061);
     			attr_dev(i7, "class", "far fa-comment svelte-1t6tzlx");
-    			add_location(i7, file$4, 57, 16, 2076);
+    			add_location(i7, file$4, 57, 16, 2116);
     			attr_dev(div6, "id", "like");
     			attr_dev(div6, "class", "svelte-1t6tzlx");
-    			add_location(div6, file$4, 55, 12, 1988);
+    			add_location(div6, file$4, 55, 12, 2028);
     			attr_dev(div7, "id", "group-posts");
     			attr_dev(div7, "class", "svelte-1t6tzlx");
-    			add_location(div7, file$4, 38, 8, 1208);
-    			if (img2.src !== (img2_src_value = "./images/dat.jpg")) attr_dev(img2, "src", img2_src_value);
+    			add_location(div7, file$4, 38, 8, 1228);
+    			if (img2.src !== (img2_src_value = "http://localhost:5000/images/dat.jpg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "point");
     			attr_dev(img2, "class", "svelte-1t6tzlx");
-    			add_location(img2, file$4, 62, 12, 2198);
+    			add_location(img2, file$4, 62, 12, 2238);
     			attr_dev(h42, "class", "svelte-1t6tzlx");
-    			add_location(h42, file$4, 63, 12, 2252);
+    			add_location(h42, file$4, 63, 12, 2312);
     			attr_dev(a2, "href", "https://www.sciencedaily.com/releases/2020/06/200610102726.htm");
-    			add_location(a2, file$4, 68, 32, 2623);
+    			add_location(a2, file$4, 68, 32, 2683);
     			attr_dev(p2, "class", "svelte-1t6tzlx");
-    			add_location(p2, file$4, 64, 12, 2291);
+    			add_location(p2, file$4, 64, 12, 2351);
     			attr_dev(i8, "class", "far fa-thumbs-up");
-    			add_location(i8, file$4, 72, 16, 2787);
+    			add_location(i8, file$4, 72, 16, 2847);
     			attr_dev(div8, "id", "like-counter");
     			attr_dev(div8, "class", "svelte-1t6tzlx");
-    			add_location(div8, file$4, 71, 12, 2746);
+    			add_location(div8, file$4, 71, 12, 2806);
     			attr_dev(i9, "class", "far fa-comment");
-    			add_location(i9, file$4, 76, 16, 2907);
+    			add_location(i9, file$4, 76, 16, 2967);
     			attr_dev(div9, "id", "comment-counter");
     			attr_dev(div9, "class", "svelte-1t6tzlx");
-    			add_location(div9, file$4, 75, 12, 2863);
+    			add_location(div9, file$4, 75, 12, 2923);
     			attr_dev(i10, "class", "far fa-thumbs-up svelte-1t6tzlx");
-    			add_location(i10, file$4, 81, 16, 3016);
+    			add_location(i10, file$4, 81, 16, 3076);
     			attr_dev(i11, "class", "far fa-comment svelte-1t6tzlx");
-    			add_location(i11, file$4, 82, 16, 3071);
+    			add_location(i11, file$4, 82, 16, 3131);
     			attr_dev(div10, "id", "like");
     			attr_dev(div10, "class", "svelte-1t6tzlx");
-    			add_location(div10, file$4, 80, 12, 2983);
+    			add_location(div10, file$4, 80, 12, 3043);
     			attr_dev(div11, "id", "group-posts");
     			attr_dev(div11, "class", "svelte-1t6tzlx");
-    			add_location(div11, file$4, 61, 8, 2162);
-    			if (img3.src !== (img3_src_value = "./images/lol.jpg")) attr_dev(img3, "src", img3_src_value);
+    			add_location(div11, file$4, 61, 8, 2202);
+    			if (img3.src !== (img3_src_value = "http://localhost:5000/images/lol.jpg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "point");
     			attr_dev(img3, "class", "svelte-1t6tzlx");
-    			add_location(img3, file$4, 87, 12, 3193);
+    			add_location(img3, file$4, 87, 12, 3253);
     			attr_dev(h43, "class", "svelte-1t6tzlx");
-    			add_location(h43, file$4, 88, 12, 3247);
-    			add_location(br, file$4, 90, 88, 3380);
+    			add_location(h43, file$4, 88, 12, 3327);
+    			add_location(br, file$4, 90, 88, 3460);
     			attr_dev(p3, "class", "svelte-1t6tzlx");
-    			add_location(p3, file$4, 89, 12, 3287);
+    			add_location(p3, file$4, 89, 12, 3367);
     			attr_dev(i12, "class", "far fa-thumbs-up");
-    			add_location(i12, file$4, 96, 16, 3667);
+    			add_location(i12, file$4, 96, 16, 3747);
     			attr_dev(div12, "id", "like-counter");
     			attr_dev(div12, "class", "svelte-1t6tzlx");
-    			add_location(div12, file$4, 95, 12, 3626);
+    			add_location(div12, file$4, 95, 12, 3706);
     			attr_dev(i13, "class", "far fa-comment");
-    			add_location(i13, file$4, 100, 16, 3788);
+    			add_location(i13, file$4, 100, 16, 3868);
     			attr_dev(div13, "id", "comment-counter");
     			attr_dev(div13, "class", "svelte-1t6tzlx");
-    			add_location(div13, file$4, 99, 14, 3744);
+    			add_location(div13, file$4, 99, 14, 3824);
     			attr_dev(i14, "class", "far fa-thumbs-up svelte-1t6tzlx");
-    			add_location(i14, file$4, 105, 16, 3895);
+    			add_location(i14, file$4, 105, 16, 3975);
     			attr_dev(i15, "class", "far fa-comment svelte-1t6tzlx");
-    			add_location(i15, file$4, 106, 16, 3950);
+    			add_location(i15, file$4, 106, 16, 4030);
     			attr_dev(div14, "id", "like");
     			attr_dev(div14, "class", "svelte-1t6tzlx");
-    			add_location(div14, file$4, 104, 12, 3862);
+    			add_location(div14, file$4, 104, 12, 3942);
     			attr_dev(div15, "id", "group-posts");
     			attr_dev(div15, "class", "svelte-1t6tzlx");
-    			add_location(div15, file$4, 86, 8, 3157);
-    			if (img4.src !== (img4_src_value = "./images/wow.png")) attr_dev(img4, "src", img4_src_value);
+    			add_location(div15, file$4, 86, 8, 3217);
+    			if (img4.src !== (img4_src_value = "http://localhost:5000/images/wow.png")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "point");
     			attr_dev(img4, "class", "svelte-1t6tzlx");
-    			add_location(img4, file$4, 111, 12, 4072);
+    			add_location(img4, file$4, 111, 12, 4152);
     			attr_dev(h44, "class", "svelte-1t6tzlx");
-    			add_location(h44, file$4, 112, 12, 4126);
+    			add_location(h44, file$4, 112, 12, 4226);
     			attr_dev(p4, "class", "svelte-1t6tzlx");
-    			add_location(p4, file$4, 113, 12, 4166);
+    			add_location(p4, file$4, 113, 12, 4266);
     			attr_dev(i16, "class", "far fa-thumbs-up");
-    			add_location(i16, file$4, 119, 16, 4487);
+    			add_location(i16, file$4, 119, 16, 4587);
     			attr_dev(div16, "id", "like-counter");
     			attr_dev(div16, "class", "svelte-1t6tzlx");
-    			add_location(div16, file$4, 118, 12, 4446);
+    			add_location(div16, file$4, 118, 12, 4546);
     			attr_dev(i17, "class", "far fa-comment");
-    			add_location(i17, file$4, 123, 16, 4609);
+    			add_location(i17, file$4, 123, 16, 4709);
     			attr_dev(div17, "id", "comment-counter");
     			attr_dev(div17, "class", "svelte-1t6tzlx");
-    			add_location(div17, file$4, 122, 14, 4565);
+    			add_location(div17, file$4, 122, 14, 4665);
     			attr_dev(i18, "class", "far fa-thumbs-up svelte-1t6tzlx");
-    			add_location(i18, file$4, 128, 16, 4716);
+    			add_location(i18, file$4, 128, 16, 4816);
     			attr_dev(i19, "class", "far fa-comment svelte-1t6tzlx");
-    			add_location(i19, file$4, 129, 16, 4771);
+    			add_location(i19, file$4, 129, 16, 4871);
     			attr_dev(div18, "id", "like");
     			attr_dev(div18, "class", "svelte-1t6tzlx");
-    			add_location(div18, file$4, 127, 12, 4683);
+    			add_location(div18, file$4, 127, 12, 4783);
     			attr_dev(div19, "id", "group-posts");
     			attr_dev(div19, "class", "svelte-1t6tzlx");
-    			add_location(div19, file$4, 110, 8, 4036);
+    			add_location(div19, file$4, 110, 8, 4116);
     			attr_dev(div20, "id", "group-container");
     			add_location(div20, file$4, 9, 4, 181);
 
@@ -1648,14 +1677,14 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
     			attr_dev(img, "class", "svelte-1vllyok");
-    			add_location(img, file$5, 11, 4, 227);
+    			add_location(img, file$5, 11, 4, 247);
 
     			set_style(section, "display", /*$showPage*/ ctx[0].pageShown == "marketplace"
     			? "block"
     			: "none");
 
     			attr_dev(section, "class", "svelte-1vllyok");
-    			add_location(section, file$5, 9, 0, 135);
+    			add_location(section, file$5, 9, 0, 155);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1693,7 +1722,7 @@ var app = (function () {
     	let $showPage;
     	validate_store(showPage, "showPage");
     	component_subscribe($$self, showPage, $$value => $$invalidate(0, $showPage = $$value));
-    	let src = "./images/construction.png";
+    	let src = "http://localhost:5000/images/construction.png";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -1755,20 +1784,20 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*src*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
     			attr_dev(img, "class", "svelte-sjpwyg");
-    			add_location(img, file$6, 12, 4, 264);
+    			add_location(img, file$6, 12, 4, 284);
     			attr_dev(h3, "class", "svelte-sjpwyg");
-    			add_location(h3, file$6, 13, 4, 294);
+    			add_location(h3, file$6, 13, 4, 314);
     			attr_dev(i, "class", "fas fa-cog svelte-sjpwyg");
-    			add_location(i, file$6, 14, 4, 335);
+    			add_location(i, file$6, 14, 4, 355);
     			attr_dev(div, "class", "profileinfo svelte-sjpwyg");
-    			add_location(div, file$6, 11, 0, 233);
+    			add_location(div, file$6, 11, 0, 253);
 
     			set_style(section, "display", /*$showPage*/ ctx[0].pageShown == "profilepage"
     			? "block"
     			: "none");
 
     			attr_dev(section, "class", "svelte-sjpwyg");
-    			add_location(section, file$6, 9, 0, 145);
+    			add_location(section, file$6, 9, 0, 165);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1811,7 +1840,7 @@ var app = (function () {
     	let $showPage;
     	validate_store(showPage, "showPage");
     	component_subscribe($$self, showPage, $$value => $$invalidate(0, $showPage = $$value));
-    	let src = "./images/me.jpg";
+    	let src = "http://localhost:5000/images/me.jpg";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -1957,11 +1986,11 @@ var app = (function () {
     			if (img0.src !== (img0_src_value = /*lixiantv*/ ctx[2])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "markiplier");
     			attr_dev(img0, "class", "svelte-1nz153u");
-    			add_location(img0, file$7, 18, 8, 439);
+    			add_location(img0, file$7, 18, 8, 479);
     			attr_dev(h40, "class", "svelte-1nz153u");
-    			add_location(h40, file$7, 19, 12, 490);
+    			add_location(h40, file$7, 19, 12, 530);
     			attr_dev(p0, "class", "svelte-1nz153u");
-    			add_location(p0, file$7, 20, 12, 521);
+    			add_location(p0, file$7, 20, 12, 561);
     			attr_dev(iframe0, "class", "vids svelte-1nz153u");
     			attr_dev(iframe0, "title", "");
     			attr_dev(iframe0, "width", "560");
@@ -1970,37 +1999,37 @@ var app = (function () {
     			attr_dev(iframe0, "frameborder", "0");
     			attr_dev(iframe0, "allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
     			iframe0.allowFullscreen = true;
-    			add_location(iframe0, file$7, 22, 11, 632);
+    			add_location(iframe0, file$7, 22, 11, 672);
     			attr_dev(div0, "class", "vidoes svelte-1nz153u");
-    			add_location(div0, file$7, 17, 8, 409);
+    			add_location(div0, file$7, 17, 8, 449);
     			attr_dev(i0, "class", "far fa-thumbs-up");
-    			add_location(i0, file$7, 26, 12, 921);
+    			add_location(i0, file$7, 26, 12, 961);
     			attr_dev(div1, "id", "like-counter");
     			attr_dev(div1, "class", "svelte-1nz153u");
-    			add_location(div1, file$7, 25, 8, 884);
+    			add_location(div1, file$7, 25, 8, 924);
     			attr_dev(i1, "class", "far fa-comment");
-    			add_location(i1, file$7, 30, 12, 1029);
+    			add_location(i1, file$7, 30, 12, 1069);
     			attr_dev(div2, "id", "comment-counter");
     			attr_dev(div2, "class", "svelte-1nz153u");
-    			add_location(div2, file$7, 29, 8, 989);
+    			add_location(div2, file$7, 29, 8, 1029);
     			attr_dev(i2, "class", "far fa-thumbs-up svelte-1nz153u");
-    			add_location(i2, file$7, 34, 12, 1123);
+    			add_location(i2, file$7, 34, 12, 1163);
     			attr_dev(i3, "class", "far fa-comment svelte-1nz153u");
-    			add_location(i3, file$7, 35, 12, 1174);
+    			add_location(i3, file$7, 35, 12, 1214);
     			attr_dev(div3, "id", "like");
     			attr_dev(div3, "class", "svelte-1nz153u");
-    			add_location(div3, file$7, 33, 8, 1094);
+    			add_location(div3, file$7, 33, 8, 1134);
     			attr_dev(div4, "id", "video-container");
     			attr_dev(div4, "class", "svelte-1nz153u");
-    			add_location(div4, file$7, 15, 4, 363);
+    			add_location(div4, file$7, 15, 4, 403);
     			if (img1.src !== (img1_src_value = /*markiplier*/ ctx[1])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "markiplier");
     			attr_dev(img1, "class", "svelte-1nz153u");
-    			add_location(img1, file$7, 43, 8, 1330);
+    			add_location(img1, file$7, 43, 8, 1370);
     			attr_dev(h41, "class", "svelte-1nz153u");
-    			add_location(h41, file$7, 44, 12, 1383);
+    			add_location(h41, file$7, 44, 12, 1423);
     			attr_dev(p1, "class", "svelte-1nz153u");
-    			add_location(p1, file$7, 45, 12, 1416);
+    			add_location(p1, file$7, 45, 12, 1456);
     			attr_dev(iframe1, "class", "vids svelte-1nz153u");
     			attr_dev(iframe1, "title", "");
     			attr_dev(iframe1, "width", "560");
@@ -2009,36 +2038,36 @@ var app = (function () {
     			attr_dev(iframe1, "frameborder", "0");
     			attr_dev(iframe1, "allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
     			iframe1.allowFullscreen = true;
-    			add_location(iframe1, file$7, 47, 11, 1537);
+    			add_location(iframe1, file$7, 47, 11, 1577);
     			attr_dev(div5, "class", "vidoes svelte-1nz153u");
-    			add_location(div5, file$7, 42, 8, 1300);
+    			add_location(div5, file$7, 42, 8, 1340);
     			attr_dev(i4, "class", "far fa-thumbs-up");
-    			add_location(i4, file$7, 51, 12, 1826);
+    			add_location(i4, file$7, 51, 12, 1866);
     			attr_dev(div6, "id", "like-counter");
     			attr_dev(div6, "class", "svelte-1nz153u");
-    			add_location(div6, file$7, 50, 8, 1789);
+    			add_location(div6, file$7, 50, 8, 1829);
     			attr_dev(i5, "class", "far fa-comment");
-    			add_location(i5, file$7, 55, 12, 1933);
+    			add_location(i5, file$7, 55, 12, 1973);
     			attr_dev(div7, "id", "comment-counter");
     			attr_dev(div7, "class", "svelte-1nz153u");
-    			add_location(div7, file$7, 54, 8, 1893);
+    			add_location(div7, file$7, 54, 8, 1933);
     			attr_dev(i6, "class", "far fa-thumbs-up svelte-1nz153u");
-    			add_location(i6, file$7, 59, 12, 2027);
+    			add_location(i6, file$7, 59, 12, 2067);
     			attr_dev(i7, "class", "far fa-comment svelte-1nz153u");
-    			add_location(i7, file$7, 60, 12, 2078);
+    			add_location(i7, file$7, 60, 12, 2118);
     			attr_dev(div8, "id", "like");
     			attr_dev(div8, "class", "svelte-1nz153u");
-    			add_location(div8, file$7, 58, 8, 1998);
+    			add_location(div8, file$7, 58, 8, 2038);
     			attr_dev(div9, "id", "video-container");
     			attr_dev(div9, "class", "svelte-1nz153u");
-    			add_location(div9, file$7, 40, 8, 1254);
+    			add_location(div9, file$7, 40, 8, 1294);
 
     			set_style(section, "display", /*$showPage*/ ctx[0].pageShown == "videos"
     			? "block"
     			: "none");
 
     			attr_dev(section, "class", "svelte-1nz153u");
-    			add_location(section, file$7, 14, 0, 278);
+    			add_location(section, file$7, 14, 0, 318);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2116,8 +2145,8 @@ var app = (function () {
     	let $showPage;
     	validate_store(showPage, "showPage");
     	component_subscribe($$self, showPage, $$value => $$invalidate(0, $showPage = $$value));
-    	let markiplier = "./images/markiplier.jpg";
-    	let lixiantv = "./images/lixiantv.jpg";
+    	let markiplier = "http://localhost:5000/images/markiplier.jpg";
+    	let lixiantv = "http://localhost:5000/images/lixiantv.jpg";
 
     	const currentPage = nameOfPage => {
     		set_store_value(showPage, $showPage.pageShown = nameOfPage, $showPage);
@@ -2194,19 +2223,19 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "Stine Knarkegaard Petersen";
     			attr_dev(h3, "class", "svelte-h0hsjn");
-    			add_location(h3, file$8, 11, 4, 132);
+    			add_location(h3, file$8, 11, 4, 152);
     			if (img.src !== (img_src_value = /*src*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
     			attr_dev(img, "class", "svelte-h0hsjn");
-    			add_location(img, file$8, 14, 8, 190);
+    			add_location(img, file$8, 14, 8, 210);
     			attr_dev(p, "class", "svelte-h0hsjn");
-    			add_location(p, file$8, 15, 8, 223);
+    			add_location(p, file$8, 15, 8, 243);
     			attr_dev(div, "class", "friend svelte-h0hsjn");
-    			add_location(div, file$8, 13, 7, 160);
+    			add_location(div, file$8, 13, 7, 180);
     			attr_dev(section, "id", "contacts");
     			attr_dev(section, "class", "svelte-h0hsjn");
-    			add_location(section, file$8, 10, 1, 103);
-    			add_location(main, file$8, 8, 0, 92);
+    			add_location(section, file$8, 10, 1, 123);
+    			add_location(main, file$8, 8, 0, 112);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2241,7 +2270,7 @@ var app = (function () {
     }
 
     function instance$8($$self, $$props, $$invalidate) {
-    	let src = "./images/me.jpg";
+    	let src = "http://localhost:5000/images/me.jpg";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -2428,99 +2457,99 @@ var app = (function () {
     			h49.textContent = "LixinaTV";
     			attr_dev(h30, "class", "svelte-1gyr93u");
     			add_location(h30, file$9, 9, 7, 99);
-    			if (img0.src !== (img0_src_value = "./images/point.svg")) attr_dev(img0, "src", img0_src_value);
+    			if (img0.src !== (img0_src_value = "http://localhost:5000/images/point.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "point");
     			attr_dev(img0, "class", "svelte-1gyr93u");
     			add_location(img0, file$9, 12, 8, 140);
     			attr_dev(h40, "class", "svelte-1gyr93u");
-    			add_location(h40, file$9, 13, 8, 192);
+    			add_location(h40, file$9, 13, 8, 212);
     			attr_dev(div0, "class", "svelte-1gyr93u");
     			add_location(div0, file$9, 11, 8, 125);
-    			if (img1.src !== (img1_src_value = "./images/building.svg")) attr_dev(img1, "src", img1_src_value);
+    			if (img1.src !== (img1_src_value = "http://localhost:5000/images/building.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "point");
     			attr_dev(img1, "class", "svelte-1gyr93u");
-    			add_location(img1, file$9, 17, 8, 251);
+    			add_location(img1, file$9, 17, 8, 271);
     			attr_dev(h41, "class", "svelte-1gyr93u");
-    			add_location(h41, file$9, 18, 8, 306);
+    			add_location(h41, file$9, 18, 8, 346);
     			attr_dev(div1, "class", "svelte-1gyr93u");
-    			add_location(div1, file$9, 16, 8, 236);
-    			if (img2.src !== (img2_src_value = "./images/virus.svg")) attr_dev(img2, "src", img2_src_value);
+    			add_location(div1, file$9, 16, 8, 256);
+    			if (img2.src !== (img2_src_value = "http://localhost:5000/images/virus.svg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "point");
     			attr_dev(img2, "class", "svelte-1gyr93u");
-    			add_location(img2, file$9, 22, 8, 367);
+    			add_location(img2, file$9, 22, 8, 407);
     			attr_dev(h42, "class", "svelte-1gyr93u");
-    			add_location(h42, file$9, 23, 8, 419);
+    			add_location(h42, file$9, 23, 8, 479);
     			attr_dev(div2, "class", "svelte-1gyr93u");
-    			add_location(div2, file$9, 21, 8, 352);
+    			add_location(div2, file$9, 21, 8, 392);
     			attr_dev(section0, "id", "sites");
     			attr_dev(section0, "class", "svelte-1gyr93u");
     			add_location(section0, file$9, 8, 1, 70);
     			attr_dev(h31, "class", "svelte-1gyr93u");
-    			add_location(h31, file$9, 29, 7, 528);
-    			if (img3.src !== (img3_src_value = "./images/nodejs.jpg")) attr_dev(img3, "src", img3_src_value);
+    			add_location(h31, file$9, 29, 7, 588);
+    			if (img3.src !== (img3_src_value = "http://localhost:5000/images/nodejs.jpg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "alt", "point");
     			attr_dev(img3, "class", "svelte-1gyr93u");
-    			add_location(img3, file$9, 32, 8, 570);
+    			add_location(img3, file$9, 32, 8, 630);
     			attr_dev(h43, "class", "svelte-1gyr93u");
-    			add_location(h43, file$9, 33, 8, 623);
+    			add_location(h43, file$9, 33, 8, 703);
     			attr_dev(div3, "class", "svelte-1gyr93u");
-    			add_location(div3, file$9, 31, 8, 555);
-    			if (img4.src !== (img4_src_value = "./images/webdev.jpg")) attr_dev(img4, "src", img4_src_value);
+    			add_location(div3, file$9, 31, 8, 615);
+    			if (img4.src !== (img4_src_value = "http://localhost:5000/images/webdev.jpg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "alt", "point");
     			attr_dev(img4, "class", "svelte-1gyr93u");
-    			add_location(img4, file$9, 37, 8, 693);
+    			add_location(img4, file$9, 37, 8, 773);
     			attr_dev(h44, "class", "svelte-1gyr93u");
-    			add_location(h44, file$9, 38, 8, 746);
+    			add_location(h44, file$9, 38, 8, 846);
     			attr_dev(div4, "class", "svelte-1gyr93u");
-    			add_location(div4, file$9, 36, 8, 678);
-    			if (img5.src !== (img5_src_value = "./images/dat.jpg")) attr_dev(img5, "src", img5_src_value);
+    			add_location(div4, file$9, 36, 8, 758);
+    			if (img5.src !== (img5_src_value = "http://localhost:5000/images/dat.jpg")) attr_dev(img5, "src", img5_src_value);
     			attr_dev(img5, "alt", "point");
     			attr_dev(img5, "class", "svelte-1gyr93u");
-    			add_location(img5, file$9, 42, 8, 813);
+    			add_location(img5, file$9, 42, 8, 913);
     			attr_dev(h45, "class", "svelte-1gyr93u");
-    			add_location(h45, file$9, 43, 8, 863);
+    			add_location(h45, file$9, 43, 8, 983);
     			attr_dev(div5, "class", "svelte-1gyr93u");
-    			add_location(div5, file$9, 41, 8, 798);
-    			if (img6.src !== (img6_src_value = "./images/lol.jpg")) attr_dev(img6, "src", img6_src_value);
+    			add_location(div5, file$9, 41, 8, 898);
+    			if (img6.src !== (img6_src_value = "http://localhost:5000/images/lol.jpg")) attr_dev(img6, "src", img6_src_value);
     			attr_dev(img6, "alt", "point");
     			attr_dev(img6, "class", "svelte-1gyr93u");
-    			add_location(img6, file$9, 47, 8, 931);
+    			add_location(img6, file$9, 47, 8, 1051);
     			attr_dev(h46, "class", "svelte-1gyr93u");
-    			add_location(h46, file$9, 48, 8, 981);
+    			add_location(h46, file$9, 48, 8, 1121);
     			attr_dev(div6, "class", "svelte-1gyr93u");
-    			add_location(div6, file$9, 46, 8, 916);
-    			if (img7.src !== (img7_src_value = "./images/wow.png")) attr_dev(img7, "src", img7_src_value);
+    			add_location(div6, file$9, 46, 8, 1036);
+    			if (img7.src !== (img7_src_value = "http://localhost:5000/images/wow.png")) attr_dev(img7, "src", img7_src_value);
     			attr_dev(img7, "alt", "point");
     			attr_dev(img7, "class", "svelte-1gyr93u");
-    			add_location(img7, file$9, 52, 8, 1050);
+    			add_location(img7, file$9, 52, 8, 1190);
     			attr_dev(h47, "class", "svelte-1gyr93u");
-    			add_location(h47, file$9, 53, 8, 1100);
+    			add_location(h47, file$9, 53, 8, 1260);
     			attr_dev(div7, "class", "svelte-1gyr93u");
-    			add_location(div7, file$9, 51, 8, 1035);
+    			add_location(div7, file$9, 51, 8, 1175);
     			attr_dev(section1, "id", "groups");
     			attr_dev(section1, "class", "svelte-1gyr93u");
-    			add_location(section1, file$9, 28, 4, 498);
+    			add_location(section1, file$9, 28, 4, 558);
     			attr_dev(h32, "class", "svelte-1gyr93u");
-    			add_location(h32, file$9, 59, 8, 1211);
-    			if (img8.src !== (img8_src_value = "./images/markiplier.jpg")) attr_dev(img8, "src", img8_src_value);
+    			add_location(h32, file$9, 59, 8, 1371);
+    			if (img8.src !== (img8_src_value = "http://localhost:5000/images/markiplier.jpg")) attr_dev(img8, "src", img8_src_value);
     			attr_dev(img8, "alt", "point");
     			attr_dev(img8, "class", "svelte-1gyr93u");
-    			add_location(img8, file$9, 62, 8, 1258);
+    			add_location(img8, file$9, 62, 8, 1418);
     			attr_dev(h48, "class", "svelte-1gyr93u");
-    			add_location(h48, file$9, 63, 12, 1319);
+    			add_location(h48, file$9, 63, 12, 1499);
     			attr_dev(div8, "class", "svelte-1gyr93u");
-    			add_location(div8, file$9, 61, 8, 1243);
-    			if (img9.src !== (img9_src_value = "./images/lixiantv.jpg")) attr_dev(img9, "src", img9_src_value);
+    			add_location(div8, file$9, 61, 8, 1403);
+    			if (img9.src !== (img9_src_value = "http://localhost:5000/images/lixiantv.jpg")) attr_dev(img9, "src", img9_src_value);
     			attr_dev(img9, "alt", "point");
     			attr_dev(img9, "class", "svelte-1gyr93u");
-    			add_location(img9, file$9, 67, 8, 1381);
+    			add_location(img9, file$9, 67, 8, 1561);
     			attr_dev(h49, "class", "svelte-1gyr93u");
-    			add_location(h49, file$9, 68, 12, 1440);
+    			add_location(h49, file$9, 68, 12, 1640);
     			attr_dev(div9, "class", "svelte-1gyr93u");
-    			add_location(div9, file$9, 66, 8, 1366);
+    			add_location(div9, file$9, 66, 8, 1546);
     			attr_dev(section2, "id", "liked-pages");
     			attr_dev(section2, "class", "svelte-1gyr93u");
-    			add_location(section2, file$9, 58, 4, 1175);
+    			add_location(section2, file$9, 58, 4, 1335);
     			attr_dev(main, "class", "svelte-1gyr93u");
     			add_location(main, file$9, 6, 0, 59);
     		},
@@ -2749,32 +2778,32 @@ var app = (function () {
     			if (img.src !== (img_src_value = src)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user");
     			attr_dev(img, "class", "svelte-1b17en6");
-    			add_location(img, file$b, 13, 8, 189);
+    			add_location(img, file$b, 13, 8, 209);
     			attr_dev(p, "class", "svelte-1b17en6");
-    			add_location(p, file$b, 14, 8, 222);
+    			add_location(p, file$b, 14, 8, 242);
     			attr_dev(i0, "class", "fas fa-minus svelte-1b17en6");
-    			add_location(i0, file$b, 15, 8, 250);
+    			add_location(i0, file$b, 15, 8, 270);
     			attr_dev(i1, "class", "fas fa-times svelte-1b17en6");
-    			add_location(i1, file$b, 16, 8, 288);
+    			add_location(i1, file$b, 16, 8, 308);
     			attr_dev(div0, "id", "top-container");
     			attr_dev(div0, "class", "svelte-1b17en6");
-    			add_location(div0, file$b, 12, 4, 155);
+    			add_location(div0, file$b, 12, 4, 175);
     			attr_dev(div1, "id", "chat");
     			attr_dev(div1, "class", "svelte-1b17en6");
-    			add_location(div1, file$b, 20, 4, 338);
+    			add_location(div1, file$b, 20, 4, 358);
     			attr_dev(input, "placeholder", "Aa");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "class", "svelte-1b17en6");
-    			add_location(input, file$b, 25, 8, 409);
+    			add_location(input, file$b, 25, 8, 429);
     			attr_dev(i2, "class", "fas fa-paper-plane svelte-1b17en6");
-    			add_location(i2, file$b, 28, 8, 474);
+    			add_location(i2, file$b, 28, 8, 494);
     			attr_dev(div2, "id", "bot-container");
     			attr_dev(div2, "class", "svelte-1b17en6");
-    			add_location(div2, file$b, 24, 4, 375);
+    			add_location(div2, file$b, 24, 4, 395);
     			attr_dev(div3, "id", "chat-container");
     			attr_dev(div3, "class", "svelte-1b17en6");
-    			add_location(div3, file$b, 11, 0, 124);
-    			add_location(section, file$b, 9, 0, 111);
+    			add_location(div3, file$b, 11, 0, 144);
+    			add_location(section, file$b, 9, 0, 131);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2817,7 +2846,7 @@ var app = (function () {
     	return block;
     }
 
-    let src = "./images/me.jpg";
+    let src = "http://localhost:5000/images/me.jpg";
 
     function instance$b($$self, $$props, $$invalidate) {
     	const writable_props = [];

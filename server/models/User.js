@@ -5,22 +5,34 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true
   },
+
   password: {
     type: String,
     required: true
   },
+
   firstName: {
     type: String,
     required: true
   },
+
   lastName: {
     type: String,
     required: true
   },
-  // profileimg: {
-  //   data: String, // image 
-  //   required: true
-  // }
+
+  profilepicture: {
+    data: Buffer, 
+    contentType: String
+  },
+
+  friends: {
+    type: Array
+  },
+
+  posts: {
+    type: Array
+  }
 });
 
 // export model user with UserSchema

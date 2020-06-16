@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const PostSchema = mongoose.Schema({
-  user_id: {
+  author_id: {
     type: String,
     required: true
   },
@@ -10,13 +10,16 @@ const PostSchema = mongoose.Schema({
     required: true
   },
   likes: {
-    type: Number,
-    required: false
+    type: Number
   },
   comments: {
-    type: String,
-    required: false
+    type: Array
+  },
+  postImg: {
+    data: Buffer,
+    contentType: String
   }
+
 });
 
 // export model user with UserSchema

@@ -1,6 +1,6 @@
 <!-- JavaScript -->
 <script>
-let src = "./images/me.jpg"
+let src = "http://localhost:5000/images/me.jpg"
 
 </script>
 

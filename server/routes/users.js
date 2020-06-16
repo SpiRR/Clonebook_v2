@@ -6,10 +6,9 @@ const {
     validationResult
 } = require("express-validator");
 const bcrypt = require("bcryptjs");
-const multer = require('multer');
-const upload = multer({
-    dest: 'images/'
-})
+const formidable = require("formidable")
+const fs = require('fs');
+const { v4: uuidV4 } = require('uuid');
 const jwt = require('jsonwebtoken')
 const expiresIn = 10000
 
@@ -46,77 +45,84 @@ router.get("/signup", (req, res) => {
 
 
 // Register
-router.post("/signup", [
-    check("email", "Missing email").not().isEmpty(),
-    check("email", "Please enter a valid email").isEmail(),
-    check("password", "Please enter a valid password").isLength({
-        min: 6
-    })
-], async (req, res) => {
+router.post("/signup", async (req, res) => {
 
-    const err = validationResult(req)
-
-    if (!err.isEmpty()) {
-        return res.status(400).json({
-            errors: err.array()
-        });
-    }
-    const {
-        email,
-        password,
-        firstName,
-        lastName
-    } = req.body
-
-    try {
-
-        let user = await User.findOne({
-            email
-        });
-
-        if (user) {
-            return res.status(400).json({
-                message: "User already exists"
-            });
+    const form = formidable({
+        multiples: true
+    });
+    form.parse(req, async (err, fields, files) => {
+        if (err) {
+            next(err);
+            return;
         }
+        const email = fields.email
+        const password = fields.password
+        const firstName = fields.firstName
+        const lastName = fields.lastName
+        // const profilepicture = files.profilepicture // uploads without in postman
 
-        // get profileimg here
-        // let profileimg = "./images/not.png"
+        try {
+            const filename = uuidV4() + '.jpg'
+            const oldPath = files.profilepicture.path
+            const newPath = path.join(__dirname, '..', 'images', 'userImages', filename)
 
-        user = new User({
-            email,
-            password,
-            firstName,
-            lastName,
-            // profileimg
-        });
+            fs.rename(oldPath, newPath, function (err) {
+                if(err){console.log('Could not move img!'); return}
+                console.log('Moved img. successfully')
+            })
 
-        const salt = await bcrypt.genSalt(10);
-        user.password = await bcrypt.hash(password, salt);
+            let user = await User.findOne({
+                email
+            });
 
-        await user.save();
-
-        const payload = {
-            user: {
-                id: user.id
-            }
-        };
-
-        // Redirect to loggedIn content
-        jwt.sign(
-            payload, "randomString", {expiresIn}, (err, token) => {
-                if(err) throw err;
-                res.status(200).json({
-                    user: user.email,
-                    token: token
+            if (user) {
+                return res.status(400).json({
+                    message: "User already exists"
                 });
             }
-        )
 
-    } catch (err) {
-        console.log(err.message);
-        res.status(500).send("Error in register")
-    }
+            console.log(newPath)
+
+            user = new User({
+                email,
+                password,
+                firstName,
+                lastName,
+                profilepicture: filename, // Find another way to store - it wont
+                friends: [], 
+                posts: []
+            });
+
+            const salt = await bcrypt.genSalt(10);
+            user.password = await bcrypt.hash(password, salt);
+
+            await user.save();
+
+            const payload = {
+                user: {
+                    id: user.id
+                }
+            };
+
+            // Redirect to loggedIn content
+            jwt.sign(
+                payload, "randomString", {
+                    expiresIn
+                }, (err, token) => {
+                    if (err) throw err;
+                    res.status(200).json({
+                        user: user.email,
+                        token: token
+                    });
+                }
+            )
+
+        } catch (err) {
+            console.log(err.message);
+            res.status(500).send("Error in register")
+        }
+    });
+
 });
 
 router.get("/login", (req, res) => {
@@ -125,74 +131,74 @@ router.get("/login", (req, res) => {
 
 // Login
 // Save TOKEN in FE in LocalStorage
-router.post("/login", [
-    check("email", "Please enter a valid email").isEmail(),
-    check("password", "Please enter a valid password").isLength({
-        min: 6
-    })
-], async (req, res) => {
-    const errors = validationResult(req);
+router.post("/login", async (req, res) => {
+    const form = formidable({multiples: true})
 
-    if (!errors.isEmpty()) {
-        return res.status(400).json({
-            errors: errors.array()
-        });
-    }
+    form.parse(req, async (err, fields, files) => {
+        if (err) {
+            next(err);
+            return;
+        }
+        const email = fields.email
+        const password = fields.password
+        
+        try {
 
-    const {
-        email,
-        password
-    } = req.body
-
-    try {
-
-        let user = await User.findOne({
-            email
-        });
-
-        if (!user) {
-            return res.status(400).json({
-                message: "User does not exists"
-            })
+            let user = await User.findOne({
+                email
+            });
+    
+            if (!user) {
+                return res.status(400).json({
+                    message: "User does not exists"
+                })
+            }
+    
+            const isMatch = await bcrypt.compare(password, user.password);
+            if (!isMatch)
+                return res.status(400).json({
+                    message: "Incorrect Password !"
+                });
+    
+            const payload = {
+                user: {
+                    id: user.id
+                }
+            };
+    
+            jwt.sign(
+                payload, "randomString", {
+                    expiresIn
+                }, (err, token) => {
+                    if (err) throw err;
+                    res.status(200).json({
+                        token: token
+                    });
+                }
+            )
+    
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({
+                message: "Server Error"
+            });
         }
 
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch)
-            return res.status(400).json({
-                message: "Incorrect Password !"
-            });
+    })
 
-        const payload = {
-            user: {
-                id: user.id
-            }
-        };
-
-        jwt.sign(
-            payload, "randomString", {expiresIn}, (err, token) => {
-                if(err) throw err;
-                res.status(200).json({
-                    token: token
-                });
-            }
-        )
-
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({
-            message: "Server Error"
-        });
-    }
+    
 
 });
 
-router.get("/profile", isAuthendicated ,async(req, res) => {
+router.get("/profile", isAuthendicated, async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
         res.json(user);
-      } catch (e) {
-        res.send({ message: "Error in Fetching user" });
-      }
+    } catch (e) {
+        res.send({
+            message: "Error in Fetching user"
+        });
+    }
 });
 
 // Logout

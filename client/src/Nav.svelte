@@ -1,11 +1,15 @@
 <script>
 
-let src = "./images/me.jpg"
+let src = "http://localhost:5000/images/me.jpg"
 
 import {showPage} from './pageToggle.js'
 
 const currentPage = (nameOfPage) => {
   $showPage.pageShown = nameOfPage
+}
+
+function logout () {
+  
 }
 
 </script>
@@ -51,8 +55,12 @@ const currentPage = (nameOfPage) => {
 	<div class="right">
 		<div class="profilelink" on:click={() => { currentPage('profilepage') }}>
 			<img {src} alt="user"/> 
-      <p>Stine</p>        
+      <p>Stine</p>       
 		</div>
+
+    <div class="menu">
+      <a id="logout" href="/login"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
 
 	</div>
 
@@ -147,7 +155,7 @@ nav .middle div:hover {
 
 nav div.right{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 2rem;
   align-items: center;
@@ -183,19 +191,24 @@ nav div.right > div:last-child{
   text-align: right;
 }
 
+nav div.right div.menu {
+  top: -1px;
+  left: 20px;
+}
 
+nav div.right div.menulist i {
+  text-decoration: none;
+  text-transform: none;
+  font-size: 14px;
+  text-align: left;
+  left: 14px;
+  color:  #1da1f2;
+  position: absolute;
+  font-weight: 500;
+}
 
-  /* div#searchResults {
-    position: absolute;
-    width: 8%;
-    margin-top: -0.1rem;
-    height: 20vh;
-    padding: 0.2rem;
-    background-color: white;
-    color: #333;
-    border: 1px solid #111;
-    border-top: none;
-    display: none;
-  } */
+nav div.right div.menulist i:active, nav div.right div.menulist i:focus {
+  color:  #1da1f2;
+}
 
 </style>
