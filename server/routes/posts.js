@@ -82,7 +82,7 @@ router.patch("/comment-post", isAuthendicated, async (req, res) => {
 
 });
 
-// All yours and your friends posts
+// get All yours and your friends posts
 router.get("/get-posts", (req, res) => {
     res.send('loaded posts')
 })
