@@ -28,11 +28,8 @@ const UserSchema = mongoose.Schema({
 
   friends: {
     type: Array
-  },
-
-  posts: {
-    type: Array
   }
+
 });
 
 // export model user with UserSchema

@@ -3,6 +3,7 @@
 let src = "http://localhost:5000/images/me.jpg"
 
 import {showPage} from './pageToggle.js'
+import {user} from './data.js'
 
 const currentPage = (nameOfPage) => {
   $showPage.pageShown = nameOfPage
@@ -55,8 +56,8 @@ function logout () {
 
 	<div class="right">
 		<div class="profilelink" on:click={() => { currentPage('profilepage') }}>
-			<img {src} alt="user"/> 
-      <p>Stine</p>       
+			<img src="http://localhost:5000/images/userImages/{$user.profilepicture}" alt="user"/> 
+      <p>{$user.firstName}</p>       
 		</div>
 
     <div class="menu">

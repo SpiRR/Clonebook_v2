@@ -3,6 +3,7 @@ const server = express()
 const path = require("path")
 const port = 80
 const InitiateMongoServer = require("./config/db");
+const cookieParser = require('cookie-parser');
 const users = require("./routes/users.js")
 const posts = require('./routes/posts.js');
 
@@ -12,6 +13,7 @@ InitiateMongoServer();
 server.use(express.urlencoded({extended: false}));
 server.use(express.json());
 server.use(express.Router());
+server.use(cookieParser());
 
 server.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "client", "public", "index.html"))

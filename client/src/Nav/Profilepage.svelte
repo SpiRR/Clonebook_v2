@@ -1,7 +1,7 @@
 <script >
 
 import {showPage} from '../pageToggle.js'
-let src = "http://localhost:5000/images/me.jpg"
+import {user} from '../data.js'
 
 </script>
 
@@ -10,8 +10,8 @@ let src = "http://localhost:5000/images/me.jpg"
 <section style="display: {$showPage.pageShown == 'profilepage' ? "block" : "none"}">
 
 <div class="profileinfo">
-    <img {src} alt="user"/> 
-    <h3>Stine Knarkegaard Andersen</h3>
+    <img src="http://localhost:5000/images/userImages/{$user.profilepicture}" alt="user"/> 
+    <h3>{$user.firstName} {$user.lastName}</h3>
     <i class="fas fa-cog"></i>   
 </div>
 
@@ -35,14 +35,14 @@ section {
     padding: 10px;
 }
 
-.cover {
+/* .cover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: block;
     font-style: italic;
     font-weight: 500;
-}
+} */
 
 .profileinfo {
     position: absolute;

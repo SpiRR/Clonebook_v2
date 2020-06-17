@@ -1,6 +1,7 @@
 <!-- JavaScript -->
 <script>
 let src = "http://localhost:5000/images/me.jpg"
+  import {user} from './data.js'
 
 </script>
 
@@ -13,7 +14,7 @@ let src = "http://localhost:5000/images/me.jpg"
 
        <div class="friend">
         <img {src} alt="user"/>
-        <p>Stine Knarkegaard Petersen</p>
+        <p>{$user.friends.firstName} {$user.friends.lastName}</p>
        </div>
     </section>
 

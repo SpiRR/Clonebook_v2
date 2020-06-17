@@ -10,9 +10,9 @@ let src = "http://localhost:5000/images/me.jpg"
 
     <div class="user-posts">
         <div id="mypost">
-            <img {src} alt="user"/> 
-            <p>Stine Knarkegaard Andersen</p>
-            <div id="post">
+             <img {src} alt="user"/> <!--friend img -->
+            <p>Stine Knarkegaard Andersen</p> <!--friend name -->
+            <div id="post"> <!--friend post -->
                 Report writing before I'm gonna throw my code out the window for being a bitch 😂👌
                 #webdevelopment #webdeveloper  #reactjs #nodejs #bachelordegree
             </div>

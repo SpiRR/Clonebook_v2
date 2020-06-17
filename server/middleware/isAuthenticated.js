@@ -2,13 +2,13 @@
 const jwt = require('jsonwebtoken')
 
 function isAuthendicated(req, res, next) {
-    const token = req.header("token");
+    let token = req.header("token");
     if (!token) return res.status(401).json({
         message: "Auth Error"
     });
 
     try {
-        const decoded = jwt.verify(token, "randomString");
+        const decoded = jwt.verify(token, "myWookieSecret");
         req.user = decoded.user;
         next();
     } catch (e) {

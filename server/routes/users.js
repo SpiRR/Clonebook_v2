@@ -4,12 +4,12 @@ const path = require("path")
 const bcrypt = require("bcryptjs");
 const formidable = require("formidable")
 const fs = require('fs');
+const detect = require('detect-file-type');
 const { v4: uuidV4 } = require('uuid');
-const jwt = require('jsonwebtoken')
-const expiresIn = 10000
-
 const User = require("../models/User.js");
 const isAuthendicated = require("../middleware/isAuthenticated.js");
+const jwt = require('jsonwebtoken')
+const expiresIn = 10000
 
 //Search users (NEED TO BE CONVERTED SO YOU CAN SEARCH ON EMAIL)
 router.get("/search", async (req, res) => {
@@ -31,79 +31,71 @@ router.post("/signup", async (req, res) => {
 
     const form = formidable({multiples: true});
     form.parse(req, async (err, fields, files) => {
-        // if (err) {
-        //     next(err);
-        //     return;
-        // }
+
+        if(err){console.log('something went wrong in form, signup'); return}
+
         const email = fields.email
         const password = fields.password
         const firstName = fields.firstName
         const lastName = fields.lastName
-        // const profilepicture = files.profilepicture 
+        const profilepicture = files.profilepicture 
 
         try {
-            const filename = uuidV4() + '.jpg' // https://www.npmjs.com/package/detect-file-type
-            const oldPath = files.profilepicture.path
-            const newPath = path.join(__dirname, '..', 'images', 'userImages', filename)
-
-            fs.rename(oldPath, newPath, function (err) {
-                if(err){console.log('Could not move img!'); return}
-                console.log('Moved img. successfully')
-            })
 
             let user = await User.findOne({
                 email
             });
 
+            
             if (user) {
                 return res.status(400).json({
                     message: "User already exists"
                 });
-            }
+            
+            } else {
+                
+                detect.fromFile(profilepicture.path, async function(err, result) {
+                    
+                    if (err) {
+                        return console.log(err);
+                    }
 
-            console.log('???', newPath)
+                    const filename = uuidV4() + '.jpg'
+                    const oldPath = files.profilepicture.path
+                    const newPath = path.join(__dirname, '..', '..', 'client', 'public', 'images', 'userImages', filename)
+                    
+                    fs.rename(oldPath, newPath, function (err) {
+                        if(err){console.log('Could not move img!'); return}
+                        console.log('Moved img. successfully')
+                    })
+                    
+                    console.log(result); // { ext: 'jpg', mime: 'image/jpeg' }
+                
+                
+                user = new User({
+                    email,
+                    password,
+                    firstName,
+                    lastName,
+                    profilepicture: filename.toString(), 
+                    friends: [], 
+                });
 
-            user = new User({
-                email,
-                password,
-                firstName,
-                lastName,
-                profilepicture: filename.toString(), 
-                friends: [], 
-                posts: []
+                const salt = await bcrypt.genSalt(10);
+                user.password = await bcrypt.hash(password, salt);
+
+                await user.save();
+
+       
             });
-
-            const salt = await bcrypt.genSalt(10);
-            user.password = await bcrypt.hash(password, salt);
-
-            await user.save();
-
-            const payload = {
-                user: {
-                    id: user.id
-                }
-            };
-
-            // Redirect to loggedIn content
-            jwt.sign(
-                payload, "randomString", {
-                    expiresIn
-                }, (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        user: user.email,
-                        token: token
-                    });
-                }
-            )
-
+        }
+        res.redirect("/login")
+        
         } catch (err) {
             console.log(err.message);
             res.status(500).send("Error in register")
         }
     });
-
-    res.send('error in signup')
 });
 
 router.get("/login", (req, res) => {
@@ -116,18 +108,19 @@ router.post("/login", async (req, res) => {
     const form = formidable({multiples: true})
 
     form.parse(req, async (err, fields, files) => {
-        if (err) {
-            next(err);
-            return;
-        }
+
+        if(err){console.log('something went wrong in form, login'); return}
+
         const email = fields.email
-        const password = fields.password
+        const password = fields.password      
 
         try {
 
             let user = await User.findOne({
                 email
             });
+
+            // console.log(user)
     
             if (!user) {
                 return res.status(400).json({
@@ -140,23 +133,23 @@ router.post("/login", async (req, res) => {
                 return res.status(400).json({
                     message: "Incorrect Password !"
                 });
-    
-            const payload = {
-                user: {
-                    id: user.id
-                }
-            };
-    
-            jwt.sign(
-                payload, "randomString", {
-                    expiresIn
-                }, (err, token) => {
-                    if (err) throw err;
-                    res.status(200).json({
-                        token: token
-                    });
-                }
-            )
+            
+                  const payload = {
+                    user: {
+                        id: user.id
+                    }
+                };
+
+                // let saveToken = jwt.sign(payload, "myWookieSecret", {expiresIn}, (token) => {
+                //         return res.status(200);
+                    // })
+                let saveToken = jwt.sign(payload, "myWookieSecret")
+
+                    console.log(typeof saveToken)
+
+                    res.send(saveToken)
+
+                // res.redirect("/")
     
         } catch (err) {
             console.error(err);
@@ -168,6 +161,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.get("/profile", isAuthendicated, async (req, res) => {
+
     try {
         const user = await User.findById(req.user.id);
         res.json(user);

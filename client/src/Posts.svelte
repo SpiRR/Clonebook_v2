@@ -1,6 +1,6 @@
 <script>
 
-let src = "http://localhost:5000/images/me.jpg"
+import {user} from './data.js'
 
 </script>
 
@@ -9,7 +9,7 @@ let src = "http://localhost:5000/images/me.jpg"
 <section>
 <div id="post-container">
     
-    <img {src} alt="user"/> 
+    <img src="http://localhost:5000/images/userImages/{$user.profilepicture}" alt="user"/> 
 
         <form action="">
             <input placeholder="What's on your mind?"/>

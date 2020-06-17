@@ -96,8 +96,7 @@
 		</div>
 
         <h2>Signup</h2>
-
-        <form method="POST" action="signup">
+        <form method="POST" action="signup" enctype="multipart/form-data">
             
             <input 
             placeholder="E-mail"
@@ -123,37 +122,13 @@
             name="lastName"
             />
         
-            <input name="profilepicture" type="file" id="img">
+            <input name="profilepicture" type="file" id="img" accept="image/*">
         
             <button id="signup-btn" type="submit">Signup</button>
         
         </form>
         
         </section>
-
-    <script>
-
-    // $("#signup-btn").click(function () {
-    //     const formData = $('form').serialize()
-    //     console.log('from form: ', formData)
-
-    //     $.ajax({
-    //         url: "/signup",
-    //         type: "POST",
-    //         dataType: 'json',
-    //         xhrFields: {
-    //             withCredentials: true
-    //         }, 
-    //         data: formData
-    //     }).done(function (data) {
-    //         console.log('data ', data)
-    //         var token = data.token 
-    //         localStorage.setItem('token', token)
-    //         location.href = "/"
-    //     })
-
-    // })
-    </script>
     
 </body>
 </html>
