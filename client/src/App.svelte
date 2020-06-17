@@ -16,11 +16,6 @@
   import {showPage} from './pageToggle.js'
   import {user} from './data.js'
 
-
-  // aynsc fetch  call to get  my user and its data
-
-    // assigning the return to the $user store
-
   // FETCH PROFILE INFO DEPENDING ON JWT
   const fetchUserInfo = (async () => {
       const connection = await fetch('/profile', {credentials: 'include', headers: {"token": localStorage.token}})
@@ -28,6 +23,12 @@
       $user = response
       console.log($user)
   })()
+
+  // FETCH POSTS
+
+  // CHANGE YOUR DETAILS
+
+  // SEARCH
 
 </script>
 

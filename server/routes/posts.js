@@ -3,7 +3,6 @@ const isAuthendicated = require("../middleware/isAuthenticated.js");
 const router = express.Router();
 const formidable = require("formidable");
 const Post = require("../models/Post.js");
-const { ObjectID } = require("mongodb");
 
 // Create a post
 // If no posts - create empty array of posts

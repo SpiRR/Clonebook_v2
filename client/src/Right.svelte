@@ -1,6 +1,5 @@
 <!-- JavaScript -->
 <script>
-let src = "http://localhost:5000/images/me.jpg"
   import {user} from './data.js'
 
 </script>
@@ -13,8 +12,13 @@ let src = "http://localhost:5000/images/me.jpg"
     <h3>Contacts</h3>
 
        <div class="friend">
-        <img {src} alt="user"/>
-        <p>{$user.friends.firstName} {$user.friends.lastName}</p>
+       {#each $user.friends as friend}
+        <li>
+            <img src="http://localhost:5000/images/userImages/{friend.profilepicture}" alt="user"/>
+            <p>{friend.firstName} {friend.lastName}</p>
+
+        </li>
+       {/each}
        </div>
     </section>
 
@@ -45,7 +49,13 @@ let src = "http://localhost:5000/images/me.jpg"
         position: relative;
         top: 10px;
         width: 2vw;
+        height: 4vh;
         border-radius: 50%;
+    }
+
+    section#contacts li {
+        list-style: none;
+        margin-bottom: 15px;
     }
 
     section#contacts .friend p {

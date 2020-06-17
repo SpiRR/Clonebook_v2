@@ -166,6 +166,7 @@ nav div.right{
 nav div.right img {
   width: 2vw;
   border-radius: 50%;
+  height: 4vh;
 }
 
 nav div.right .profilelink {

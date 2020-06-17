@@ -13,8 +13,9 @@ const expiresIn = 10000
 
 //Search users (NEED TO BE CONVERTED SO YOU CAN SEARCH ON EMAIL)
 router.get("/search", async (req, res) => {
+    const { firstName } = req.body;
 
-    let users = await User.find();
+    let users = await User.find({firstName});
 
     res.send(users)
     

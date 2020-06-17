@@ -1,6 +1,15 @@
 <script>
 
 import {user} from './data.js'
+import {createPost} from './data.js'
+
+  // CREATE A POST
+  const createAPost = (async () => {
+    const connection = await fetch("/create-post",  {credentials: 'include', headers: {"token": localStorage.token}})
+    let response = await connection.json()
+    $createPost = response
+    console.log($createPost)
+  })
 
 </script>
 
@@ -11,9 +20,9 @@ import {user} from './data.js'
     
     <img src="http://localhost:5000/images/userImages/{$user.profilepicture}" alt="user"/> 
 
-        <form action="">
-            <input placeholder="What's on your mind?"/>
-            <i class="fas fa-paper-plane"></i>
+        <form method="POST" action="/create-post">
+            <input placeholder="What's on your mind?" name="postmsg"/>
+            <button type="submit" onsubmit="createAPost(); return false"><i class="fas fa-paper-plane"></i></button>
         </form>
 
     <div class="extras">
@@ -45,6 +54,7 @@ div#post-container {
 
 div#post-container img {
     width: 3vw;
+    height: 5vh;
     border-radius: 50%;
     margin-left: 12px;
     margin-top: 4px;
