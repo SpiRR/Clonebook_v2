@@ -174,11 +174,33 @@ router.get("/profile", isAuthendicated, async (req, res) => {
 });
 
 // Change my details 
-router.patch("/change-details", (req, res) => {
+router.patch("/change-details", isAuthendicated, async(req, res) => {
     // Which details? 
-    // Profile img
     // Name
-    res.send('change details')
+    const form = formidable({multiples: true})
+
+    form.parse(req, async (err, fields, files) => {
+
+        if(err){console.log('something went wrong in form, change-details'); return}
+
+        let updatedFirstName = fields.firstName
+        let updatedLastName = fields.lastName
+
+        try {
+
+            let doc = await User.findOneAndUpdate({_id: req.user.id}, {firstName: updatedFirstName, lastName: updatedLastName}, async function (err, docs) {
+                if(err){console.log('something went wrong in update'); return}
+                await docs.save()
+
+            })
+            return res.send( 'Users names updated' )
+
+        } catch (error) {
+            if (err) {console.log("Could not change details"); return}
+        }
+        
+    })
+    // Profile img
 });
 
 // Contacts and their statuses change
