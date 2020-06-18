@@ -24,11 +24,11 @@
       console.log($user)
   })()
 
-  // FETCH POSTS
 
-  // CHANGE YOUR DETAILS
 
-  // SEARCH
+
+
+ 
 
 </script>
 

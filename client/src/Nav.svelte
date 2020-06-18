@@ -14,6 +14,8 @@ function logout () {
   location.href = "http://localhost:80/login"
 }
 
+ // SEARCH
+
 </script>
 
 

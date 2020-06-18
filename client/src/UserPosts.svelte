@@ -2,6 +2,8 @@
 
 let src = "http://localhost:5000/images/me.jpg"
 
+// FETCH POSTS
+
 </script>
 
 <!-- -------------------------------- -->
