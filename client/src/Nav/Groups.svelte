@@ -10,7 +10,7 @@ import {showPage} from '../pageToggle.js'
     <div id="group-container">
 
         <div id="group-posts">
-            <img src="./images/nodejs.jpg" alt="point">
+            <img src="http://localhost:5000/images/nodejs.jpg" alt="point">
             <h4>Node.js Developers</h4>
             <p>
             This is a security release.
@@ -37,7 +37,7 @@ import {showPage} from '../pageToggle.js'
         </div>
 
         <div id="group-posts">
-            <img src="./images/webdev.jpg" alt="point">
+            <img src="http://localhost:5000/images/webdev.jpg" alt="point">
             <h4>Web Development</h4>
             <p>
             One of the most common problems that I run into when using Redux is trying to figure out why an action is not being captured by a reducer. 
@@ -60,7 +60,7 @@ import {showPage} from '../pageToggle.js'
         </div>
 
         <div id="group-posts">
-            <img src="./images/dat.jpg" alt="point">
+            <img src="http://localhost:5000/images/dat.jpg" alt="point">
             <h4>Computer Science</h4>
             <p>
             Scientists have developed the world's first 3D artificial eye with capabilities better than existing bionic eyes and in some cases, 
@@ -85,7 +85,7 @@ import {showPage} from '../pageToggle.js'
         </div>
 
         <div id="group-posts">
-            <img src="./images/lol.jpg" alt="point">
+            <img src="http://localhost:5000/images/lol.jpg" alt="point">
             <h4>League of Legends</h4>
             <p>
                 Happy June! Y'all ready for a summer of fun (safely indoors on League?) <br>
@@ -109,7 +109,7 @@ import {showPage} from '../pageToggle.js'
         </div>
 
         <div id="group-posts">
-            <img src="./images/wow.png" alt="point">
+            <img src="http://localhost:5000/images/wow.png" alt="point">
             <h4>World of Warcraft</h4>
             <p>
                 Within war-torn Maldraxxus, might—of all kinds—makes right. Here, in the birthplace of necromantic magic, 

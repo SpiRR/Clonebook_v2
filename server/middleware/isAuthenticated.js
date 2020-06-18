@@ -2,13 +2,13 @@
 const jwt = require('jsonwebtoken')
 
 function isAuthendicated(req, res, next) {
-    const token = req.header("token");
+    let token = req.header("token");
     if (!token) return res.status(401).json({
         message: "Auth Error"
     });
 
     try {
-        const decoded = jwt.verify(token, "randomString");
+        const decoded = jwt.verify(token, "myWookieSecret");
         req.user = decoded.user;
         next();
     } catch (e) {
@@ -17,15 +17,7 @@ function isAuthendicated(req, res, next) {
             message: "Invalid Token"
         });
     }
-    //     let username = "A" // Inreality it will come in post from the request, the jwt
-
-    //     if (username == "A") { return next(); }
-    //     return res.send("error");
-
-    //    }
-
-    //    app.get("/testMiddleware", isAuthendicated, (req, res) => {
-    //     res.send("x")
+    
 }
 
 module.exports = isAuthendicated;

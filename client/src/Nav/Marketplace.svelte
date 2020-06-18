@@ -2,7 +2,7 @@
  
 import {showPage} from '../pageToggle.js'
 
-let src = "./images/construction.png"
+let src = "http://localhost:5000/images/construction.png"
 
 </script>
 

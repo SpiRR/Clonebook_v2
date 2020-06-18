@@ -1,7 +1,7 @@
 <script>
 
-let markiplier = "./images/markiplier.jpg"
-let lixiantv = "./images/lixiantv.jpg"
+let markiplier = "http://localhost:5000/images/markiplier.jpg"
+let lixiantv = "http://localhost:5000/images/lixiantv.jpg"
 import {showPage} from '../pageToggle.js'
 
 const currentPage = (nameOfPage) => {

@@ -1,7 +1,7 @@
 <!-- JavaScript -->
 <script context="module">
 
-let src = "./images/me.jpg"
+let src = "http://localhost:5000/images/me.jpg"
 
 </script>
 
@@ -37,7 +37,7 @@ let src = "./images/me.jpg"
 <style> 
 
 div#chat-container {
-    /* display: none; */
+    display: none;
     border: 1px solid lightgray;
     position: fixed;
     background-color: #FAFAFA;

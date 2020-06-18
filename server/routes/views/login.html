@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Login</title>
 
     <style>
@@ -33,7 +32,7 @@
             display: block;
             background-color: white;
             width: 20vw;
-            height: 35vh;
+            height: 15vh;
             margin-right: auto;
             margin-left: auto;
             text-align: center;
@@ -63,7 +62,7 @@
             padding: 8px 0;
         }
         
-        section form #border {
+        section #border {
             width: 17vw;
             text-align: center;
             margin-right: auto;
@@ -72,13 +71,17 @@
             margin-top: 60px;
         }
         
-        section form button:last-child {
+        section #signup{
             border-radius: 10px;
             width: 10vw;
-            margin-right: auto;
-            margin-left: auto;
+            margin-left: 29%;
             margin-top: 20px;
+            margin-bottom: 20px;
             background-color: #3FB227;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 8px 0;
         }
 
         section h2 {
@@ -108,29 +111,47 @@
 		</div>
         <h2>Login</h2>
 
-        <form>
+        <form id="form" method="POST" id="loginForm" onsubmit="loggingIn(); return false">
             <input 
+            class="email"
             placeholder="E-mail"
             type="text"
+            name="email"
             />
             
             <input 
+            class="password"
             placeholder="Password"
             type="password"
+            name="password"
             />
         
-            <button>Login</button>
+            <button id="login" type="submit" >Login</button>
+
+        </form>
         
             <a href="/">Forgot password?</a>
         
             <div id="border"></div>
         
-            <button>Signup</button>
-        </form>
-        
-        
+            <button id="signup" type="submit">Signup</button>
         
         </section>
-    
+
+        <script> 
+        async function loggingIn() {
+            var formData = new FormData( document.querySelector('#form') )
+
+            let connect = await fetch("/login", {
+                method: 'POST',
+                body: formData
+            })
+
+            let response = await connect.text()
+            window.localStorage.setItem('token', response)
+            window.location.href = "/"
+        }
+        </script>
+
 </body>
 </html>

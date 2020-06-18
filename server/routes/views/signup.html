@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Signup</title>
 
     <style>
@@ -96,8 +95,8 @@
 		</div>
 
         <h2>Signup</h2>
-
-        <form method="post">
+        <form method="POST" action="signup" enctype="multipart/form-data">
+            
             <input 
             placeholder="E-mail"
             type="text"
@@ -122,37 +121,13 @@
             name="lastName"
             />
         
-            <input name="profileimg" type="file" id="img" accept="image/*">
+            <input name="profilepicture" type="file" id="img" accept="image/*">
         
-            <button id="signup-btn" type="button">Signup</button>
+            <button id="signup-btn" type="submit">Signup</button>
         
         </form>
         
         </section>
-
-    <script>
-
-    $("#signup-btn").click(function () {
-        const formData = $('form').serialize()
-        console.log(formData)
-
-        $.ajax({
-            url: "http://localhost:80/signup",
-            type: "POST",
-            dataType: 'json',
-            xhrFields: {
-                withCredentials: true
-            }, 
-            data: formData
-        }).done(function (data) {
-            console.log(data)
-            var token = data.token 
-            localStorage.setItem('token', token)
-            location.href = "http://localhost:5000/"
-        })
-
-    })
-    </script>
     
 </body>
 </html>

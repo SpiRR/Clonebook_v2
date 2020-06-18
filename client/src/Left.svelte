@@ -10,17 +10,17 @@
        <h3>Sites</h3>
 
         <div>
-        <img src="./images/point.svg" alt="point">
+        <img src="http://localhost:5000/images/point.svg" alt="point">
         <h4>General</h4>
         </div>
 
         <div>
-        <img src="./images/building.svg" alt="point">
+        <img src="http://localhost:5000/images/building.svg" alt="point">
         <h4>Goverment</h4>
         </div>
 
         <div>
-        <img src="./images/virus.svg" alt="point">
+        <img src="http://localhost:5000/images/virus.svg" alt="point">
         <h4>COVID-19: Information Center</h4>
         </div>
 
@@ -30,27 +30,27 @@
        <h3>Groups</h3>
 
         <div>
-        <img src="./images/nodejs.jpg" alt="point">
+        <img src="http://localhost:5000/images/nodejs.jpg" alt="point">
         <h4>Node.js Developers</h4>
         </div>
 
         <div>
-        <img src="./images/webdev.jpg" alt="point">
+        <img src="http://localhost:5000/images/webdev.jpg" alt="point">
         <h4>Web Development</h4>
         </div>
 
         <div>
-        <img src="./images/dat.jpg" alt="point">
+        <img src="http://localhost:5000/images/dat.jpg" alt="point">
         <h4>Computer Science</h4>
         </div>
 
         <div>
-        <img src="./images/lol.jpg" alt="point">
+        <img src="http://localhost:5000/images/lol.jpg" alt="point">
         <h4>Leauge of Legends</h4>
         </div>
 
         <div>
-        <img src="./images/wow.png" alt="point">
+        <img src="http://localhost:5000/images/wow.png" alt="point">
         <h4>World of Warcraft</h4>
         </div>
        
@@ -60,12 +60,12 @@
         <h3>Liked pages</h3>
 
         <div>
-        <img src="./images/markiplier.jpg" alt="point">
+        <img src="http://localhost:5000/images/markiplier.jpg" alt="point">
             <h4>Markiplier</h4>
         </div>
 
         <div>
-        <img src="./images/lixiantv.jpg" alt="point">
+        <img src="http://localhost:5000/images/lixiantv.jpg" alt="point">
             <h4>LixinaTV</h4>
         </div>
 

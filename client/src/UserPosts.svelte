@@ -1,6 +1,9 @@
 <script>
 
-let src = "../images/me.jpg"
+import {post} from './data.js'
+import {user} from './data.js'
+
+
 
 </script>
 
@@ -10,11 +13,10 @@ let src = "../images/me.jpg"
 
     <div class="user-posts">
         <div id="mypost">
-            <img {src} alt="user"/> 
-            <p>Stine Knarkegaard Andersen</p>
-            <div id="post">
-                Report writing before I'm gonna throw my code out the window for being a bitch 😂👌
-                #webdevelopment #webdeveloper  #reactjs #nodejs #bachelordegree
+             <img src="" alt="user"/> <!--friend img -->
+            <p></p> <!--friend name -->
+            <div id="post"> <!--friend post -->
+                
             </div>
         </div>
 
