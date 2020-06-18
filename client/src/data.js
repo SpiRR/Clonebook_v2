@@ -6,6 +6,4 @@ export const user = writable({
 
  export const post = writable({})
 
- export const createPost = writable({})
 
- export const changeDetails = writable({})

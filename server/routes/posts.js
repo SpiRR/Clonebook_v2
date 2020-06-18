@@ -3,6 +3,8 @@ const isAuthendicated = require("../middleware/isAuthenticated.js");
 const router = express.Router();
 const formidable = require("formidable");
 const Post = require("../models/Post.js");
+const User = require("../models/User.js");
+const ObjectID = require('mongodb').ObjectID;
 
 // Create a post
 // If no posts - create empty array of posts
@@ -11,10 +13,10 @@ router.post("/create-post", isAuthendicated, async (req, res) => {
     const form = formidable({multiples: true})
 
     form.parse(req, async (err, fields, files) => {
-        if (err) {
-            next(err);
-            return;
-        }
+        // if (err) {
+        //     next(err);
+        //     return;
+        // }
         const postmsg = fields.postmsg
 
         try {
@@ -27,6 +29,8 @@ router.post("/create-post", isAuthendicated, async (req, res) => {
             })
 
             await post.save()
+
+            return res.send(post)
             
         } catch (err) {
             console.log(err.message);
@@ -50,10 +54,10 @@ router.patch("/comment-post", isAuthendicated, async (req, res) => {
     // I need postID to know which one the comment shoudl go  on
 
     form.parse(req, async (err, fields, files) => {
-        if (err) {
-            next(err);
-            return;
-        }
+        // if (err) {
+        //     next(err);
+        //     return;
+        // }
         const commentmsg = fields.commentmsg
 
         try {
@@ -81,9 +85,19 @@ router.patch("/comment-post", isAuthendicated, async (req, res) => {
 
 });
 
-// get All yours and your friends posts
-router.get("/get-posts", (req, res) => {
-    res.send('loaded posts')
+// get All your's and your friends posts
+router.get("/posts", isAuthendicated, async (req, res) => {
+    // const author_id = ObjectID(req.user.id)
+    // all friends id
+    let user = await User.find({_id: ObjectID(req.user.id)});
+    let usersFriends = user[0].friends
+    
+    let author_id = "5ee9d1579c5d42823c388a8d"
+    
+    // GIve me all posts which author_id == users friend id
+    
+    let posts = await Post.find({author_id: ObjectID(author_id)});
+    res.send(posts)
 })
 
 module.exports = router

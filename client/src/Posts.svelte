@@ -1,15 +1,15 @@
 <script>
 
 import {user} from './data.js'
-import {createPost} from './data.js'
+import {post} from './data.js'
 
   // CREATE A POST
-  const createAPost = (async () => {
-    const connection = await fetch("/create-post",  {credentials: 'include', headers: {"token": localStorage.token}})
-    let response = await connection.json()
-    $createPost = response
-    console.log($createPost)
-  })
+//   const createAPost = (async () => {
+//     const connection = await fetch("/create-post",  {credentials: 'include', headers: {"token": localStorage.token}})
+//     let response = await connection.json()
+//     $createPost = response
+//     console.log($createPost)
+//   })
 
 </script>
 

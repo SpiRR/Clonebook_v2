@@ -1,8 +1,9 @@
 <script>
 
-let src = "http://localhost:5000/images/me.jpg"
+import {post} from './data.js'
+import {user} from './data.js'
 
-// FETCH POSTS
+
 
 </script>
 
@@ -12,7 +13,7 @@ let src = "http://localhost:5000/images/me.jpg"
 
     <div class="user-posts">
         <div id="mypost">
-             <img {src} alt="user"/> <!--friend img -->
+             <img src="" alt="user"/> <!--friend img -->
             <p></p> <!--friend name -->
             <div id="post"> <!--friend post -->
                 

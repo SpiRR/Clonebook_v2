@@ -10,6 +10,7 @@ const User = require("../models/User.js");
 const isAuthendicated = require("../middleware/isAuthenticated.js");
 const jwt = require('jsonwebtoken')
 const expiresIn = 10000
+const ObjectID = require('mongodb').ObjectID;
 
 //Search users (NEED TO BE CONVERTED SO YOU CAN SEARCH ON EMAIL)
 router.get("/search", async (req, res) => {
@@ -120,8 +121,6 @@ router.post("/login", async (req, res) => {
             let user = await User.findOne({
                 email
             });
-
-            // console.log(user)
     
             if (!user) {
                 return res.status(400).json({
@@ -141,16 +140,11 @@ router.post("/login", async (req, res) => {
                     }
                 };
 
-                // let saveToken = jwt.sign(payload, "myWookieSecret", {expiresIn}, (token) => {
-                //         return res.status(200);
-                    // })
                 let saveToken = jwt.sign(payload, "myWookieSecret")
 
                     console.log(typeof saveToken)
 
                     res.send(saveToken)
-
-                // res.redirect("/")
     
         } catch (err) {
             console.error(err);
@@ -164,7 +158,7 @@ router.post("/login", async (req, res) => {
 router.get("/profile", isAuthendicated, async (req, res) => {
 
     try {
-        const user = await User.findById(req.user.id);
+        const user = await User.findById({_id: ObjectID(req.user.id)});
         res.json(user);
     } catch (e) {
         res.send({
@@ -173,40 +167,41 @@ router.get("/profile", isAuthendicated, async (req, res) => {
     }
 });
 
-// Change my details 
-router.patch("/change-details", isAuthendicated, async(req, res) => {
-    // Which details? 
-    // Name
+router.post("/edit", isAuthendicated, (req, res) => {
     const form = formidable({multiples: true})
 
     form.parse(req, async (err, fields, files) => {
-
         if(err){console.log('something went wrong in form, change-details'); return}
-
+        
         let updatedFirstName = fields.firstName
         let updatedLastName = fields.lastName
 
+        console.log(updatedFirstName)
+        console.log(updatedLastName)
+          
         try {
-
-            let doc = await User.findOneAndUpdate({_id: req.user.id}, {firstName: updatedFirstName, lastName: updatedLastName}, async function (err, docs) {
+            
+            let doc = await User.findOneAndUpdate({_id: ObjectID(req.user.id)}, {firstName: updatedFirstName, lastName: updatedLastName}, async function (err, docs) {
                 if(err){console.log('something went wrong in update'); return}
                 await docs.save()
-
             })
-            return res.send( 'Users names updated' )
+
+            console.log(doc)
+            return res.json(doc)
 
         } catch (error) {
-            if (err) {console.log("Could not change details"); return}
+            if (err) {console.log("could not edit"); return}
         }
-        
+
     })
-    // Profile img
 });
 
 // Contacts and their statuses change
 // Get my contacts / friends
-router.get("/contacts", (req, res) => {
-    res.send('my contacts')
+router.get("/friends", isAuthendicated, async (req, res) => {
+    
+    let user = await User.find({_id: ObjectID(req.user.id)});
+    res.send(user[0].friends)
 });
 
 module.exports = router

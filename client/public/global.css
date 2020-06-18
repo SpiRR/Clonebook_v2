@@ -22,3 +22,9 @@ input{
 h4 {
   font-weight: 600;
 }
+
+button {    
+  cursor: pointer;
+  border: none;
+  outline: none;
+}

@@ -2,7 +2,9 @@
 
 import {showPage} from '../pageToggle.js'
 import {user} from '../data.js'
-import {changeDetails} from '../data.js'
+
+$: firstName = $user.firstName
+$: lastName = $user.lastName
 
 function toggle() {
   const modal = document.getElementById("modal");
@@ -23,8 +25,22 @@ function close () {
 }
 
   // CHANGE YOUR DETAILS
-  function updateDetails () {
-      console.log('updated')
+  async function updateDetails () {
+    let formData = new FormData()
+    formData.append('firstName', firstName)
+    formData.append('lastName', lastName)
+
+    
+    const connection = await fetch('/edit', 
+    {   
+        method: 'post', 
+        credentials: 'include', 
+        body: formData,     
+        headers:{"token": localStorage.token}
+    })
+    let response = await connection.json()
+    $user = response
+    close()
   }
 
 
@@ -45,11 +61,11 @@ function close () {
             <h3>Update you info</h3>
             <button on:click={close}><i class="fas fa-times"></i></button>
         </div>
-        <form class="modal-body">
-            <input type="text" value={$user.firstName} name="firstName">
-            <input type="text" value={$user.lastName} name="lastName">
-            <input type="email" value={$user.email} disabled>
-            <button type="button" on:click={updateDetails}>Update</button>
+        <form class="modal-body" on:submit|preventDefault={updateDetails}>
+            <input type="text" value={firstName} on:input={e => firstName = e.target.value} name="firstName">
+            <input type="text" value={lastName} on:input={e => lastName = e.target.value} name="lastName">
+            <input type="email" value={$user.email} name="email" disabled>
+            <button>Update</button>
         </form>
     </div>
 
@@ -177,6 +193,12 @@ section {
     width: 100%;
     margin-top: 16px;
     cursor: pointer;
+}
+
+button {    
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 </style>
