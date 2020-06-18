@@ -12,9 +12,6 @@ const PostSchema = mongoose.Schema({
   likes: {
     type: Number
   },
-  comments: {
-    type: Array
-  },
   postImg: {
     data: Buffer,
     contentType: String

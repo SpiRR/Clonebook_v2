@@ -3,13 +3,25 @@
 import {user} from './data.js'
 import {post} from './data.js'
 
+let postmsg = ''
   // CREATE A POST
-//   const createAPost = (async () => {
-//     const connection = await fetch("/create-post",  {credentials: 'include', headers: {"token": localStorage.token}})
-//     let response = await connection.json()
-//     $createPost = response
-//     console.log($createPost)
-//   })
+const createAPost = (async () => {
+    let formData = new FormData()
+    formData.append('postmsg', postmsg)
+
+    const connection = await fetch("/create-post",  
+    {
+        method: 'post',
+        credentials: 'include', 
+        body: formData,
+        headers: {"token": localStorage.token}
+        })
+    let response = await connection.json()
+    $post = response
+
+    document.querySelector("#status").reset()
+    console.log($post)
+})
 
 </script>
 
@@ -20,9 +32,9 @@ import {post} from './data.js'
     
     <img src="http://localhost:5000/images/userImages/{$user.profilepicture}" alt="user"/> 
 
-        <form method="POST" action="/create-post">
-            <input placeholder="What's on your mind?" name="postmsg"/>
-            <button type="submit" onsubmit="createAPost(); return false"><i class="fas fa-paper-plane"></i></button>
+        <form id="status" on:submit|preventDefault={createAPost}>
+            <input placeholder="What's on your mind?" type="text" name="postmsg" bind:value="{postmsg}"/>
+            <button><i class="fas fa-paper-plane"></i></button>
         </form>
 
     <div class="extras">

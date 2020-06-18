@@ -22,10 +22,9 @@ router.post("/create-post", isAuthendicated, async (req, res) => {
         try {
             const likes = 0
             post = new Post({
-                author_id: userId,
+                author: userId, // {author ID, author name, lastname, profileimage}
                 post: postmsg,
-                likes,
-                comments: []
+                likes
             })
 
             await post.save()
