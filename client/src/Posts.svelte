@@ -17,6 +17,7 @@ const createAPost = (async () => {
         headers: {"token": localStorage.token}
         })
     let response = await connection.json()
+    console.log(response)
     $post = response
 
     document.querySelector("#status").reset()
@@ -50,31 +51,35 @@ const createAPost = (async () => {
 
 <style>
 
+section {
+    background-color: #18191A;
+}
+
 div#post-container {
     position: relative;
-    top: 130px;
+    top: 160px;
     width: 40vw;
     height: 14vh;
-    background-color: #FAFAFA;
+    background-color: #242527;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 150px;
     border-radius: 25px;
-    border: 1px solid lightgray;
+    border: 1px solid #3E4042;
     padding: 10px;
-    box-shadow: 2px 5px lightgray;
 }
 
 div#post-container img {
     width: 3vw;
-    height: 5vh;
+    height: 6vh;
     border-radius: 50%;
     margin-left: 12px;
     margin-top: 4px;
 }
 
 div#post-container input {
-    background-color: #FAFAFA;
-    color: black;
+    background-color: #3A3B3C;
+    color: #E4E6EB;
     border-radius: 20px;
     width: 30vw;
     padding: 8px;
@@ -93,6 +98,7 @@ div#post-container form i {
 }
 
 div#post-container i {
+    cursor: pointer;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -100,17 +106,21 @@ div#post-container i {
     right: -107px;
 }
 
+.fas.fa-paper-plane {
+    color: #0084FF;
+}
+
 .extras {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     bottom: 22px;
-    left: 0;
+    left: 24px;
     position: absolute;
     /* grid-gap: 5rem; */
 }
 
 .extras p {
-    color: black;
+    color: white;
     font-size: 14px;
     display: inline-block;
     padding-left: 5px;
@@ -118,14 +128,17 @@ div#post-container i {
 
 .extras .fa-youtube {
     color: red;
+    background-color: #3A3B3C;
     font-size: 20px;
 }
 .extras .fa-images {
     font-size: 20px;
-    color: blue;
+    background-color: #3A3B3C;
+    color: #0084FF;
 }
 .extras .fa-surprise {
     font-size: 20px;
+    background-color: #3A3B3C;
     color: green;
 }
 

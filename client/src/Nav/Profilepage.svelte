@@ -85,11 +85,10 @@ section {
     top: 150px;
     width: 55vw;
     height: 28vh;
-    background-color: #FAFAFA;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
-    border: 1px solid lightgray;
+    border: 1px solid #3E4042;
     padding: 10px;
 }
 
@@ -98,13 +97,14 @@ section {
     top: 29%;
     left: 43%;
     text-align: center;
-    background-color: #FAFAFA;
+    color: #E4E6EB;
+    background-color: #18191A;
     max-width: 15vw;
     width: 15vw;
     height: 31vh;
     margin-top: 20px;
     display: none;
-    border: 1px solid lightgray;
+    border: 1px solid #3E4042;
     border-radius: 10px;
     }
 
@@ -113,11 +113,12 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid lightgray; 
+    border-bottom: 1px solid #3E4042; 
 }
 
 .modal-header h3 {
     font-size: 17px;
+    color: #E4E6EB;
 }
 
 .modal-header button {
@@ -143,7 +144,7 @@ section {
     border: none;
     outline: none;
     background: #3FB227;
-    color: white;
+    color: #E4E6EB;
     width: 76%;
     border-radius: 4px;
     margin-top: 25px;
@@ -152,6 +153,7 @@ section {
 
 .modal-body input {
     display: block;
+    color: #E4E6EB;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 12px;
@@ -173,10 +175,11 @@ section {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid white;
+
 }
 
 .profileinfo h3 {
+    color: #E4E6EB;
     display: block;
     margin-top: 17px;
     margin-left: auto;
@@ -186,6 +189,7 @@ section {
 
 .profileinfo .fas {
     position: absolute;
+    color: #E4E6EB;
     margin-right: auto;
     margin-left: auto;
     display: block;

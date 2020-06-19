@@ -18,7 +18,7 @@ import {showPage} from '../pageToggle.js'
             CVE-2020-8174: napi_get_value_string_*() allows various kinds of memory corruption (High).
             CVE-2020-10531: ICU-20958 Prevent SEGV_MAPERR in append (High).
             CVE-2020-11080: HTTP/2 Large Settings Frame DoS (Low).
-            For more info go to <a href="https://nodejs.org/en/blog/">Node.js</a>
+            For more info go to <a href="https://nodejs.org/en/blog/" target="_blank">Node.js</a>
             </p>
 
             <div id="like-counter">
@@ -30,8 +30,8 @@ import {showPage} from '../pageToggle.js'
             </div>
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
 
         </div>
@@ -42,7 +42,7 @@ import {showPage} from '../pageToggle.js'
             <p>
             One of the most common problems that I run into when using Redux is trying to figure out why an action is not being captured by a reducer. 
             For someone just getting starting with Redux, debugging this issue can be especially overwhelming because of how Redux manages data flow. 
-            Read more on <a href="https://reactjsnews.com/">React News</a>
+            Read more on <a href="https://reactjsnews.com/" target="_blank">React News</a>
             </p>
 
             <div id="like-counter">
@@ -54,8 +54,8 @@ import {showPage} from '../pageToggle.js'
             </div>
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -66,7 +66,7 @@ import {showPage} from '../pageToggle.js'
             Scientists have developed the world's first 3D artificial eye with capabilities better than existing bionic eyes and in some cases, 
             even exceed those of the human eyes, 
             bringing vision to humanoid robots and new hope to patients with visual impairment. 
-            For more info to go <a href="https://www.sciencedaily.com/releases/2020/06/200610102726.htm">SciendeDaily</a>
+            For more info to go <a href="https://www.sciencedaily.com/releases/2020/06/200610102726.htm" target="_blank">SciendeDaily</a>
             </p>
 
             <div id="like-counter">
@@ -79,8 +79,8 @@ import {showPage} from '../pageToggle.js'
 
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -103,8 +103,8 @@ import {showPage} from '../pageToggle.js'
 
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -126,8 +126,8 @@ import {showPage} from '../pageToggle.js'
 
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -137,31 +137,29 @@ import {showPage} from '../pageToggle.js'
 
 <style>
  
-section {
+/* section {
     position: relative;
     top: 150px;
     width: 40vw;
     height: 14vh;
-    background-color: #FAFAFA;
+    background-color: #18191A;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
-    /* border: 1px solid lightgray; */
     padding: 10px;
-}
+} */
 
 div#group-posts {
     position: relative;
-    top: 0;
+    top: 160px;
     width: 40vw;
     height: auto;
-    background-color: #FAFAFA;
+    background-color: #242527;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     border-radius: 25px;
-    border: 1px solid lightgray;
-    box-shadow: 2px 5px lightgray;
+    border: 1px solid #3E4042;
     padding: 14px 20px;
 }
 
@@ -173,6 +171,7 @@ div#group-posts img {
 }
 
 div#group-posts h4 {
+    color: #E4E6EB;
     position: relative;
     top: -18px;
     display: inline-block;
@@ -180,41 +179,48 @@ div#group-posts h4 {
 }
 
 div#group-posts p {
+    color: #E4E6EB;
+    font-size: 16px;
     width: auto;
     margin-left: 6px;
     margin-top: 12px;
 }
 
-div#like-counter {
-    position: relative;
-    top: 20px;
-    left: 8px;
+div#group-posts a {
+    color: #0084FF;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 div#comment-counter{
     position: relative;
-    top: 0px;
+    top: -2px;
+    color: #0084FF;
     float: left;
     left: 90px;
 }
 
-div#like {
+#like-counter {
+    position: relative;
+    color: #0084FF;
+    top: 17px;
+    left: 17px;
+}
+
+#like {
+    border-top: 1px solid #3E4042;
+    border-bottom: 1px solid #3E4042;
+    color: #0084FF;
     cursor: pointer;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    padding: 6px;
+    margin-top: 39px;
     top: -9px;
     left: 1px;
     width: 100%;
-}
-
-div#like i {
-    font-size: 20px;
-    left: 0;
-    position: relative;
 }
 
 </style>

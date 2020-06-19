@@ -20,7 +20,7 @@ section {
     top: 150px;
     width: 40vw;
     height: 14vh;
-    background-color: #FAFAFA;
+    background-color: #18191A;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;

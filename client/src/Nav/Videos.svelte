@@ -32,8 +32,8 @@ const currentPage = (nameOfPage) => {
         </div>
 
         <div id="like">
-            <i class="far fa-thumbs-up">Like </i>
-            <i class="far fa-comment">Comment </i>
+            <i class="far fa-thumbs-up"> </i>
+            <i class="far fa-comment"> </i>
         </div>
 
     </div>
@@ -57,8 +57,8 @@ const currentPage = (nameOfPage) => {
         </div>
 
         <div id="like">
-            <i class="far fa-thumbs-up">Like </i>
-            <i class="far fa-comment">Comment </i>
+            <i class="far fa-thumbs-up"> </i>
+            <i class="far fa-comment"> </i>
         </div>
 
     </div>
@@ -69,34 +69,22 @@ const currentPage = (nameOfPage) => {
 
 <style>
 
-section {
-    position: relative;
-    top: 150px;
-    width: 40vw;
-    height: 14vh;
-    background-color: #FAFAFA;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
-    padding: 10px;
-}
-
 div#video-container {
     position: relative;
-    top: 0;
+    top: 160px;
     width: 40vw;
-    height: 62vh;
-    background-color: #FAFAFA;
+    height: auto;
+    background-color: #242527;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     border-radius: 25px;
-    border: 1px solid lightgray;
-    box-shadow: 2px 5px lightgray;
-    padding: 10px;
+    border: 1px solid #3E4042;
+    padding: 14px 20px;
 }
 
 div.vidoes h4 {
+    color: #E4E6EB;
     display: inline-block;
     position: relative;
     font-weight: 600;
@@ -104,10 +92,12 @@ div.vidoes h4 {
 }
 
 div.vidoes p {
+    color: #E4E6EB;
     display: block;
     position: relative;
-    margin-left: 66px;
+    margin-left: 64px;
     margin-bottom: 25px;
+    font-size: 16px;
 
 }
 
@@ -126,36 +116,42 @@ div.vidoes img {
     margin-right: auto;
 }
 
-div#like-counter {
-    position: relative;
-    top: 20px;
-    left: 60px;
-    float: left;
-}
+
 
 div#comment-counter{
     position: relative;
-    top: 20px;
+    color: #0084FF;
+    left: 116px;
     float: left;
-    left: 75px;
+    top: -2px;
 }
 
-div#like {
+#like-counter {
+    position: relative;
+    color: #0084FF;
+    top: 17px;
+    left: 48px;
+}
+
+#like {
+    border-top: 1px solid #3E4042;
+    border-bottom: 1px solid #3E4042;
+    color: #0084FF;
     cursor: pointer;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    top: 8px;
+    padding: 6px;
+    margin-top: 39px;
+    top: -9px;
     left: 1px;
     width: 100%;
 }
 
-div#like i {
+/* div#like i {
     font-size: 20px;
     left: 0;
     position: relative;
-}
+} */
 </style>

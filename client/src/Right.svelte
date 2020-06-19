@@ -26,23 +26,31 @@
 
 <!-- Style to this component -->
 <style>
+    section {
+        background-color: #18191A;
+    }
 
     section#contacts {
-    position: fixed;
-    padding-left: 0.6rem;
-    width: 17vw;
-    height: 91%;
-    bottom: 0;
-    right: 0;
+        position: fixed;
+        padding-left: 0.6rem;
+        width: 17vw;
+        height: 93%;
+        bottom: 0;
+        right: 0;
     }
 
     section#contacts h3 {
-        color: grey;
+       color: #E4E6EB;
+       margin-top: 25px;
+       margin-left: 10px;
+        margin-bottom: 25px;
+        font-weight: 600;
     }
 
     section#contacts .friend {
+        margin-left: 10px;
         cursor: pointer;
-        color: black;
+        color: #E4E6EB
     }
 
     section#contacts .friend img {
@@ -59,10 +67,12 @@
     }
 
     section#contacts .friend p {
+        font-size: 16px;
         position: relative;
         display: inline-block;
         top: -5px;
         margin-left: 10px;
+        font-weight: 500;
     }
 
 </style>

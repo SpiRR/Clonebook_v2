@@ -11,6 +11,7 @@ function isAuthendicated(req, res, next) {
         const decoded = jwt.verify(token, "myWookieSecret");
         req.user = decoded.user;
         next();
+        
     } catch (e) {
         console.error(e);
         res.status(500).send({
