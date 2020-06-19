@@ -114,6 +114,11 @@ router.patch("/comment-post", isAuthendicated, async (req, res) => {
 
 });
 
+// Delete post
+router.delete("/delete", (req, res) => {
+
+});
+
 // get All your's and your friends posts
 router.get("/posts", isAuthendicated, async (req, res) => {
     // All posts

@@ -149,14 +149,14 @@ nav div.middle > div{
   height: 50%;
 }
 
-nav .middle div:focus {
-  color: lightskyblue;
+nav .middle div:focus, .fa-sign-out-alt:focus {
+  color: #0084FF;
 }
 
 
-nav .middle div:hover {
+nav .middle div:hover, .fa-sign-out-alt:hover {
   background-color: #18191A;
-  color: lightskyblue;
+  color: #0084FF;
 }
 
 nav div.right{

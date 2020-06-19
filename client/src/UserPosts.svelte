@@ -101,7 +101,7 @@ div#post {
     margin-left: -23px;
     width: 90%;
     font-size: 16px;
-    top: 45px;
+    top: 55px;
 }
 
 #like-counter {

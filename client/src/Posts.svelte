@@ -71,7 +71,7 @@ div#post-container {
 
 div#post-container img {
     width: 3vw;
-    height: 5vh;
+    height: 6vh;
     border-radius: 50%;
     margin-left: 12px;
     margin-top: 4px;
@@ -98,6 +98,7 @@ div#post-container form i {
 }
 
 div#post-container i {
+    cursor: pointer;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -113,7 +114,7 @@ div#post-container i {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     bottom: 22px;
-    left: 0;
+    left: 24px;
     position: absolute;
     /* grid-gap: 5rem; */
 }
@@ -127,14 +128,17 @@ div#post-container i {
 
 .extras .fa-youtube {
     color: red;
+    background-color: #3A3B3C;
     font-size: 20px;
 }
 .extras .fa-images {
     font-size: 20px;
-    color: blue;
+    background-color: #3A3B3C;
+    color: #0084FF;
 }
 .extras .fa-surprise {
     font-size: 20px;
+    background-color: #3A3B3C;
     color: green;
 }
 
