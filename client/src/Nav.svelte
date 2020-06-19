@@ -40,18 +40,22 @@ function logout () {
 	<div class="middle">
     <div on:click={() => { currentPage('home') }}>
       <i class="fas fa-home"></i>
+      <!-- <p id="border"></p> -->
     </div>
 
     <div on:click={() => { currentPage('groups') }}>
       <i class="fas fa-users"></i>
+      <!-- <p id="border"></p> -->
     </div>  
 
     <div on:click={() => { currentPage('videos') }}>
       <i class="fas fa-video"></i>
+      <!-- <p id="border"></p> -->
     </div>  
 
     <div on:click={() => { currentPage('marketplace') }}>
       <i class="fas fa-shopping-basket"></i>
+      <!-- <p id="border"></p> -->
     </div> 
 
 	</div>
@@ -84,8 +88,8 @@ function logout () {
   height: 4rem;
   padding: 0px 2vw;
   font-size: 1.5rem;
-  color: #555;
-  background: white;
+  color: #E4E6EB;
+  background-color: #18191A;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   z-index: 1;
   }
@@ -110,6 +114,8 @@ nav .left form, nav .left form input {
 
 nav .left form input {
   margin-left: 70px;
+  background-color: #3A3B3C;
+  color: #E4E6EB
 }
 
 nav .left .logo{
@@ -137,14 +143,10 @@ nav div.middle > div{
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-cursor: pointer;
+  cursor: pointer;
   position: relative;
   width: 100%;
-  height: 100%;
-}
-
-nav .middle div:active {
-  border-bottom: 2px solid #1da1f2;
+  height: 50%;
 }
 
 nav .middle div:focus {
@@ -153,7 +155,7 @@ nav .middle div:focus {
 
 
 nav .middle div:hover {
-  background-color: #e7e7e7;
+  background-color: #18191A;
   color: lightskyblue;
 }
 

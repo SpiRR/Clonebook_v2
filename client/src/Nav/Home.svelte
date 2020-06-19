@@ -8,7 +8,6 @@ import {showPage} from '../pageToggle.js'
 </script>
 
 <section style="display: {$showPage.pageShown == 'home' ? "block" : "none"}">
-Home
 
 <Posts />
 <UserPosts />

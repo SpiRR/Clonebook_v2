@@ -36,11 +36,16 @@ let src = "http://localhost:5000/images/me.jpg"
 <!-- Style to this component -->
 <style> 
 
+section {
+  background-color: #18191A;
+  height: 100%;
+}
+
 div#chat-container {
     display: none;
     border: 1px solid lightgray;
     position: fixed;
-    background-color: #FAFAFA;
+    background-color: #242527;
     width: 17vw;
     height: 47vh;
     bottom: 0px;

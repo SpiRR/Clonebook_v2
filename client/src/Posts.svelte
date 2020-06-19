@@ -51,19 +51,22 @@ const createAPost = (async () => {
 
 <style>
 
+section {
+    background-color: #18191A;
+}
+
 div#post-container {
     position: relative;
-    top: 130px;
+    top: 160px;
     width: 40vw;
     height: 14vh;
-    background-color: #FAFAFA;
+    background-color: #242527;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 150px;
     border-radius: 25px;
-    border: 1px solid lightgray;
+    border: 1px solid #3E4042;
     padding: 10px;
-    box-shadow: 2px 5px lightgray;
 }
 
 div#post-container img {
@@ -75,8 +78,8 @@ div#post-container img {
 }
 
 div#post-container input {
-    background-color: #FAFAFA;
-    color: black;
+    background-color: #3A3B3C;
+    color: #E4E6EB;
     border-radius: 20px;
     width: 30vw;
     padding: 8px;
@@ -102,6 +105,10 @@ div#post-container i {
     right: -107px;
 }
 
+.fas.fa-paper-plane {
+    color: #0084FF;
+}
+
 .extras {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
@@ -112,7 +119,7 @@ div#post-container i {
 }
 
 .extras p {
-    color: black;
+    color: white;
     font-size: 14px;
     display: inline-block;
     padding-left: 5px;

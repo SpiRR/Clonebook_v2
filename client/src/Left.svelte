@@ -80,16 +80,16 @@
    main {
         position: fixed;
         padding-left: 0.6rem;
-        background-color: #FAFAFA;
-        color: black;
+        background-color: #18191A;
+        color: #E4E6EB;
         width: 16vw;
-        height: 91%;
+        height: 93%;
         bottom: 0;
         left: 0;
     }
 
     section {
-        color: grey;
+        color: #E4E6EB;
     }
 
     section#sites div img, section#groups div img, section#liked-pages div img {
