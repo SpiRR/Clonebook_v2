@@ -4,6 +4,6 @@ export const user = writable({
     "friends": []
  })
 
- export const post = writable({})
+ export const post = writable([])
 
 

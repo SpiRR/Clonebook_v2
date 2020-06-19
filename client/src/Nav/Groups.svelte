@@ -30,8 +30,8 @@ import {showPage} from '../pageToggle.js'
             </div>
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
 
         </div>
@@ -54,8 +54,8 @@ import {showPage} from '../pageToggle.js'
             </div>
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -79,8 +79,8 @@ import {showPage} from '../pageToggle.js'
 
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -103,8 +103,8 @@ import {showPage} from '../pageToggle.js'
 
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 
@@ -126,8 +126,8 @@ import {showPage} from '../pageToggle.js'
 
 
             <div id="like">
-                <i class="far fa-thumbs-up">Like </i>
-                <i class="far fa-comment">Comment </i>
+                <i class="far fa-thumbs-up"> </i>
+                <i class="far fa-comment"> </i>
             </div>
         </div>
 

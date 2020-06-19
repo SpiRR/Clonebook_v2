@@ -17,6 +17,7 @@ const createAPost = (async () => {
         headers: {"token": localStorage.token}
         })
     let response = await connection.json()
+    console.log(response)
     $post = response
 
     document.querySelector("#status").reset()
@@ -58,6 +59,7 @@ div#post-container {
     background-color: #FAFAFA;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 150px;
     border-radius: 25px;
     border: 1px solid lightgray;
     padding: 10px;

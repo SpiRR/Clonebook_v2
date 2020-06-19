@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const { ObjectID } = require("mongodb");
 
 const PostSchema = mongoose.Schema({
-  author_id: {
-    type: String,
+  author: {
+    type: Object,
     required: true
   },
   post: {
